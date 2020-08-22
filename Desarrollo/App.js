@@ -5,17 +5,26 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { ImageBackground, StyleSheet, Text, View , Image, Button } from 'react-native';
 import Registro from './app/Componets/registro';
 import Login from './app/Componets/login';
+import Home_Uno from './app/Componets/homeUno';
 
 function RegistroScreen({ navigation }) {
-  return (
-    <Registro/>
+  return (    
+    <Registro navigation = {navigation}/>
+
   );
 }
 
 function LoginScreen({ navigation }) {
   return (
-    <Login/>
+    <Login navigation = {navigation}/>
   );
+}
+
+function HomeScreen({navigation}) {
+  return(
+    <Home_Uno navigation = {navigation}/>
+  )
+  
 }
 
 const Stack = createStackNavigator();
@@ -23,7 +32,8 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>      
-      <Stack.Navigator initialRouteName="Servipet" headerMode="none">            
+      <Stack.Navigator initialRouteName="homeUno" headerMode="none">
+        <Stack.Screen name="homeUno" component={HomeScreen}/>
         <Stack.Screen name="Registro" component={RegistroScreen}/>
         <Stack.Screen name="Login" component={LoginScreen}/>
       </Stack.Navigator>

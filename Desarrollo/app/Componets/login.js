@@ -1,14 +1,16 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View , Image, Modal} from 'react-native';
+import { ImageBackground, StyleSheet, Text, View , Image, Modal, TouchableHighlight} from 'react-native';
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function registro(){
+export default function login(props){
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
-      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>                       
+      <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
+      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>
+      </TouchableHighlight>                       
       <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
       <Input style={styles.textInput}/>
@@ -45,10 +47,8 @@ export default function registro(){
       color: "white"}}></Button>
       <Text style={styles.text}>
         ¿Aun no estás registrado?
-        <a href="">
-          <Text style={styles.textLink}> Registrarse</Text>
-        </a>
-      </Text>      
+            <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Registro')}}> Registrarse</Text>
+        </Text>      
       </ImageBackground>              
     </View>
     )

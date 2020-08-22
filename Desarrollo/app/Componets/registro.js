@@ -1,15 +1,20 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View , Image, Modal} from 'react-native';
+import { ImageBackground, StyleSheet, Text, View , Image, Modal, Linking, TouchableHighlight} from 'react-native';
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
+import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from './login';
 
-export default function registro(){
+export default function registro(props){
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
-      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>                       
+      <View>
+      <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
+      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>
+      </TouchableHighlight>
+      </View>                                   
       <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
       <Text style={styles.textlbl}>Nombre de usuario</Text>
       <Input style={styles.textInput}/>
@@ -50,9 +55,7 @@ export default function registro(){
       color: "white"}}></Button>
       <Text style={styles.text}>
         ¿Ya estoy registrado?
-        <a href="">
-          <Text style={styles.textLink}> Iniciar Sesión</Text>
-        </a>
+        <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Login')}}> Iniciar Sesión</Text>
       </Text>      
       </ImageBackground>              
     </View>
