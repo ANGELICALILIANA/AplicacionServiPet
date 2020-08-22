@@ -6,7 +6,7 @@ import { Button } from 'react-native-elements';
 //Imagen Logo Vertical no sirve
 //Posiciones de los botones en la pantalla
 
-export default function inicio({ navigation }) {
+export default function homeUno( props ) {
   return (
     <View
       style={{ flex: 1, color: "white" }}>
@@ -29,14 +29,14 @@ export default function inicio({ navigation }) {
             title="Registrate"
             titleStyle={{ color: "gray" }}
             buttonStyle={{ backgroundColor: 'white', width: '156px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}
-            onPress={() => alert('Boton Registrate Presionado')}>
+            onPress={()=>{props.navigation.navigate('Registro')}}>
           </Button>
           <Button
-            title='Hechar un vistazo'
+            title='Echar un vistazo'
             type="clear"
             titleStyle={{ color: "gray" }}
             buttonStyle={{ backgroundColor: 'white', width: 'fit-content', margin: 'auto', borderRadius: '20px', marginTop: '10px' }}
-            onPress={() => alert('Boton Hechar un vistazo Presionado')}>
+             onPress={()=>{props.navigation.navigate('Hometwo')}}>
           </Button>
         </View>
       </ImageBackground>
