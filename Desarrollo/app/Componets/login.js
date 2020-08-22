@@ -12,7 +12,7 @@ export default function registro(){
       <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
       <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Contrasea</Text>
+      <Text style={styles.textlbl}>Contraseña</Text>
       <Input secureTextEntry={true}/>
       <Button
       icon={
