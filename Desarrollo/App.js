@@ -24,8 +24,8 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>      
-      <Stack.Navigator initialRouteName="Servipet">                
-        <Stack.Screen name=" " component={RegistroScreen}/>
+      <Stack.Navigator initialRouteName="Servipet" headerMode="none">            
+        <Stack.Screen name="Registro" component={RegistroScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
