@@ -25,7 +25,7 @@ function App() {
   return (
     <NavigationContainer>      
       <Stack.Navigator initialRouteName="Servipet">                
-        <Stack.Screen name="Registro" component={RegistroScreen} />
+        <Stack.Screen name=" " component={RegistroScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
