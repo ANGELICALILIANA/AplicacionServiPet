@@ -20,11 +20,10 @@ const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       
-      <Stack.Navigator>
+      <Stack.Navigator headerMode="none">
       <Stack.Screen name=" " component={HometwoScreen}/>
-      <Stack.Screen name="  " component={HeaderhometwoScreen}/>
       </Stack.Navigator>
       
     </NavigationContainer>
