@@ -3,21 +3,16 @@ import { ImageBackground, StyleSheet, Text, View , Image, Modal} from 'react-nat
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Login from './login';
 
 export default function registro(){
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
       <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>                       
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
-      <Text style={styles.textlbl}>Nombre de usuario</Text>
-      <Input style={styles.textInput}/>
+      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
       <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Text style={styles.textlbl}>Confirmar Contraseña</Text>
+      <Text style={styles.textlbl}>Contrasea</Text>
       <Input secureTextEntry={true}/>
       <Button
       icon={
@@ -42,16 +37,16 @@ export default function registro(){
           color="white"
         />
       }
-      title="Registrarse con Google" 
+      title="Iniciar Sesión con Google" 
       buttonStyle={{ backgroundColor: 'red', 
       width: '300px', 
       margin: 'auto', 
       borderRadius: '20px', 
       color: "white"}}></Button>
       <Text style={styles.text}>
-        ¿Ya estoy registrado?
+        ¿Aun no estás registrado?
         <a href="">
-          <Text style={styles.textLink}> Iniciar Sesión</Text>
+          <Text style={styles.textLink}> Registrarse</Text>
         </a>
       </Text>      
       </ImageBackground>              
@@ -98,7 +93,9 @@ const styles = StyleSheet.create({
     },
     Carrito:{
       width: '40px',
-      height: '40px'
+      height: '40px',
+      marginTop: '-80px',
+      marginBottom: '100px'
     },
     textInput:{
       border: "#B4B4B4",      
