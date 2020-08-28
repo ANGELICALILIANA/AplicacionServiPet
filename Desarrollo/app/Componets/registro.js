@@ -4,7 +4,6 @@ import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import Login from './login';
 
 export default function registro(props){
     return(

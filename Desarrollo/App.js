@@ -8,21 +8,33 @@ import * as React from 'react';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import Registro from "./app/Componets/registro";
+import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 
-function HeaderhometwoScreen() {
+const Stack = createStackNavigator();
+
+function HometwoScreen({ navigation }) {
   return (
-    <Headerhometwo />
-  );
-}
-function HometwoScreen() {
-  return (
-    <Hometwo />
+    <Hometwo navigation={navigation}/>
   );
 }
 
+/**
+ * 
+ * Vista inicial de la aplicación "Home 1"
+ */
 function inicio({ navigation }) {
   return (
     <HomeUno navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de los servicios de estética y peluquería
+ */
+function estetica({ navigation }) {
+  return (
+    <EsteticaYPeluqueria navigation={navigation} />
   )
 }
 
@@ -32,8 +44,6 @@ function RegistroScreen({ navigation }) {
   );
 }
 
-const Stack = createStackNavigator();
-
 function App() {
   return (
     <NavigationContainer>
@@ -41,6 +51,7 @@ function App() {
         <Stack.Screen name="homeUno" component={inicio} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
+        <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
