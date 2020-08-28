@@ -5,27 +5,25 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 
-function HeaderhometwoScreen(){
-  return(
-<Headerhometwo/>
-  );
-}
+
 function HometwoScreen() {
   return(
     <Hometwo/>
     );
   } 
 
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer >
-      
+      <View>
+      <Headerhometwo/>
+      </View>
       <Stack.Navigator headerMode="none">
       <Stack.Screen name=" " component={HometwoScreen}/>
       </Stack.Navigator>
-      
     </NavigationContainer>
   );
 }
