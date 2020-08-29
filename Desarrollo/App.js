@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeUno from './app/Componets/homeUno';
+import Home_Uno from './app/Componets/homeUno';
 import { } from 'react-native-elements';
 import * as React from 'react';
 import Hometwo from "./app/Componets/hometwo.js";
@@ -22,9 +22,9 @@ function HometwoScreen({ navigation }) {
  * 
  * Vista inicial de la aplicación "Home 1"
  */
-function inicio({ navigation }) {
+function HomeScreem({ navigation }) {
   return (
-    <HomeUno navigation={navigation} />
+    <Home_Uno navigation={navigation} />
   )
 }
 
@@ -48,7 +48,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="homeUno" headerMode="none">
-        <Stack.Screen name="homeUno" component={inicio} />
+        <Stack.Screen name="homeUno" component={HomeScreem} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
