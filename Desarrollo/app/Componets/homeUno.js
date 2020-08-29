@@ -3,8 +3,6 @@ import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } fr
 import { Button } from 'react-native-elements';
 
 //Tipo de letra botones
-//Imagen Logo Vertical no sirve
-//Posiciones de los botones en la pantalla
 
 export default function homeUno( props ) {
   return (

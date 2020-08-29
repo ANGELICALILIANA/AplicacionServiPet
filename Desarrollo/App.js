@@ -13,20 +13,20 @@ import Headerhometwo from "./app/Componets/headerHometwo.js";
 
 function HometwoScreen({ navigation }) {
   return (
-    <Hometwo navigation={navigation}/>
+    <Hometwo navigation={navigation} />
   );
 }
 
 function RegistroScreen({ navigation }) {
-  return (    
-    <Registro navigation = {navigation}/>
+  return (
+    <Registro navigation={navigation} />
 
   );
 }
 
 function LoginScreen({ navigation }) {
   return (
-    <Login navigation = {navigation}/>
+    <Login navigation={navigation} />
   );
 }
 
@@ -34,11 +34,11 @@ function LoginScreen({ navigation }) {
  * 
  * Vista inicial de la aplicación "Home 1"
  */
-function HomeScreen({navigation}) {
-  return(
-    <Home_Uno navigation = {navigation}/>
+function HomeScreen({ navigation }) {
+  return (
+    <Home_Uno navigation={navigation} />
   )
-  
+
 }
 
 /**
@@ -55,11 +55,12 @@ const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>      
-      <Stack.Navigator initialRouteName="homeUno" headerMode="none">
-        <Stack.Screen name="homeUno" component={HomeScreen}/>
-        <Stack.Screen name="Registro" component={RegistroScreen}/>
-        <Stack.Screen name="Login" component={LoginScreen}/>
+    <NavigationContainer>
+      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none"> */}
+      <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none">
+        <Stack.Screen name="homeUno" component={HomeScreen} />
+        <Stack.Screen name="Registro" component={RegistroScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
@@ -69,5 +70,3 @@ function App() {
 }
 
 export default App;
-
-
