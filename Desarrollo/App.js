@@ -10,6 +10,7 @@ import Home_Uno from './app/Componets/homeUno';
 import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
 
 function HometwoScreen({ navigation }) {
   return (
