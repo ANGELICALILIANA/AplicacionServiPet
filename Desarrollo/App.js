@@ -10,6 +10,7 @@ import Home_Uno from './app/Componets/homeUno';
 import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
+import Menu from "./app/Componets/menu";
 
 function HometwoScreen({ navigation }) {
   return (
@@ -51,6 +52,12 @@ function estetica({ navigation }) {
   )
 }
 
+function menuScreen({navigation}){
+  return(
+    <Menu navigation={navigation}/>
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -62,6 +69,7 @@ function App() {
         <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
+        <Stack.Screen name="Menu" component={menuScreen} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
