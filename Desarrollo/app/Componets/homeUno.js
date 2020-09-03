@@ -54,16 +54,16 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   imagenLogo: {
-    marginLeft: '100px',
+    marginLeft: '110px',
     zIndex: '-1',
     position: 'relative',
-    width: '100px',
+    width: '120px',
     height: '200px',
   },
   imagenInicioSesion: {
-    marginTop: '-123px',
-    width: '50px',
-    height: '50px',
+    marginTop: '-133px',
+    width: '30px',
+    height: '30px',
     marginLeft: 'auto',
   },
   margenesPantalla: {
