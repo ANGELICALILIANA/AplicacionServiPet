@@ -1,21 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
+import withFirebaseAuth from 'react-with-firebase-auth';
+import 'firebase/auth';
+import firebaseConfig from '../../firebase';
 import { ImageBackground, StyleSheet, Text, View , Image, Modal, TouchableHighlight} from 'react-native';
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function login(props){
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+
+  const submit = ()=>{
+    console.log(email,pass)
+  }
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>
+      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
       </TouchableHighlight>                       
       <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
-      <Input style={styles.textInput}/>
+      <Input keyboardType={"email-address"} style={styles.textInput} onChangeText={()=> setEmail()}/>
       <Text style={styles.textlbl}>Contraseña</Text>
-      <Input secureTextEntry={true}/>
+      <Input secureTextEntry={true} onChangeText={() => setPass()}/>
       <Button
       icon={
         <Icon
@@ -24,7 +33,7 @@ export default function login(props){
           color="white"
         />
       }
-      title="Registrarse" 
+      title="Iniciar Sesión" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
       width: '300px', 
       margin: 'auto',
@@ -91,11 +100,10 @@ const styles = StyleSheet.create({
       fontFamily: "nexa light",
       marginLeft: "20px"
     },
-    Carrito:{
+    Cerrar:{
       width: '40px',
       height: '40px',
-      marginTop: '-80px',
-      marginBottom: '100px'
+      marginTop: '-100px'
     },
     textInput:{
       border: "#B4B4B4",      
