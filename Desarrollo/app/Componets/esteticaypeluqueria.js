@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
+import { InputGroup, FormControl } from 'react-bootstrap';
 //import Autocomplete from 'react-native-autocomplete-input';
 
 export default function esteticaypeluqueria(props) {
@@ -22,7 +23,16 @@ export default function esteticaypeluqueria(props) {
                         style={styles.imagenMenu}
                         source={require('../../assets/SideMenu.svg')} />
                 </View>
-                <Input style={styles.entradaTexto} />
+                <InputGroup className="mb-3">
+                    <FormControl
+                        placeholder="Recipient's username"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                    />
+                    <InputGroup.Append>
+                        <Button variant="outline-secondary">Button</Button>
+                    </InputGroup.Append>
+                </InputGroup>
                 <View>
                     <Text style={styles.cajaTexto}>ESTÉTICA Y PELUQUERIA</Text>
                 </View>
