@@ -12,6 +12,7 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
 
+
 function HometwoScreen({ navigation }) {
   return (
     <Hometwo navigation={navigation}/>
