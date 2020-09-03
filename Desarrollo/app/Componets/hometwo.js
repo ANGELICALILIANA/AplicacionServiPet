@@ -1,41 +1,48 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground,TouchableHighlight } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native-elements';
 
-function Apphometwo() {
+function Apphometwo(props) {
   return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <ImageBackground source={require('../../assets/FondoVerde.png')} style={styles.image}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <ImageBackground source={require('../../assets/FondoVerde.png')} style={styles.image}>
+      <TouchableHighlight onPress={()=>{ props.navigation.navigate('Menu')}}>
+              <Image
+                style={styles.imagenMenu}
+                source={require('../../assets/SideMenu.svg')} 
+                />
+      </TouchableHighlight>
         <Button
           title="ESTETICA Y PELUQUERIA"
-          titleStyle={{color: "#047D82", fontWeight: "bold"}}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px'}}>
+          titleStyle={{ color: "#047D82", fontWeight: "bold" }}
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px' }}
+          onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
         </Button>
         <Button
           title="CONSULTA VETERINARIA"
-          titleStyle={{color: "#047D82", fontWeight: "bold"}}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px'}}>
+          titleStyle={{ color: "#047D82", fontWeight: "bold" }}
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
         </Button>
         <Button
           title="CONSULTA ESPECIALISTA"
-          titleStyle={{color: "#047D82", fontWeight: "bold"}}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px'}}>
+          titleStyle={{ color: "#047D82", fontWeight: "bold" }}
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
         </Button>
         <Button
           title="GUARDERIA"
-          titleStyle={{color: "#047D82", fontWeight: "bold"}}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px'}}>
+          titleStyle={{ color: "#047D82", fontWeight: "bold" }}
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
         </Button>
         <Button
           title="URGENCIAS"
-          titleStyle={{color: "#047D82", fontWeight: "bold"}}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px'}}>
+          titleStyle={{ color: "#047D82", fontWeight: "bold" }}
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
         </Button>
-        </ImageBackground>
+      </ImageBackground>
 
-      </View>
+    </View>
 
   );
 }
@@ -55,5 +62,11 @@ const styles = StyleSheet.create({
     color: "grey",
     fontSize: 30,
     fontWeight: "bold"
+  },
+  imagenMenu: {
+    marginTop: '-160px',
+    width: '50px',
+    height: '50px',
+    marginRight: 'auto',
   }
 });

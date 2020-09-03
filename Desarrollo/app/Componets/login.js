@@ -1,29 +1,30 @@
-import React from 'react';
-import { ImageBackground, StyleSheet, Text, View , Image, Modal, Linking, TouchableHighlight} from 'react-native';
+import React, {useState} from 'react';
+import withFirebaseAuth from 'react-with-firebase-auth';
+import 'firebase/auth';
+import firebaseConfig from '../../firebase';
+import { ImageBackground, StyleSheet, Text, View , Image, Modal, TouchableHighlight} from 'react-native';
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
-import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Login from './login';
 
-export default function registro(props){
+export default function login(props){
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+
+  const submit = ()=>{
+    console.log(email,pass)
+  }
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
-      <View>
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
       <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
-      </TouchableHighlight>
-      </View>                                   
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
-      <Text style={styles.textlbl}>Nombre de usuario</Text>
-      <Input style={styles.textInput}/>
+      </TouchableHighlight>                       
+      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
-      <Input style={styles.textInput}/>
+      <Input keyboardType={"email-address"} style={styles.textInput} onChangeText={()=> setEmail()}/>
       <Text style={styles.textlbl}>Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Text style={styles.textlbl}>Confirmar Contraseña</Text>
-      <Input secureTextEntry={true}/>
+      <Input secureTextEntry={true} onChangeText={() => setPass()}/>
       <Button
       icon={
         <Icon
@@ -32,7 +33,7 @@ export default function registro(props){
           color="white"
         />
       }
-      title="Registrarse" 
+      title="Iniciar Sesión" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
       width: '300px', 
       margin: 'auto',
@@ -47,16 +48,16 @@ export default function registro(props){
           color="white"
         />
       }
-      title="Registrarse con Google" 
+      title="Iniciar Sesión con Google" 
       buttonStyle={{ backgroundColor: 'red', 
       width: '300px', 
       margin: 'auto', 
       borderRadius: '20px', 
       color: "white"}}></Button>
       <Text style={styles.text}>
-        ¿Ya estoy registrado?
-        <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Login')}}> Iniciar Sesión</Text>
-      </Text>      
+        ¿Aun no estás registrado?
+            <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Registro')}}> Registrarse</Text>
+        </Text>      
       </ImageBackground>              
     </View>
     )
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
     },
     Cerrar:{
       width: '40px',
-      height: '40px'
+      height: '40px',
+      marginTop: '-100px'
     },
     textInput:{
       border: "#B4B4B4",      
