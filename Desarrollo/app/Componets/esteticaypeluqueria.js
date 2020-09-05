@@ -10,7 +10,7 @@ export default function esteticaypeluqueria(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerde.svg')}
+                source={require('../../assets/FondoVerdeClaro.svg')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
@@ -21,9 +21,9 @@ export default function esteticaypeluqueria(props) {
                         source={require('../../assets/Carrito.svg')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/SideMenuVerde.svg')} />
                 </View>
-                <InputGroup className="mb-3">
+                {/*<InputGroup className="mb-3">
                     <FormControl
                         placeholder="Recipient's username"
                         aria-label="Recipient's username"
@@ -32,44 +32,51 @@ export default function esteticaypeluqueria(props) {
                     <InputGroup.Append>
                         <Button variant="outline-secondary">Button</Button>
                     </InputGroup.Append>
-                </InputGroup>
+    </InputGroup>*/}
                 <View>
-                    <Text style={styles.cajaTexto}>ESTÉTICA Y PELUQUERIA</Text>
+                    <Text style={styles.cajaTextoUno}>
+                        ESTÉTICA Y</Text>
+                    <Text style={styles.cajaTextoDos}>
+                        PELUQUERÍA</Text>
                 </View>
                 <Image
                     style={styles.imagenPeluqueria}
                     source={require('../../assets/Peluqueria.jpg')} />
-                <Text>
+                <Text style={styles.margenesTexto}>
                     La peluquería canina es importante porque se encarga de cuidar y mantener la salud, la higiene y la apariencia de nuestras mascotas. Estos tres aspectos ya son suficientes para no dudar al momento de llevar a nuestras mascotas a la peluquería.
                     La peluquería canina también es importante porque además del corte de pelo, se intenta cuidar el manto de acuerdo a las características particulares de cada raza. Además, una vez que el perro está en la peluquería se lo suele someter a una revisión completa con la cual se puede detectar a tiempo cualquier tipo de anormalidades o infecciones.
                     </Text>
                 <Text
-                style={styles.borde}>
+                    style={styles.borde}>
                     ADQUIERE NUESTRO SERVICIOS DE
                     </Text>
-                <Button
-                    title="   CORTE   DE UÑAS"
-                    titleStyle={{ color: "white" }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
-                </Button>
-                <Button
-                    title="BAÑO"
-                    titleStyle={{ color: "white" }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
-                </Button>
-                <Button
-                    title="   CORTE   DE PELO"
-                    titleStyle={{ color: "white" }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
-                </Button>
-                <Button
-                    title="PROFILAXIS"
-                    titleStyle={{ color: "white" }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
-                </Button>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.organizacionBotones}>
+                    <Button
+                        title="   CORTE   DE UÑAS"
+                        titleStyle={{ color: "white" }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '60%', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
+                    </Button>
+                    <Button
+                        title="BAÑO"
+                        titleStyle={{ color: "white" }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100%', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                    </Button>
+                    <Button
+                        title="   CORTE   DE PELO"
+                        titleStyle={{ color: "white" }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '60%', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
+                    </Button>
+                    <Button
+                        title="PROFILAXIS"
+                        titleStyle={{ color: "white" }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100%', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                    </Button>
+                </View>
+                <View style={styles.piedepagina}>
+                    <Text style={styles.numero}>300 209 9929</Text>
+                </View>
             </ImageBackground>
-        </View>
+        </View >
     )
 };
 
@@ -82,15 +89,28 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPeluqueria: {
-        width: '50px',
-        height: '50px',
+        width: '90%',
+        height: '20%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '3%',
     },
-    cajaTexto: {
+    cajaTextoUno: {
         backgroundColor: '#047D82',
         color: 'white',
-        width: '100px',
+        width: '90%',
+        marginTop: '30%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+    },
+    cajaTextoDos: {
+        backgroundColor: '#047D82',
+        color: 'white',
+        width: '90%',
+        textAlign: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     margenesVista: {
         flex: 1,
@@ -109,16 +129,17 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
-
     },
     piedepagina: {
         width: '100%',
         height: '5%',
-        textAlign: 'center',
-        backgroundColor: 'white',
         position: 'absolute',
         bottom: '0px',
+        backgroundColor: 'white',
+    },
+    numero: {
         color: '#047D82',
+        marginLeft: '50%',
     },
     imagenCarrito: {
         position: 'absolute',
@@ -136,13 +157,31 @@ const styles = StyleSheet.create({
     },
     entradaTexto: {
         position: 'relative',
-        marginTop: '20%'
+        marginTop: '20%',
+
     },
-    borde:{
+    borde: {
         borderTopWidth: '2px',
         borderBottomWidth: '2px',
         borderBottomColor: 'white',
         borderTopColor: 'white',
+        color: 'white',
+        width: '90%',
+        textAlign: 'center',
+    },
+    margenesTexto: {
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'white',
+        fontsize: '75%',
+        marginTop: '3%',
+    },
+    organizacionBotones: {
+        flexDirection: 'row',
+        //width: '90%'
+        //justifyContent: 'space-between',
     },
 });
 
