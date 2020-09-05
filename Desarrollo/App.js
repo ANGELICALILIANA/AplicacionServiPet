@@ -1,7 +1,6 @@
 import * as React from 'react';
 /* import React, { Component } from 'react'; */
 /* import { DrawerNavigator } from 'react-native'; */
-/* import * as Font from 'expo-font'; */
 /* import Estetica from "./app/Componets/esteticaScreen.js"
 import Veterinaria from "./app/Componets/veterinariaScreen.js" */
   
@@ -19,6 +18,7 @@ import Urgencias from './app/Componets/urgencias';
 import ConsultaVeterinaria from './app/Componets/consultaVeterinaria';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
+import * as Font from 'expo-font';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
@@ -86,6 +86,8 @@ function urgencias({ navigation }) {
     <Urgencias navigation={navigation} />
   )
 }
+
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -108,14 +110,14 @@ function App() {
   );
 }
 
-{/* const navegacion = DrawerNavigator({
-  estetica:{
-    screen: Estetica
-  },
-  veterinaria:{
-    screen: Veterinaria
-  },
+/* const [loaded] = useFonts({
+  thebold: require('./assets/fonts/theboldfont.ttf'),
+});
 
-})  */}
+if (!loaded) {
+  return null;
+}
+
+return <Text style={{ fontFamily: 'thebold' }} />; */
 
 export default App;

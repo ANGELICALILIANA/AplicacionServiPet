@@ -46,8 +46,6 @@ export default function consultaEspecialista(props) {
                 <Text style={styles.entradaTexto}>
                 Una urgencia se presenta en aquellas situaciones en las que se precisa atención rápida, comunicate al celular 321 8024171 y un médico veterinario calificado te hará algunas preguntas de importancia para realizar un triage (clasificación de la urgencia), 
                 te dará consejos de atención básica, manipulación y transporte. Se te dará una cita de consulta urgente dentro de las siguientes 4 horas.
-                Normalmente estamos ante una urgencia cuando: Aparición súbita de un cuadro grave, traumas, heridas, o por empeoramiento de una enfermedad crónica, ejemplo: mascota con vómito recurrente, diarrea abundante y/o sanguinolenta, episodios convulsivos, 
-                sospecha de intoxicicación, dolor abdominal agudo, pérdida de conciencia momentánea, hinchazon alérgica sin compromiso respiratorio, caídas o golpes moderados, mucosas palidas y secas (deshidratacion aguda), salivación excesiva, distosia de parto entre otros.
                 </Text>
                 </View>
                 <View>
@@ -58,18 +56,18 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="URGENCIAS (TRIAGE)"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
                     title="SINTOMAS DE ALARMA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'}}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'}}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -99,7 +97,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
-        height: '60px',
+        height: '55px',
     },
     cajaTexto: {
         backgroundColor: '#047D82',
@@ -171,9 +169,16 @@ const styles = StyleSheet.create({
     arreglo: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
       },
-    search: {
-        Top: '10%',
-        position: "absolute"
+      search: {
+
+        top: '9%',
+        width: '90%',
+        height: '25%',
+        marginRight: 'auto',
+        marginLeft: 'auto',
     },
 });

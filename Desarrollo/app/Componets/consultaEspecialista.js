@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } fr
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import * as Font from 'expo-font';
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
@@ -56,18 +57,18 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -89,11 +90,11 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '180px',
+        height: '170px',
     },
 
     imagenPrincipal2: {
-        marginTop: '8px',
+        paddingTop: '3%',
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
         right: '4%',
     },
     imagenMenu: {
+        position: "relative",
         position: 'absolute',
         width: '50px',
         height: '60px',
@@ -143,6 +145,7 @@ const styles = StyleSheet.create({
         left: '4%',
     },
     entradaTexto: {
+        position: "relative",
         width: '90%',
         alignContent: 'center',
         marginLeft: 'auto',
@@ -152,7 +155,8 @@ const styles = StyleSheet.create({
         marginTop: '5%',
         fontSize: '9pt',
     },
-    border: {    
+    border: {   
+        position: "relative", 
         marginLeft: 'auto',
         marginRight: 'auto',
         borderTopWidth: '2px',
@@ -167,11 +171,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     arreglo: {
+        position: "relative",
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginRight: 'auto',
+        marginLeft: 'auto',
       },
     search: {
-        Top: '10%',
-        position: "absolute"
+        position: "relative",
+        top: '40px',
+        width: '90%',
+        height: '40px',
+        marginRight: 'auto',
+        marginLeft: 'auto',
     },
 });
