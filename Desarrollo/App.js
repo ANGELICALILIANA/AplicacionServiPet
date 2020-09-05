@@ -18,6 +18,7 @@ import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
+import Control from "./app/Componets/control.js"
 
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
@@ -68,12 +69,19 @@ function menuScreen({navigation}){
   )
 }
 
+function vistaControl({navigation}){
+return(
+  <Control navegation={navigation}/>
+
+)
+}
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="homeUno" headerMode="none"> 
+      <Stack.Navigator initialRouteName="Control" headerMode="none"> 
+      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
       {/* <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none"> */}
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
@@ -81,6 +89,7 @@ function App() {
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="Control" component={vistaControl} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>

@@ -9,53 +9,21 @@ import Login from './login';
 export default function registro(props){
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
+      <ImageBackground source={require('../../assets/FondoBlancoHuellasHuesos.svg')} style={styles.image}>      
       <View>
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>
+      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Carrito}></Image>
       </TouchableHighlight>
       </View>                                   
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
-      <Text style={styles.textlbl}>Nombre de usuario</Text>
-      <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Email</Text>
-      <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Text style={styles.textlbl}>Confirmar Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Button
-      icon={
-        <Icon
-          name="arrow-right"
-          size={15}
-          color="white"
-        />
-      }
-      title="Registrarse" 
-      buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: '300px', 
-      margin: 'auto',
-      marginBottom: '8px', 
-      borderRadius: '20px', 
-      color: "white"}}></Button>
-      <Button
-      icon={
-        <Icon
-          name="arrow-right"
-          size={15}
-          color="white"
-        />
-      }
-      title="Registrarse con Google" 
-      buttonStyle={{ backgroundColor: 'red', 
-      width: '300px', 
-      margin: 'auto', 
-      borderRadius: '20px', 
-      color: "white"}}></Button>
+      <Image source={require('../../assets/Control.jpg')} style={styles.imgLogo}></Image>
+      
+      
+
+      
+     
       <Text style={styles.text}>
-        ¿Ya estoy registrado?
-        <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Login')}}> Iniciar Sesión</Text>
+        
+       
       </Text>      
       </ImageBackground>              
     </View>
