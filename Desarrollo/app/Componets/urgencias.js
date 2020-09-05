@@ -35,17 +35,19 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.png')} /> 
+                        source={require('../../assets/Urgencias.png')} /> 
                 </View>
                 <View>
                 <Image
                     style={styles.imagenPrincipal1}
-                    source={require('../../assets/Especialista.jpeg')} />
+                    source={require('../../assets/Urgencias.jpg')} />
                 </View>
                 <View>
                 <Text style={styles.entradaTexto}>
-                El veterinario es el profesional de la salud de referencia de tu perro y, como tal, se ocupa de prevenir, diagnosticar y curar los trastornos de tu amigo peludo, aunque también vela por la salud de las personas que conviven con animales para evitar la zoonosis o contagio entre animales y humanos.
-                En general, se recomienda que un perro sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
+                Una urgencia se presenta en aquellas situaciones en las que se precisa atención rápida, comunicate al celular 321 8024171 y un médico veterinario calificado te hará algunas preguntas de importancia para realizar un triage (clasificación de la urgencia), 
+                te dará consejos de atención básica, manipulación y transporte. Se te dará una cita de consulta urgente dentro de las siguientes 4 horas.
+                Normalmente estamos ante una urgencia cuando: Aparición súbita de un cuadro grave, traumas, heridas, o por empeoramiento de una enfermedad crónica, ejemplo: mascota con vómito recurrente, diarrea abundante y/o sanguinolenta, episodios convulsivos, 
+                sospecha de intoxicicación, dolor abdominal agudo, pérdida de conciencia momentánea, hinchazon alérgica sin compromiso respiratorio, caídas o golpes moderados, mucosas palidas y secas (deshidratacion aguda), salivación excesiva, distosia de parto entre otros.
                 </Text>
                 </View>
                 <View>
@@ -55,17 +57,17 @@ export default function consultaEspecialista(props) {
                 </View>
                 <View style={styles.arreglo}>
                 <Button
-                    title="ETOLOGIA"
+                    title="URGENCIAS (TRIAGE)"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
                     buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
-                    title="NUTRICIONISTA"
+                    title="SINTOMAS DE ALARMA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
                     buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
                 </Button>
                 <Button
-                    title="CIRUJANO"
+                    title="SERVICIO DE AMBULANCIA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
                     buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
                 </Button>
