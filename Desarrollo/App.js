@@ -1,4 +1,10 @@
 import * as React from 'react';
+/* import React, { Component } from 'react'; */
+/* import { DrawerNavigator } from 'react-native'; */
+/* import * as Font from 'expo-font'; */
+/* import Estetica from "./app/Componets/esteticaScreen.js"
+import Veterinaria from "./app/Componets/veterinariaScreen.js" */
+  
 import { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
@@ -8,6 +14,8 @@ import Registro from './app/Componets/registro';
 import Login from './app/Componets/login';
 import Home_Uno from './app/Componets/homeUno';
 import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
+import ConsultaEspecialista from './app/Componets/consultaEspecialista';
+import Urgencias from './app/Componets/urgencias';
 import ConsultaVeterinaria from './app/Componets/consultaVeterinaria';
 import Etologia from './app/Componets/etologia';
 import Hometwo from "./app/Componets/hometwo.js";
@@ -63,6 +71,12 @@ function estetica({ navigation }) {
   )
 }
 
+function especialista({ navigation }) {
+  return (
+    <ConsultaEspecialista navigation={navigation} />
+  )
+}
+
 function consultaVet({ navigation }) {
   return (
     <ConsultaVeterinaria navigation={navigation} />
@@ -74,7 +88,11 @@ function menuScreen({navigation}){
     <Menu navigation={navigation}/>
   )
 }
-
+function urgencias({ navigation }) {
+  return (
+    <Urgencias navigation={navigation} />
+  )
+}
 const Stack = createStackNavigator();
 
 function App() {
@@ -87,6 +105,8 @@ function App() {
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
+        <Stack.Screen name="ConsultaEspecialista" component={especialista} />
+        <Stack.Screen name="Urgencias" component={urgencias} />
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
@@ -95,5 +115,15 @@ function App() {
     </NavigationContainer>
   );
 }
+
+{/* const navegacion = DrawerNavigator({
+  estetica:{
+    screen: Estetica
+  },
+  veterinaria:{
+    screen: Veterinaria
+  },
+
+})  */}
 
 export default App;

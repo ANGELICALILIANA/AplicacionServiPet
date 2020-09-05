@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } fr
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
-//import Autocomplete from 'react-native-autocomplete-input';
 
 export default function esteticaypeluqueria(props) {
     return (
@@ -103,6 +102,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
+        fontSize: 'larger',
     },
     cajaTextoDos: {
         backgroundColor: '#047D82',
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
+        fontSize: 'larger',
     },
     margenesVista: {
         flex: 1,
@@ -180,8 +181,6 @@ const styles = StyleSheet.create({
     },
     organizacionBotones: {
         flexDirection: 'row',
-        //width: '90%'
-        //justifyContent: 'space-between',
     },
 });
 
