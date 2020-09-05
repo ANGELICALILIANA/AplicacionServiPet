@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
     Logo:{
       width: '220px',
       height: '80px',
-      marginTop: '-170px',
+      marginTop: '-130px',
       marginBottom: '20px'
     },
     Cerrar:{
         width: '40px',
         height: '40px',
         marginLeft: 'auto',
-        marginTop: '-160px',
+        marginTop: '-110px',
         marginRight: '10px'
     }
   });

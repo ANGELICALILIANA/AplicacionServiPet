@@ -12,6 +12,8 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
+
 
 function HometwoScreen({ navigation }) {
   return (
