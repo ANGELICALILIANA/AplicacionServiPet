@@ -43,7 +43,8 @@ export default function esteticaypeluqueria(props) {
                     La peluquería canina es importante porque se encarga de cuidar y mantener la salud, la higiene y la apariencia de nuestras mascotas. Estos tres aspectos ya son suficientes para no dudar al momento de llevar a nuestras mascotas a la peluquería.
                     La peluquería canina también es importante porque además del corte de pelo, se intenta cuidar el manto de acuerdo a las características particulares de cada raza. Además, una vez que el perro está en la peluquería se lo suele someter a una revisión completa con la cual se puede detectar a tiempo cualquier tipo de anormalidades o infecciones.
                     </Text>
-                <Text>
+                <Text
+                style={styles.borde}>
                     ADQUIERE NUESTRO SERVICIOS DE
                     </Text>
                 <Button
@@ -83,10 +84,13 @@ const styles = StyleSheet.create({
     imagenPeluqueria: {
         width: '50px',
         height: '50px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     cajaTexto: {
         backgroundColor: '#047D82',
         color: 'white',
+        width: '100px',
     },
     margenesVista: {
         flex: 1,
@@ -133,7 +137,13 @@ const styles = StyleSheet.create({
     entradaTexto: {
         position: 'relative',
         marginTop: '20%'
-    }
+    },
+    borde:{
+        borderTopWidth: '2px',
+        borderBottomWidth: '2px',
+        borderBottomColor: 'white',
+        borderTopColor: 'white',
+    },
 });
 
 
