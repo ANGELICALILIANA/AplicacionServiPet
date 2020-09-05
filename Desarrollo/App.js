@@ -10,16 +10,19 @@ import { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet, Text, View, Button, ImageBackground, TouchableHighlight, Image } from 'react-native';
+import { H1,StyleSheet, Text, View, Button, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import Registro from './app/Componets/registro';
 import Login from './app/Componets/login';
 import Home_Uno from './app/Componets/homeUno';
 import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 import ConsultaEspecialista from './app/Componets/consultaEspecialista';
+import ConsultaVeterinaria from './app/Componets/consultaVeterinaria';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
+
 
 function HometwoScreen({ navigation }) {
   return (
@@ -67,6 +70,12 @@ function especialista({ navigation }) {
   )
 }
 
+function consultaVet({ navigation }) {
+  return (
+    <ConsultaVeterinaria navigation={navigation} />
+  )
+}
+
 function menuScreen({navigation}){
   return(
     <Menu navigation={navigation}/>
@@ -85,6 +94,7 @@ function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         <Stack.Screen name="ConsultaEspecialista" component={especialista} />
+        <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
