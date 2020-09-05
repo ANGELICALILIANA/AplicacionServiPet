@@ -23,7 +23,8 @@ function Apphometwo(props) {
         <Button
           title="CONSULTA VETERINARIA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}
+          onPress={() => { props.navigation.navigate('ConsultaVeterinaria') }}>
         </Button>
         <Button
           title="CONSULTA ESPECIALISTA"
