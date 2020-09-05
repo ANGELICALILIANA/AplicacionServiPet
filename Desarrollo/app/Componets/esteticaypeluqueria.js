@@ -15,13 +15,18 @@ export default function esteticaypeluqueria(props) {
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogoVerdeHorizontal.svg')}
+                    />
                     <Image
                         style={styles.imagenCarrito}
                         source={require('../../assets/Carrito.svg')} />
-                    <Image
-                        style={styles.imagenMenu}
-                        source={require('../../assets/SideMenuVerde.svg')} />
+                    <View>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
+                            <Image
+                                style={styles.imagenMenu}
+                                source={require('../../assets/SideMenuVerde.svg')} />
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 <View style={styles.buscar}>
                     <SearchBar
@@ -51,22 +56,22 @@ export default function esteticaypeluqueria(props) {
                     <Button
                         title="CORTE DE UÑAS"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', height: '30px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}>
                     </Button>
                     <Button
                         title="BAÑO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}>
                     </Button>
                     <Button
                         title="CORTE DE PELO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
                         titleStyle={{ color: "white", fontSize: 'small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto" }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
@@ -152,10 +157,10 @@ const styles = StyleSheet.create({
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
+        position: 'RELATIVE',
         width: '50px',
         height: '65px',
-        top: '15%',
+        top: '-103%',
         left: '4%',
     },
     entradaTexto: {
@@ -170,7 +175,7 @@ const styles = StyleSheet.create({
         color: 'white',
         width: '90%',
         textAlign: 'center',
-        marginBottom: '2%',
+        marginBottom: '4%',
         fontWeight: 'bolder',
         marginLeft: 'auto',
         marginRight: 'auto',
