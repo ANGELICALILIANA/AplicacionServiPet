@@ -9,6 +9,7 @@ import Login from './app/Componets/login';
 import Home_Uno from './app/Componets/homeUno';
 import EsteticaYPeluqueria from './app/Componets/esteticaypeluqueria';
 import ConsultaVeterinaria from './app/Componets/consultaVeterinaria';
+import Etologia from './app/Componets/etologia';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
@@ -32,6 +33,12 @@ function RegistroScreen({ navigation }) {
 function LoginScreen({ navigation }) {
   return (
     <Login navigation={navigation} />
+  );
+}
+
+function Etology({ navigation }) {
+  return (
+    <Etologia navigation={navigation} />
   );
 }
 
@@ -73,9 +80,10 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
-      <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none">
+      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none"> */}
+      <Stack.Navigator initialRouteName="Etologia" headerMode="none">
         <Stack.Screen name="homeUno" component={HomeScreen} />
+        <Stack.Screen name="Etologia" component={Etology} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
