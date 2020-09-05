@@ -44,7 +44,7 @@ export default function menu(props){
                     <ListItemText style={{ color: '#fff'}} primary="Urgencia" />
                 </ListItem>
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
-                    <ListItemText style={{ color: '#fff'}} primary="Contactarnos" />
+                    <ListItemText style={{ color: '#fff'}} primary="Contactarnos"/>
                 </ListItem>
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
                     <ListItemText style={{ color: '#fff'}} primary="Social Media" />
@@ -58,6 +58,21 @@ export default function menu(props){
             />
       }
       title="Cerrar Sesión" 
+      buttonStyle={{ backgroundColor: '#09B1B8', 
+      width: '300px', 
+      margin: 'auto',
+      borderRadius: '20px', 
+      color: "white"}}></Button>
+
+<Button
+            icon={
+            <Icon
+            size={15}
+            color="white"
+            />
+      }
+      title="Contacto"
+      onPress={()=>{ props.navigation.navigate('contactenos')}} 
       buttonStyle={{ backgroundColor: '#09B1B8', 
       width: '300px', 
       margin: 'auto',

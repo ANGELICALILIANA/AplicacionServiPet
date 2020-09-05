@@ -13,6 +13,7 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+import Contacto from "./app/Componets/contactenos";
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
 
 
@@ -68,6 +69,12 @@ function menuScreen({navigation}){
   )
 }
 
+function contactenos({navigation}){
+  return(
+    <Contacto navigation={navigation}/>
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -82,6 +89,7 @@ function App() {
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="contactenos" component={contactenos} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
