@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } fr
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import { SearchBar } from 'react-native-elements';
 
 export default function esteticaypeluqueria(props) {
     return (
@@ -22,17 +23,14 @@ export default function esteticaypeluqueria(props) {
                         style={styles.imagenMenu}
                         source={require('../../assets/SideMenuVerde.svg')} />
                 </View>
-                {/*<InputGroup className="mb-3">
-                    <FormControl
-                        placeholder="Recipient's username"
-                        aria-label="Recipient's username"
-                        aria-describedby="basic-addon2"
+                <View style={styles.buscar}>
+                    <SearchBar
+                        round
+                        lightTheme
+                        placeholder="Lo que buscas para tu peludo"
                     />
-                    <InputGroup.Append>
-                        <Button variant="outline-secondary">Button</Button>
-                    </InputGroup.Append>
-    </InputGroup>*/}
-                <View>
+                </View>
+                <View style={styles.posicionTexto}>
                     <Text style={styles.cajaTextoUno}>
                         ESTÉTICA Y</Text>
                     <Text style={styles.cajaTextoDos}>
@@ -51,24 +49,24 @@ export default function esteticaypeluqueria(props) {
                     </Text>
                 <View style={styles.organizacionBotones}>
                     <Button
-                        title="   CORTE   DE UÑAS"
-                        titleStyle={{ color: "white" }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '60%', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
+                        title="CORTE DE UÑAS"
+                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}>
                     </Button>
                     <Button
                         title="BAÑO"
-                        titleStyle={{ color: "white" }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100%', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}>
                     </Button>
                     <Button
-                        title="   CORTE   DE PELO"
-                        titleStyle={{ color: "white" }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '60%', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto" }}>
+                        title="CORTE DE PELO"
+                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
-                        titleStyle={{ color: "white" }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100%', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                        titleStyle={{ color: "white", fontSize: 'small', fontWeight: 'bolder' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
@@ -88,17 +86,21 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPeluqueria: {
+        position: 'relative',
         width: '90%',
-        height: '20%',
+        height: '26%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '3%',
+        marginTop: '2%',
+    },
+    posicionTexto: {
+        position: 'relative',
+        marginTop: '18%',
     },
     cajaTextoUno: {
         backgroundColor: '#047D82',
         color: 'white',
         width: '90%',
-        marginTop: '30%',
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
@@ -117,7 +119,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     encabezado: {
-        height: '16%',
+        height: '90px',
         width: '100%',
         top: '0px',
         backgroundColor: 'white',
@@ -144,22 +146,21 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        width: '55px',
+        height: '55px',
+        top: '17%',
         right: '4%',
     },
     imagenMenu: {
         position: 'absolute',
         width: '50px',
-        height: '60px',
-        top: '10%',
+        height: '65px',
+        top: '15%',
         left: '4%',
     },
     entradaTexto: {
         position: 'relative',
-        marginTop: '20%',
-
+        marginTop: '10px',
     },
     borde: {
         borderTopWidth: '2px',
@@ -169,6 +170,10 @@ const styles = StyleSheet.create({
         color: 'white',
         width: '90%',
         textAlign: 'center',
+        marginBottom: '2%',
+        fontWeight: 'bolder',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     margenesTexto: {
         width: '90%',
@@ -176,12 +181,23 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'white',
-        fontsize: '75%',
-        marginTop: '3%',
+        fontSize: 'x-small',
+        marginTop: '2%',
+        marginBottom: '2%',
     },
     organizacionBotones: {
         flexDirection: 'row',
+        marginBottom: '-4px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
+    buscar: {
+        position: "relative",
+        top: '9%',
+        width: '90%',
+        marginRight: 'auto',
+        marginLeft: 'auto',
+    }
 });
 
 

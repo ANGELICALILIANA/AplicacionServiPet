@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     encabezadoLogoVerde: {
         margin: 'auto',
         width: '200px',
-        height: '70px',
+        height: '80px',
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
