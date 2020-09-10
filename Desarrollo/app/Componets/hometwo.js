@@ -29,7 +29,8 @@ function Apphometwo(props) {
         <Button
           title="CONSULTA ESPECIALISTA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}
+          onPress={() => { props.navigation.navigate('ConsultaEspecialista') }}>
         </Button>
         <Button
           title="GUARDERIA"
@@ -40,7 +41,8 @@ function Apphometwo(props) {
         <Button   
           title="URGENCIAS"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}>
+          buttonStyle={{ backgroundColor: 'white', width: '250px', margin: 'auto', borderRadius: '8px', marginTop: '12px' }}
+          onPress={() => { props.navigation.navigate('Urgencias') }}>
         </Button>
       </ImageBackground>
     </View>

@@ -1,16 +1,37 @@
-import * as React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { Button } from 'react-native-elements';
-import Logo from '../../assets/sidemenu.png';
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Logo from "../../assets/LogoVerdeHorizontal.svg"
 
-function headerhometwo() {
-  return (
-    <Image
-      style={{ width: 35, height: 35 }}
-      source={Logo}
-    />
-  );
+export default function Header() {
+    return (
+        <View style={styles.header}>
+            <View>
+            <Image style={{ width: 190, height: 80, margin: 'auto'}} source={Logo} />
+            </View>
+        </View>
+    );
 }
-export default headerhometwo;
+
+const styles = StyleSheet.create({
+    header: {
+        height: 90 ,
+        paddingTop: 5 ,
+        backgroundColor: '#fff',
+    },
+    title: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 20 ,
+        color: '#333',
+        letterSpacing: 1 ,
+    },
+    image: {
+        position: 'absolute',
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+        width: '100%',
+        height: '100%',
+      },
+});
+
