@@ -18,6 +18,8 @@ import ConsultaEspecialista from './app/Componets/consultaEspecialista';
 import Urgencias from './app/Componets/urgencias';
 import ConsultaVeterinaria from './app/Componets/consultaVeterinaria';
 import Etologia from './app/Componets/etologia';
+import Nutricionista from './app/Componets/nutricionista';
+import Cirujano from './app/Componets/cirujano';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
@@ -47,6 +49,18 @@ function LoginScreen({ navigation }) {
 function Etology({ navigation }) {
   return (
     <Etologia navigation={navigation} />
+  );
+}
+
+function Nutricion({ navigation }) {
+  return (
+    <Nutricionista navigation={navigation} />
+  );
+}
+
+function cirujan({ navigation }) {
+  return (
+    <Cirujano navigation={navigation} />
   );
 }
 
@@ -98,15 +112,16 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none"> */}
-      <Stack.Navigator initialRouteName="Etologia" headerMode="none">
+        <Stack.Navigator initialRouteName="homeUno" headerMode="none">
         <Stack.Screen name="homeUno" component={HomeScreen} />
-        <Stack.Screen name="Etologia" component={Etology} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="EsteticaYPeluqueria" component={estetica} />
         <Stack.Screen name="ConsultaEspecialista" component={especialista} />
+        <Stack.Screen name="Etologia" component={Etology} />
+        <Stack.Screen name="Nutricionista" component={Nutricion} />
         <Stack.Screen name="Urgencias" component={urgencias} />
+        <Stack.Screen name="cirujano" component={cirujan} />
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
