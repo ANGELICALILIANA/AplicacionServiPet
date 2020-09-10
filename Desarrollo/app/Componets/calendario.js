@@ -1,18 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
-}));
+import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 
 export default function calendario() {
   const classes = useStyles();
@@ -32,3 +21,20 @@ export default function calendario() {
     </form>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    textField: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      width: 200,
+    },
+  }));
+
+
+  const styles = StyleSheet.create({
+    
+});
