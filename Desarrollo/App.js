@@ -24,6 +24,7 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+import Guarderia from './app/Componets/guarderia'
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
 
 
@@ -107,6 +108,17 @@ function urgencias({ navigation }) {
     <Urgencias navigation={navigation} />
   )
 }
+
+/**
+ * 
+ * Vista de los servicios de guardería
+ */
+function vistaGuarderia({ navigation }) {
+  return (
+    <Guarderia navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -125,6 +137,7 @@ function App() {
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="Guarderia" component={vistaGuarderia} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
