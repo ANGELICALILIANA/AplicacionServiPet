@@ -13,9 +13,14 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
-import Guarderia from './app/Componets/guarderia'
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
+import Guarderia from './app/Componets/guarderia';
+import ReactDOM from 'react-dom';
+import Calendario from './app/Componets/calendario'
 
+
+//ReactDOM.render(<Calendario />, document.querySelector('#root'));
+
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
 
 function HometwoScreen({ navigation }) {
   return (
@@ -79,13 +84,22 @@ function vistaGuarderia({ navigation }) {
   )
 }
 
+/**
+ * 
+ * Vista del calendario
+ */
+function calendar({ navigation }) {
+  return (
+    <Calendario navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
        <Stack.Navigator initialRouteName="homeUno" headerMode="none"> 
-      {/* <Stack.Navigator initialRouteName="Guarderia" headerMode="none"> */}
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -94,6 +108,7 @@ function App() {
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
         <Stack.Screen name="Guarderia" component={vistaGuarderia} />
+        <Stack.Screen name="Calendario" component={calendar} />
         {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
