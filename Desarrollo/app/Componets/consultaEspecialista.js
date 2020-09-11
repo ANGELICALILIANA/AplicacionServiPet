@@ -57,18 +57,23 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
+                
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('Nutricionista') }}>     
+
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>
