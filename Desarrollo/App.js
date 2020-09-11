@@ -26,9 +26,11 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
-import Calendario from './app/Componets/calendario'
-
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
+import Calendario from './app/Componets/calendario';
+import CorteUnas from './app/Componets/corteUnas';
+import BanoMascota from './app/Componets/banoMascota';
+import CortePelo from './app/Componets/cortePelo';
+import Profilaxis from './app/Componets/profilaxis'
 
 function HometwoScreen({ navigation }) {
   return (
@@ -131,13 +133,52 @@ function calendar({ navigation }) {
   )
 }
 
+/**
+ * 
+ * Vista de corte de uñas
+ */
+function corteDeUnas({ navigation }) {
+  return (
+    <CorteUnas navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de baño de mascotas
+ */
+function banoDeMascotas({ navigation }) {
+  return (
+    <BanoMascota navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de corte de pelo
+ */
+function corteDePelo({ navigation }) {
+  return (
+    <CortePelo navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de profilaxis
+ */
+function vistaProfilaxis({ navigation }) {
+  return (
+    <Profilaxis navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-       {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
-       <Stack.Navigator initialRouteName="Calendario" headerMode="none"> 
+        <Stack.Navigator initialRouteName="homeUno" headerMode="none">  
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -152,7 +193,10 @@ function App() {
         <Stack.Screen name="Menu" component={menuScreen} />
         <Stack.Screen name="Guarderia" component={vistaGuarderia} />
         <Stack.Screen name="Calendario" component={calendar} />
-        {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
+        <Stack.Screen name="CorteUnas" component={corteDeUnas} />
+        <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
+        <Stack.Screen name="CortePelo" component={corteDePelo} />
+        <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
       </Stack.Navigator>
     </NavigationContainer>
   );
