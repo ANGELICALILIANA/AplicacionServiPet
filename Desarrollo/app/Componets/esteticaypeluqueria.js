@@ -56,22 +56,26 @@ export default function esteticaypeluqueria(props) {
                     <Button
                         title="CORTE DE UÑAS"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', height: '30px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', height: '30px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}
+                        onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="BAÑO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}
+                        onPress={() => { props.navigation.navigate('BanoMascota') }}>
                     </Button>
                     <Button
                         title="CORTE DE PELO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}
+                        onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
                         titleStyle={{ color: "white", fontSize: 'small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto" }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto" }}
+                        onPress={() => { props.navigation.navigate('Profilaxis') }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
