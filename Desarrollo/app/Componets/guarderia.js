@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function esteticaypeluqueria(props) {
+export default function guarderia(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -37,45 +37,33 @@ export default function esteticaypeluqueria(props) {
                 </View>
                 <View style={styles.posicionTexto}>
                     <Text style={styles.cajaTextoUno}>
-                        ESTÉTICA Y</Text>
-                    <Text style={styles.cajaTextoDos}>
-                        PELUQUERÍA</Text>
+                        GUARDERIA</Text>
                 </View>
                 <Image
                     style={styles.imagenPeluqueria}
-                    source={require('../../assets/Peluqueria.jpg')} />
+                    source={require('../../assets/Guarderia.jpg')} />
                 <Text style={styles.margenesTexto}>
-                    La peluquería canina es importante porque se encarga de cuidar y mantener la salud, la higiene y la apariencia de nuestras mascotas. Estos tres aspectos ya son suficientes para no dudar al momento de llevar a nuestras mascotas a la peluquería.
-                    La peluquería canina también es importante porque además del corte de pelo, se intenta cuidar el manto de acuerdo a las características particulares de cada raza. Además, una vez que el perro está en la peluquería se lo suele someter a una revisión completa con la cual se puede detectar a tiempo cualquier tipo de anormalidades o infecciones.
-                    </Text>
+                    Guardería  canina y hotel canino campestre con todas las comodidades que tu Mascota necesita para ser Feliz, en Servipet entendemos que tu peludo forma parte de tu familia, por eso contamos con servicios complementarios como: guardería canina, colegio canino,hotel canino, adiestramiento básico, asistencia veterinaria, actividades caninas, recreación, socialización y transporte canino especializado para que tu mejor amigo disfrute y se divierta cada día.
+                   </Text>
                 <Text
                     style={styles.borde}>
                     ADQUIERE NUESTRO SERVICIOS DE
                     </Text>
                 <View style={styles.organizacionBotones}>
                     <Button
-                        title="CORTE DE UÑAS"
+                        title="PASEO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', height: '30px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}
-                        onPress={() => { props.navigation.navigate('CorteUnas') }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '15px' }}>
                     </Button>
                     <Button
-                        title="BAÑO"
+                        title="HOTEL"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}
-                        onPress={() => { props.navigation.navigate('BanoMascota') }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '15px' }}>
                     </Button>
                     <Button
-                        title="CORTE DE PELO"
+                        title="GUARDERIA"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}
-                        onPress={() => { props.navigation.navigate('CorteUnas') }}>
-                    </Button>
-                    <Button
-                        title="PROFILAXIS"
-                        titleStyle={{ color: "white", fontSize: 'small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto" }}
-                        onPress={() => { props.navigation.navigate('Profilaxis') }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '30px', color: "white", margin: "Auto"}}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
@@ -97,7 +85,7 @@ const styles = StyleSheet.create({
     imagenPeluqueria: {
         position: 'relative',
         width: '90%',
-        height: '26%',
+        height: '30%',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '2%',
@@ -110,19 +98,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#047D82',
         color: 'white',
         width: '90%',
+        height: '40px',
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
         fontSize: 'larger',
-    },
-    cajaTextoDos: {
-        backgroundColor: '#047D82',
-        color: 'white',
-        width: '90%',
-        textAlign: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        fontSize: 'larger',
+        paddingTop: '5px',
     },
     margenesVista: {
         flex: 1,
@@ -179,7 +160,7 @@ const styles = StyleSheet.create({
         color: 'white',
         width: '90%',
         textAlign: 'center',
-        marginBottom: '4%',
+        marginBottom: '3%',
         fontWeight: 'bolder',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -191,12 +172,12 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         color: 'white',
         fontSize: 'x-small',
-        marginTop: '2%',
-        marginBottom: '2%',
+        marginTop: '3%',
+        marginBottom: '3%',
     },
     organizacionBotones: {
         flexDirection: 'row',
-        marginBottom: '-4px',
+        marginBottom: '-3px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
