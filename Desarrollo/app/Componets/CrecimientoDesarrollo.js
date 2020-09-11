@@ -6,7 +6,7 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
-export default function nutricionista(props) {    
+export default function crecimientodesarrollo(props) {    
     return (        
         <View
             style={styles.margenesVista}>
@@ -24,19 +24,18 @@ export default function nutricionista(props) {
 
                 <View style={styles.encabezado2}>
                 <Image
-                    style={styles.iconocontrol}
-                    source={require('../../assets/IconoControl.svg')} />
-                <Text style={styles.titulo}>CONTROL</Text>
+                    style={styles.iconocrecimiento}
+                    source={require('../../assets/Crecimiento.svg')} />
+                <Text style={styles.titulo}>CRECIMIENTO Y DESARROLLO</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencontrol}
-                    source={require('../../assets/Control.jpg')} />
+                    style={styles.imagencrecimiento}
+                    source={require('../../assets/imagenCrecimiento.jpg')} />
                 
                 <View style={styles.Descripcion}>
                 <Text style={styles.texto}>
-                Las mascotas deben ir al veterinario mínimo dos veces al año para tener ... de salud, el plan de vacunación, de alimentación y desparasitación, con ... la esterilización para evitar inconvenientes de proliferación sin control.
-
+                El desarrollo de los cachorros involucra muchas etapas y avances conforme crecen hasta la edad adulta. Ya sea que hayas adoptado un cachorro y estés esperando a que se calme y deje de masticar todo, o que simplemente tengas curiosidad acerca de lo que pasa con los cachorros hasta convertirse en perros hechos y derechos
                 </Text>
 
                 <View style={styles.Boton}>
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencontrol: {
+    imagencrecimiento: {
         paddingTop: '5px',
         width: '90%',
         height: '30%',
@@ -136,9 +135,12 @@ const styles = StyleSheet.create({
         color: '#047D82',
         textAlign: "center",
         fontSize: '24pt',
+       
+       
+
     },
 
-    iconocontrol: {
+    iconocrecimiento: {
         width: '70px',
         height: '70px',
         marginLeft: 'auto',
