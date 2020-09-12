@@ -30,9 +30,14 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
-import Calendario from './app/Componets/calendario'
-
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
+import Calendario from './app/Componets/calendario';
+import CorteUnas from './app/Componets/corteUnas';
+import BanoMascota from './app/Componets/banoMascota';
+import CortePelo from './app/Componets/cortePelo';
+import Profilaxis from './app/Componets/profilaxis';
+import Paseo from './app/Componets/paseo';
+import Hotel from './app/Componets/hotel';
+import ServicioGuarderia from './app/Componets/servicioGuarderia';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -157,6 +162,76 @@ function vistavacunacion({ navigation }) {
     <Vacunacion navigation={navigation} />
   );
 }
+/**
+ * 
+ * Vista de corte de uñas
+ */
+function corteDeUnas({ navigation }) {
+  return (
+    <CorteUnas navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de baño de mascotas
+ */
+function banoDeMascotas({ navigation }) {
+  return (
+    <BanoMascota navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de corte de pelo
+ */
+function corteDePelo({ navigation }) {
+  return (
+    <CortePelo navigation={navigation} />
+  )
+};
+
+/**
+ * 
+ * Vista de profilaxis
+ */
+function vistaProfilaxis({ navigation }) {
+  return (
+    <Profilaxis navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de paseo
+ */
+function vistaPaseo({ navigation }) {
+  return (
+    <Paseo navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de hotel
+ */
+function vistaHotel({ navigation }) {
+  return (
+    <Hotel navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de Guarderia
+ */
+function vistaServicioGuarderia({ navigation }) {
+  return (
+    <ServicioGuarderia navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -174,7 +249,7 @@ function App() {
         <Stack.Screen name="Etologia" component={Etology} />
         <Stack.Screen name="Nutricionista" component={Nutricion} />
         <Stack.Screen name="Urgencias" component={urgencias} />
-        <Stack.Screen name="cirujano" component={cirujan} />
+        <Stack.Screen name="cirujano" component={cirujan} />  
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
@@ -183,7 +258,13 @@ function App() {
         <Stack.Screen name="Vacunacion" component={vistavacunacion} />
         <Stack.Screen name="Guarderia" component={vistaGuarderia} />
         <Stack.Screen name="Calendario" component={calendar} />
-        {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
+        <Stack.Screen name="CorteUnas" component={corteDeUnas} />
+        <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
+        <Stack.Screen name="CortePelo" component={corteDePelo} />
+        <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
+        <Stack.Screen name="Paseo" component={vistaPaseo} />
+        <Stack.Screen name="Hotel" component={vistaHotel} />
+        <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
       </Stack.Navigator>
     </NavigationContainer>
   );

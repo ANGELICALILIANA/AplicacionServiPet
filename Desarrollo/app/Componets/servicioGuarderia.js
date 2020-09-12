@@ -5,8 +5,8 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function etologia(props) {    
-    return (        
+export default function servicioGuarderia(props) {
+    return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
@@ -16,43 +16,51 @@ export default function etologia(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                    <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
                     <Image
-                        style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/CerrarBlanco.svg')} 
+                        style={styles.iconocerrar}/>
+                        </TouchableHighlight>
                 </View>
 
                 <View style={styles.encabezado2}>
-                <Image
-                    style={styles.iconocorteuñas}
-                    source={require('../../assets/Etologia.svg')} />
-                <Text style={styles.titulo}>ETOLOGIA</Text>
+                    <Image
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/Profilaxis.svg')} />
+                    <Text style={styles.titulo}>PROFILAXIS</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorteuñas}
-                    source={require('../../assets/Etologia.jpg')} />
-                
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/Profilaxis.jpg')} />
+
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
-                Las ideas fundamentales de la etología es la 
-                existencia de pautas de acción modal (PAM). Las 
-                PAM son comportamientos estereotipados que 
-                ocurren en una secuencia rígida, en situaciones 
-                determinadas como respuesta a un estímulo 
-                concreto. Una especie de “reflejo comportamental” 
-                que ocurre de forma inevitable y siempre de 
-                la misma forma.
-                </Text>
+                    <Text style={styles.texto}>
+                        Una profilaxis es necesaria de una a dos veces al año, menos en cachorros (menores de año o año y medio).
+                        Los canes también sufren de sarro, caries y gingivitis, entre otras enfermedades que podrían terminar por afectar otras partes de su cuerpo, incluso el corazón.
+                        Una señal clara de que su perro necesita un tratamiento es que tenga los dientes amarillos, verdes, cafés o las encías muy enrojecidas.
+                        </Text>
+                    <Text style={styles.texto}>
+                        Beneficios de la profilaxis dental canina:
+                         </Text>
+                    <Text style={styles.texto}>
+                        1-Habrá una mayor protección al esmalte dental
+                        </Text>
+                    <Text style={styles.texto}>
+                        2- El problema de mal aliento (o alitosis) estará resuelto.
+                       </Text>
+                    <Text style={styles.texto}>
+                        3- Una vez se elimina la acumulación de bacterias, que crecen en la placa o cálculo dental, se remueven estos problemas bucales.
+                        </Text>
+                    <View style={styles.Boton}>
+                        <Button
+                            title="COMPRAR"
+                            titleStyle={{ color: "white", fontSize: '9pt' }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                        </Button>
+                    </View>
 
-                <View style={styles.Boton}>
-                <Button 
-                    title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
-                </Button> 
                 </View>
-
-                </View>   
 
             </ImageBackground>
         </View>
@@ -60,7 +68,7 @@ export default function etologia(props) {
 };
 
 const styles = StyleSheet.create({
-    imagencorteuñas: {
+    imagenFondoEtologia: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -68,10 +76,9 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorteuñas: {
-        paddingTop: '5px',
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -100,10 +107,12 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: '5px',
-        width: '90%',
+        width: '100%',
         height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'justify',
+        marginLeft: '5%',
     },
 
     encabezadoLogoVerde: {
@@ -113,7 +122,6 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
-
     },
 
     imagenCarrito: {
@@ -143,11 +151,12 @@ const styles = StyleSheet.create({
         fontSize: '24pt',
     },
 
-    iconoetologia: {
+    iconoprofilaxis: {
         width: '80px',
         height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
@@ -161,6 +170,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: '15px'
+        paddingTop: '5px'
     }
 });

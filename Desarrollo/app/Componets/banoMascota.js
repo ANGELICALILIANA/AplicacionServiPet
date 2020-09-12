@@ -5,8 +5,8 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function etologia(props) {    
-    return (        
+export default function corteUnas(props) {
+    return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
@@ -16,51 +16,42 @@ export default function etologia(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <Image
-                        style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
-                </View>
-
+                <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria')}}>
+                        <Image
+                            style={styles.iconocerrar}
+                            source={require('../../assets/CerrarBlanco.svg')} />
+                    </TouchableHighlight>
+                    </View>
                 <View style={styles.encabezado2}>
-                <Image
-                    style={styles.iconocorteuñas}
-                    source={require('../../assets/Etologia.svg')} />
-                <Text style={styles.titulo}>ETOLOGIA</Text>
+                    <Image
+                        style={styles.iconoetologia}
+                        source={require('../../assets/BañoMascotas.svg')} />
+                    <Text style={styles.titulo}>BAÑO DE MASCOTAS</Text>
                 </View>
-
                 <Image
-                    style={styles.imagencorteuñas}
-                    source={require('../../assets/Etologia.jpg')} />
-                
+                    style={styles.imagenetologia}
+                    source={require('../../assets/Baño.jpg')} />
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
-                Las ideas fundamentales de la etología es la 
-                existencia de pautas de acción modal (PAM). Las 
-                PAM son comportamientos estereotipados que 
-                ocurren en una secuencia rígida, en situaciones 
-                determinadas como respuesta a un estímulo 
-                concreto. Una especie de “reflejo comportamental” 
-                que ocurre de forma inevitable y siempre de 
-                la misma forma.
+                    <Text style={styles.texto}>
+                        Lo ideal es que los PERROS Y GATOS se bañen cada 15 o 20 días. Como norma, los perros grandes o con pelo largo les tendríamos que bañar dos veces al mes.
+                        Los perros pequeños o con pelo corto cada dos o tres meses.
+                        No se pueden bañar con mucha frecuencia, ya que tanto su piel como sus folículos no lo requieren al no producir tanta grasa.
                 </Text>
-
-                <View style={styles.Boton}>
-                <Button 
-                    title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
-                </Button> 
+                    <View style={styles.Boton}>
+                        <Button
+                            title="COMPRAR"
+                            titleStyle={{ color: "white", fontSize: '9pt' }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                        </Button>
+                    </View>
                 </View>
-
-                </View>   
-
             </ImageBackground>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    imagencorteuñas: {
+    imagenFondoEtologia: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -68,7 +59,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorteuñas: {
+    imagenetologia: {
         paddingTop: '5px',
         width: '90%',
         height: '30%',
@@ -100,10 +91,12 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: '5px',
-        width: '90%',
+        width: '100%',
         height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'justify',
+        marginLeft: '5%',
     },
 
     encabezadoLogoVerde: {
@@ -113,7 +106,6 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
-
     },
 
     imagenCarrito: {
@@ -131,7 +123,6 @@ const styles = StyleSheet.create({
         width: '27px',
         height: '27px',
     },
-
     entradaTexto: {
         position: 'relative',
         marginTop: '20%'

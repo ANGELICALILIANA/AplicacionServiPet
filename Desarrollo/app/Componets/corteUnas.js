@@ -5,8 +5,8 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function etologia(props) {    
-    return (        
+export default function corteUnas(props) {
+    return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
@@ -16,43 +16,44 @@ export default function etologia(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
                     <Image
                         style={styles.iconocerrar}
                         source={require('../../assets/CerrarBlanco.svg')} />
+                        </TouchableHighlight>
                 </View>
-
                 <View style={styles.encabezado2}>
-                <Image
-                    style={styles.iconocorteuñas}
-                    source={require('../../assets/Etologia.svg')} />
-                <Text style={styles.titulo}>ETOLOGIA</Text>
+                    <Image
+                        style={styles.iconoetologia}
+                        source={require('../../assets/Cortedeuñas.svg')} />
+                    <Text style={styles.titulo}>CORTE DE UÑAS</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorteuñas}
-                    source={require('../../assets/Etologia.jpg')} />
-                
+                    style={styles.imagenetologia}
+                    source={require('../../assets/CorteUñas.jpg')} />
+
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
-                Las ideas fundamentales de la etología es la 
-                existencia de pautas de acción modal (PAM). Las 
-                PAM son comportamientos estereotipados que 
-                ocurren en una secuencia rígida, en situaciones 
-                determinadas como respuesta a un estímulo 
-                concreto. Una especie de “reflejo comportamental” 
-                que ocurre de forma inevitable y siempre de 
-                la misma forma.
+                    <Text style={styles.texto}>
+                        Por su salud y bienestar, es importante arreglar las
+                        uñas de nuestro amigo con regularidad. Debemos
+                        hacerlo con una correcta técnica y acostumbrarlo
+                        desde cachorro para que sea cómodo para
+                        nosotros y rutinario para él. Es conveniente,
+                        también, mantener recortado el pelo de sus patas,
+                        pues puede impedir que veamos unas uñas
+                        demasiado largas o heridas dolorosas.
                 </Text>
 
-                <View style={styles.Boton}>
-                <Button 
-                    title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
-                </Button> 
-                </View>
+                    <View style={styles.Boton}>
+                        <Button
+                            title="COMPRAR"
+                            titleStyle={{ color: "white", fontSize: '9pt' }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                        </Button>
+                    </View>
 
-                </View>   
+                </View>
 
             </ImageBackground>
         </View>
@@ -60,7 +61,7 @@ export default function etologia(props) {
 };
 
 const styles = StyleSheet.create({
-    imagencorteuñas: {
+    imagenFondoEtologia: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorteuñas: {
+    imagenetologia: {
         paddingTop: '5px',
         width: '90%',
         height: '30%',
@@ -100,10 +101,12 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: '5px',
-        width: '90%',
+        width: '100%',
         height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'justify',  
+        marginLeft: '5%',  
     },
 
     encabezadoLogoVerde: {
@@ -113,7 +116,6 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
-
     },
 
     imagenCarrito: {
