@@ -23,7 +23,7 @@ import Cirujano from './app/Componets/cirujano';
 import Hometwo from "./app/Componets/hometwo.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
-import Control from "./app/Componets/control.js"
+import Control from "./app/Componets/Control.js"
 import Crecimientodesarrollo from "./app/Componets/CrecimientoDesarrollo.js";
 import Vacunacion from "./app/Componets/vacunacion.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
@@ -38,6 +38,8 @@ import Profilaxis from './app/Componets/profilaxis';
 import Paseo from './app/Componets/paseo';
 import Hotel from './app/Componets/hotel';
 import ServicioGuarderia from './app/Componets/servicioGuarderia';
+import SintomasAlarma from './app/Componets/sintomasAlarma';
+import SintomasGatos from './app/Componets/sintomasGatos';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -147,13 +149,9 @@ return(
 )
 }
 
-
-
-
 function vistaCrecimiento({navigation}){
 return(
   <Crecimientodesarrollo navegation={navigation}/>
-
 )
 }
 
@@ -232,15 +230,32 @@ function vistaServicioGuarderia({ navigation }) {
   )
 }
 
+/**
+ * 
+ * Vista de Sintomas de Alarma
+ */
+function vistaSintomasAlarma({ navigation }) {
+  return (
+    <SintomasAlarma navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de Sintomas de Alarma Gatos
+ */
+function vistaSintomasAlarmaGatos({ navigation }) {
+  return (
+    <SintomasGatos navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="homeUno" headerMode="none"> 
-      {/*</Stack.Navigator><Stack.Navigator initialRouteName="Control" headerMode="none"> */}
-     {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
-      {/* <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none"> */}
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -265,6 +280,8 @@ function App() {
         <Stack.Screen name="Paseo" component={vistaPaseo} />
         <Stack.Screen name="Hotel" component={vistaHotel} />
         <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
+        <Stack.Screen name="SintomasAlarma" component={vistaSintomasAlarma} />
+        <Stack.Screen name="SintomasGatos" component={vistaSintomasAlarmaGatos} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -16,41 +16,34 @@ export default function hotel(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
-                    <Image
-                        source={require('../../assets/CerrarBlanco.svg')} 
-                        style={styles.iconocerrar}/>
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Guarderia') }}>
+                            <Image
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
+                    </View>
                 </View>
-
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoprofilaxis}
-                        source={require('../../assets/Profilaxis.svg')} />
-                    <Text style={styles.titulo}>PROFILAXIS</Text>
+                        source={require('../../assets/iconohotel.svg')} />
+                    <Text style={styles.titulo}>HOTEL</Text>
                 </View>
 
                 <Image
                     style={styles.imagenprofilaxis}
-                    source={require('../../assets/Profilaxis.jpg')} />
+                    source={require('../../assets/Hotel.jpg')} />
 
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Una profilaxis es necesaria de una a dos veces al año, menos en cachorros (menores de año o año y medio).
-                        Los canes también sufren de sarro, caries y gingivitis, entre otras enfermedades que podrían terminar por afectar otras partes de su cuerpo, incluso el corazón.
-                        Una señal clara de que su perro necesita un tratamiento es que tenga los dientes amarillos, verdes, cafés o las encías muy enrojecidas.
-                        </Text>
-                    <Text style={styles.texto}>
-                        Beneficios de la profilaxis dental canina:
-                         </Text>
-                    <Text style={styles.texto}>
-                        1-Habrá una mayor protección al esmalte dental
-                        </Text>
-                    <Text style={styles.texto}>
-                        2- El problema de mal aliento (o alitosis) estará resuelto.
+                        En Servipet nos preocupamos por el bienestar de tu mascota, por eso hemos desarrollado planes y actividades de esparcimiento para que nuestros mejores amigos disfruten su estadia con nosotros.
                        </Text>
                     <Text style={styles.texto}>
-                        3- Una vez se elimina la acumulación de bacterias, que crecen en la placa o cálculo dental, se remueven estos problemas bucales.
+                        Nuestra sede campestre les proporciona un ambiente de calma y tranquilidad, estamos ubicados en Cota-Cundinamarca.
+                         </Text>
+                    <Text style={styles.texto}>
+                        No te preocupes por esos días que debes estar fuera de la Ciudad, en Canes Club House estamos felices de cuidar a tu mejor amigo, además el disfrutará más de 10.000 mts 2 de parque campestre canino.
                         </Text>
                     <View style={styles.Boton}>
                         <Button

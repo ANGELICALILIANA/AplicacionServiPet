@@ -53,17 +53,20 @@ export default function guarderia(props) {
                     <Button
                         title="PASEO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '15px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '15px' }}
+                        onPress={() => { props.navigation.navigate('Paseo') }}>
                     </Button>
                     <Button
                         title="HOTEL"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '15px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '15px' }}
+                        onPress={() => { props.navigation.navigate('Hotel') }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '30px', color: "white", margin: "Auto"}}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '30px', color: "white", margin: "Auto"}}
+                        onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>

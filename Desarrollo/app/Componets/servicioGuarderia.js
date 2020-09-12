@@ -16,52 +16,36 @@ export default function servicioGuarderia(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
-                    <Image
-                        source={require('../../assets/CerrarBlanco.svg')} 
-                        style={styles.iconocerrar}/>
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Guarderia') }}>
+                            <Image
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
+                    </View>
                 </View>
-
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoprofilaxis}
-                        source={require('../../assets/Profilaxis.svg')} />
-                    <Text style={styles.titulo}>PROFILAXIS</Text>
+                        source={require('../../assets/iconoguarderia.svg')} />
+                    <Text style={styles.titulo}>GUARDERIA</Text>
                 </View>
-
                 <Image
                     style={styles.imagenprofilaxis}
-                    source={require('../../assets/Profilaxis.jpg')} />
-
+                    source={require('../../assets/GuarderiaService.jpg')} />
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Una profilaxis es necesaria de una a dos veces al año, menos en cachorros (menores de año o año y medio).
-                        Los canes también sufren de sarro, caries y gingivitis, entre otras enfermedades que podrían terminar por afectar otras partes de su cuerpo, incluso el corazón.
-                        Una señal clara de que su perro necesita un tratamiento es que tenga los dientes amarillos, verdes, cafés o las encías muy enrojecidas.
-                        </Text>
-                    <Text style={styles.texto}>
-                        Beneficios de la profilaxis dental canina:
-                         </Text>
-                    <Text style={styles.texto}>
-                        1-Habrá una mayor protección al esmalte dental
-                        </Text>
-                    <Text style={styles.texto}>
-                        2- El problema de mal aliento (o alitosis) estará resuelto.
+                        ¿Tu perrito tiene mucha energía? ¡El Bosque Canino es su guardería! Certificados como Centro Deportivo Canino, el día a día de tu peludo estará lleno de actividad, deporte y socialización.
+                        Tu perrito estará siempre acompañado de personal especializado en su cuidado y disfrutando de una propiedad de 80.000 m2.
                        </Text>
-                    <Text style={styles.texto}>
-                        3- Una vez se elimina la acumulación de bacterias, que crecen en la placa o cálculo dental, se remueven estos problemas bucales.
-                        </Text>
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
                             titleStyle={{ color: "white", fontSize: '9pt' }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', color: "white", width: '100px',}}>
                         </Button>
                     </View>
-
                 </View>
-
             </ImageBackground>
         </View>
     )
@@ -170,6 +154,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: '5px'
+        paddingTop: '5px',  
     }
 });

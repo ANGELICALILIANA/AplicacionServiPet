@@ -4,51 +4,57 @@ import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
-//import Autocomplete from 'react-native-autocomplete-input';
 
-export default function control(props) {    
-    return (        
+//Fondo
+//Icono 
+
+export default function sintomasGatos(props) {
+    return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
                 source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
-                style={styles.imagenFondonutricion}>
+                style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <Image
-                        style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Urgencias') }}>
+                            <Image
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 <View style={styles.encabezado2}>
-                <Image
-                    style={styles.iconocontrol}
-                    source={require('../../assets/IconoControl.svg')} />
-                <Text style={styles.titulo}>CONTROL</Text>
+                    <Image
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/sintomasAlarma.svg')} />
+                    <Text style={styles.titulo}>SÍNTOMAS DE ALARMA (GATOS)</Text>
                 </View>
                 <Image
-                    style={styles.imagencontrol}
-                    source={require('../../assets/Control.jpg')} />
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/SintomasGatos.jpg')} />
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
-                Las mascotas deben ir al veterinario mínimo dos veces al año para tener ... de salud, el plan de vacunación, de alimentación y desparasitación, con ... la esterilización para evitar inconvenientes de proliferación sin control.
-                </Text>
-                <View style={styles.Boton}>
-                <Button 
-                    title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
-                </Button> 
+                    <Text style={styles.texto}>
+                        Los gatos enmascaran con facilidad los síntomas de sus enfermedades, por lo que podría ser difícil identificar si el animal está enfermo, a menos de que su dueño lo conozca a la perfección.
+                        </Text>
+                    <Text style={styles.texto}>
+                        En los gatos pueden ser considerados signos de alarma: que no coma en un día, que deje de tomar agua y los cambios drásticos en su comportamiento.
+                        </Text>
+                    <Text style={styles.texto}>
+                        Las enfermedades más frecuentes en los felinos y que requieren atenciones de urgencia son los politraumatismos, que se presentan cuando el gato salta desde grandes alturas, y  la lipidosis hepática, que se refiere a la perdida del apetito repentina en animales que tienen obesidad.
+                        </Text>
                 </View>
-                </View>   
+
             </ImageBackground>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    imagenFondonutricion: {
+    imagenFondoEtologia: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -56,12 +62,12 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencontrol: {
-        paddingTop: '5px',
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-40px'
     },
 
     cajaTexto: {
@@ -88,10 +94,12 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: '5px',
-        width: '90%',
+        width: '100%',
         height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'justify',
+        marginLeft: '5%',
     },
 
     encabezadoLogoVerde: {
@@ -101,7 +109,6 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
-
     },
 
     imagenCarrito: {
@@ -126,16 +133,18 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        color: '#047D82',
+        color: '#09B1B8',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: '22pt',
+        fontWeight: 'bold',
     },
 
-    iconocontrol: {
-        width: '70px',
-        height: '70px',
+    iconoprofilaxis: {
+        width: '80px',
+        height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
@@ -147,8 +156,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
     },
-
-    Boton: {
-        paddingTop: '15px'
-    }
 });

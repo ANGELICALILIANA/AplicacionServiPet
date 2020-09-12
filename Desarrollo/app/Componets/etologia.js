@@ -43,7 +43,6 @@ export default function etologia(props) {
                 que ocurre de forma inevitable y siempre de 
                 la misma forma.
                 </Text>
-
                 <View style={styles.Boton}>
                 <Button 
                     title="COMPRAR"
@@ -51,9 +50,7 @@ export default function etologia(props) {
                     buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
                 </Button> 
                 </View>
-
                 </View>   
-
             </ImageBackground>
         </View>
     )

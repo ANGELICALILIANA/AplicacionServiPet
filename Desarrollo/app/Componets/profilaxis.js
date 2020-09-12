@@ -16,13 +16,14 @@ export default function profilaxis(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
-                    <Image
-                        source={require('../../assets/CerrarBlanco.svg')} 
-                        style={styles.iconocerrar}/>
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                            <Image
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
+                    </View>
                 </View>
-
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoprofilaxis}

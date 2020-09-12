@@ -16,11 +16,13 @@ export default function cortePelo(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
-                        <Image
-                        style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
-                    </TouchableHighlight>
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                            <Image
+                                style={styles.iconocerrar}
+                                source={require('../../assets/CerrarBlanco.svg')} />
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
