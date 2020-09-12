@@ -30,7 +30,10 @@ import Calendario from './app/Componets/calendario';
 import CorteUnas from './app/Componets/corteUnas';
 import BanoMascota from './app/Componets/banoMascota';
 import CortePelo from './app/Componets/cortePelo';
-import Profilaxis from './app/Componets/profilaxis'
+import Profilaxis from './app/Componets/profilaxis';
+import Paseo from './app/Componets/paseo';
+import Hotel from './app/Componets/hotel';
+import ServicioGuarderia from './app/Componets/servicioGuarderia';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -173,12 +176,42 @@ function vistaProfilaxis({ navigation }) {
   )
 }
 
+/**
+ * 
+ * Vista de paseo
+ */
+function vistaPaseo({ navigation }) {
+  return (
+    <Paseo navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de hotel
+ */
+function vistaHotel({ navigation }) {
+  return (
+    <Hotel navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de Guarderia
+ */
+function vistaServicioGuarderia({ navigation }) {
+  return (
+    <ServicioGuarderia navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="homeUno" headerMode="none">  
+        <Stack.Navigator initialRouteName="Calendario" headerMode="none">  
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -187,7 +220,7 @@ function App() {
         <Stack.Screen name="Etologia" component={Etology} />
         <Stack.Screen name="Nutricionista" component={Nutricion} />
         <Stack.Screen name="Urgencias" component={urgencias} />
-        <Stack.Screen name="cirujano" component={cirujan} />
+        <Stack.Screen name="cirujano" component={cirujan} />  
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
@@ -197,6 +230,9 @@ function App() {
         <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
         <Stack.Screen name="CortePelo" component={corteDePelo} />
         <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
+        <Stack.Screen name="Paseo" component={vistaPaseo} />
+        <Stack.Screen name="Hotel" component={vistaHotel} />
+        <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function profilaxis(props) {
+export default function hotel(props) {
     return (
         <View
             style={styles.margenesVista}>

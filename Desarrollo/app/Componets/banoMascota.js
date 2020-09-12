@@ -16,12 +16,12 @@ export default function corteUnas(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria')}}>
                         <Image
                             style={styles.iconocerrar}
                             source={require('../../assets/CerrarBlanco.svg')} />
                     </TouchableHighlight>
-                </View>
+                    </View>
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoetologia}
@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
         width: '27px',
         height: '27px',
     },
-
     entradaTexto: {
         position: 'relative',
         marginTop: '20%'

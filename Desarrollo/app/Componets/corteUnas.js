@@ -22,7 +22,6 @@ export default function corteUnas(props) {
                         source={require('../../assets/CerrarBlanco.svg')} />
                         </TouchableHighlight>
                 </View>
-
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoetologia}
