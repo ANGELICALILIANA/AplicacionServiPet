@@ -64,7 +64,7 @@ export default function registro(props){
 
 const styles = StyleSheet.create({    
     image: {
-      flex: "1",
+      flex: 1,
       position: "absolute",    
       resizeMode: "cover",
       justifyContent: "center",
@@ -84,27 +84,27 @@ const styles = StyleSheet.create({
       fontSize: 16,
       textAlign: "center",
       fontFamily: "nexa light",
-      marginTop: "10px"    
+      marginTop: '10px'    
     },
     imgLogo: {
       width: '320px',
       height: '140px',
-      marginLeft: "15px",
-      marginRight: "15px"
+      marginLeft: 15,
+      marginRight: 15
     },
     textlbl: {
       color: "#09B1B8",
       fontSize: 23,
       textAlign: "left",
       fontFamily: "nexa light",
-      marginLeft: "20px"
+      marginLeft: 15
     },
     Carrito:{
       width: '40px',
       height: '40px'
     },
     textInput:{
-      border: "#B4B4B4",      
+      borderColor: "#B4B4B4",      
       height: "50px",
       width: "90%",
       margin: "20px",

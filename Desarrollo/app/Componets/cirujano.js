@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
 
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#047D82',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
     },
 
     iconocirujia: {
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: '9pt',
-        flex: '1',
+        fontSize: 9,
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',

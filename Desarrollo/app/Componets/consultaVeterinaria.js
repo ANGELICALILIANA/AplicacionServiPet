@@ -20,9 +20,13 @@ export default function consultaVeterinaria(props) {
                     <Image
                         style={styles.imagenCarrito}
                         source={require('../../assets/Carrito.svg')} />
-                    <Image
-                        style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                    <View>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
+                            <Image
+                                style={styles.imagenMenu}
+                                source={require('../../assets/SideMenuVerde.svg')} />
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 <SearchBar
                 round
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
     },
     imagenvet: {
         width: '300px',
-        height: '170px',
+        height: '150px',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -115,16 +119,16 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        position:'relative',
+        width: 50,
+        height: '65px',
+        top: '-110%',
         left: '4%',
     },
     entradaTexto: {
@@ -134,12 +138,12 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#fff',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
         backgroundColor: '#047D82'
     },
     texto: {
         color: '#fff',
-        fontSize: '9pt',
+        fontSize: 13,
         margin: '1%'
     },
     search: {

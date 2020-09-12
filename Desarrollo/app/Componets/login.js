@@ -65,7 +65,7 @@ export default function login(props){
 
 const styles = StyleSheet.create({    
     image: {
-      flex: "1",
+      flex: 1,
       position: "absolute",    
       resizeMode: "cover",
       justifyContent: "center",
@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     imgLogo: {
       width: '320px',
       height: '140px',
-      marginLeft: "15px",
-      marginRight: "15px"
+      marginLeft: 15,
+      marginRight: 15
     },
     textlbl: {
       color: "#09B1B8",
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
       marginTop: '-100px'
     },
     textInput:{
-      border: "#B4B4B4",      
+      borderColor: "#B4B4B4",      
       height: "50px",
       width: "90%",
       margin: "20px",

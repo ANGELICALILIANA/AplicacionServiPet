@@ -53,12 +53,12 @@ export default function guarderia(props) {
                     <Button
                         title="PASEO"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '15px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: 15 }}>
                     </Button>
                     <Button
                         title="HOTEL"
                         titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '15px' }}>
+                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: 15 }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
-        fontSize: 'larger',
+        fontSize: 24,
         paddingTop: '5px',
     },
     margenesVista: {
@@ -142,8 +142,8 @@ const styles = StyleSheet.create({
         right: '4%',
     },
     imagenMenu: {
-        position: 'RELATIVE',
-        width: '50px',
+        position: 'relative',
+        width: 50,
         height: '65px',
         top: '-103%',
         left: '4%',
@@ -153,15 +153,15 @@ const styles = StyleSheet.create({
         marginTop: '10px',
     },
     borde: {
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
         color: 'white',
         width: '90%',
         textAlign: 'center',
         marginBottom: '3%',
-        fontWeight: 'bolder',
+        fontWeight: 'bold',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'white',
-        fontSize: 'x-small',
+        fontSize: 9,
         marginTop: '3%',
         marginBottom: '3%',
     },
