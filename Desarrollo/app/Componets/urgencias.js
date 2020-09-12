@@ -57,17 +57,20 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="URGENCIAS (TRIAGE)"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('Triage') }}>
                 </Button>
                 <Button
                     title="SINTOMAS DE ALARMA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'}}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('Sintomasperro') }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: '10.5pt'}}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}
+                    onPress={() => { props.navigation.navigate('Servicioambulancia') }}>
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>

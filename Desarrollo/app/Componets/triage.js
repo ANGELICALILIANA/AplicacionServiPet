@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function triaje(props) {
+export default function triage(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -27,28 +27,21 @@ export default function triaje(props) {
                     <Image
                         style={styles.iconoetologia}
                         source={require('../../assets/Cortedeuñas.svg')} />
-                    <Text style={styles.titulo}>CORTE DE UÑAS</Text>
+                    <Text style={styles.titulo}>TRIAGE</Text>
                 </View>
 
                 <Image
                     style={styles.imagenetologia}
-                    source={require('../../assets/CorteUñas.jpg')} />
+                    source={require('../../assets/Triage.jpg')} />
+
+                <Image
+                    style={styles.imagenetologia}
+                    source={require('../../assets/Triage2.png')} />
 
                 <View style={styles.Descripcion}>
-                    <Text style={styles.texto}>
-                        Por su salud y bienestar, es importante arreglar las
-                        uñas de nuestro amigo con regularidad. Debemos
-                        hacerlo con una correcta técnica y acostumbrarlo
-                        desde cachorro para que sea cómodo para
-                        nosotros y rutinario para él. Es conveniente,
-                        también, mantener recortado el pelo de sus patas,
-                        pues puede impedir que veamos unas uñas
-                        demasiado largas o heridas dolorosas.
-                </Text>
-
                     <View style={styles.Boton}>
                         <Button
-                            title="COMPRAR"
+                            title="Asignar Resultado"
                             titleStyle={{ color: "white", fontSize: '9pt' }}
                             buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
                         </Button>
@@ -148,7 +141,7 @@ const styles = StyleSheet.create({
 
     iconoetologia: {
         width: '80px',
-        height: '80px',
+        height: '65px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },

@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function triaje(props) {
+export default function sintomasperro(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -27,35 +27,21 @@ export default function triaje(props) {
                     <Image
                         style={styles.iconoetologia}
                         source={require('../../assets/Cortedeuñas.svg')} />
-                    <Text style={styles.titulo}>CORTE DE UÑAS</Text>
+                    <Text style={styles.titulo}>TRIAGE</Text>
                 </View>
 
                 <Image
                     style={styles.imagenetologia}
-                    source={require('../../assets/CorteUñas.jpg')} />
+                    source={require('../../assets/SintomasPerros.jpg')} />
 
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Por su salud y bienestar, es importante arreglar las
-                        uñas de nuestro amigo con regularidad. Debemos
-                        hacerlo con una correcta técnica y acostumbrarlo
-                        desde cachorro para que sea cómodo para
-                        nosotros y rutinario para él. Es conveniente,
-                        también, mantener recortado el pelo de sus patas,
-                        pues puede impedir que veamos unas uñas
-                        demasiado largas o heridas dolorosas.
+                    En el caso de los perros, hay que tener en cuenta que la falta de apetito, vomito, diarrea, dejar de tomar agua o cambios en su estado de ánimo son síntomas que pueden comprometer la vida del animal y, por ende, son considerados un motivo de alerta. 
+                    Es importante revisar que el color de las encías sea rosado, si es blanco o morado hay que dirigirse al servicio de urgencias.
+                    Cualquier tipo de intoxicación con los perros requiere manejo de urgencia. Se pueden presentar con fumigaciones o alimentos en mal estado. Los politraumatismos, es decir, lesiones graves provocadas por una pelea con otro perro, siempre serán motivo de alerta, al igual que las enfermedades degenerativas. 
                 </Text>
-
-                    <View style={styles.Boton}>
-                        <Button
-                            title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: '9pt' }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
-                        </Button>
-                    </View>
-
                 </View>
-
+                
             </ImageBackground>
         </View>
     )
@@ -148,7 +134,7 @@ const styles = StyleSheet.create({
 
     iconoetologia: {
         width: '80px',
-        height: '80px',
+        height: '65px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },

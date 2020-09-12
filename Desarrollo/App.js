@@ -20,6 +20,7 @@ import Etologia from './app/Componets/etologia';
 import Nutricionista from './app/Componets/nutricionista';
 import Cirujano from './app/Componets/cirujano';
 import Hometwo from "./app/Componets/hometwo.js";
+import Triage from "./app/Componets/triage.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import * as Font from 'expo-font';
 import { InputGroup, FormControl } from 'react-bootstrap';
@@ -30,7 +31,9 @@ import Calendario from './app/Componets/calendario';
 import CorteUnas from './app/Componets/corteUnas';
 import BanoMascota from './app/Componets/banoMascota';
 import CortePelo from './app/Componets/cortePelo';
-import Profilaxis from './app/Componets/profilaxis'
+import Profilaxis from './app/Componets/profilaxis';
+import Sintomasperro from './app/Componets/sintomasperro';
+import Servicioambulancia from './app/Componets/servicioambulancia';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -173,6 +176,24 @@ function vistaProfilaxis({ navigation }) {
   )
 }
 
+function triage({ navigation }) {
+  return (
+    <Triage navigation={navigation} />
+  )
+}
+
+function sintomasperro({ navigation }) {
+  return (
+    <Sintomasperro navigation={navigation} />
+  )
+}
+
+function servicioambulancia({ navigation }) {
+  return (
+    <Servicioambulancia navigation={navigation} />
+  )
+}
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -197,6 +218,9 @@ function App() {
         <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
         <Stack.Screen name="CortePelo" component={corteDePelo} />
         <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
+        <Stack.Screen name="Triage" component={triage} />
+        <Stack.Screen name="Sintomasperro" component={sintomasperro} />
+        <Stack.Screen name="Servicioambulancia" component={servicioambulancia} />
       </Stack.Navigator>
     </NavigationContainer>
   );
