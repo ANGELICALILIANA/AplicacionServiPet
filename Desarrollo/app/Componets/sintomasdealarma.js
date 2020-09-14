@@ -25,8 +25,8 @@ export default function vacunacion(props) {
                 <View style={styles.encabezado2}>
                 <Image
                     style={styles.iconovacunacion}
-                    source={require('../../assets/Icono vacunacion.svg')} />
-                <Text style={styles.titulo}>VACUNACIÓN Y DESPARACITACION</Text>
+                    source={require('../../assets/Iconosintomasdealarma3.svg')} />
+                <Text style={styles.titulo}>SINTOMAS DE ALARMA</Text>
                 </View>
 
                 <Image

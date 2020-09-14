@@ -38,6 +38,7 @@ import Profilaxis from './app/Componets/profilaxis';
 import Paseo from './app/Componets/paseo';
 import Hotel from './app/Componets/hotel';
 import ServicioGuarderia from './app/Componets/servicioGuarderia';
+import Sintomasdealarma from './app/Componets/sintomasdealarma';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -146,9 +147,10 @@ return(
 
 )
 }
-
-
-
+/**
+ * 
+ * Vista Crecimiento
+ */
 
 function vistaCrecimiento({navigation}){
 return(
@@ -156,7 +158,10 @@ return(
 
 )
 }
-
+/**
+ * 
+ * Vista vacunación
+ */
 function vistavacunacion({ navigation }) {
   return (
     <Vacunacion navigation={navigation} />
@@ -231,13 +236,24 @@ function vistaServicioGuarderia({ navigation }) {
     <ServicioGuarderia navigation={navigation} />
   )
 }
+/**
+ * 
+ * Vista de sintomas de alarma
+ */
+function vistasintomasdealarma({ navigation }) {
+  return (
+    <Sintomasdealarma navigation={navigation} />
+  )
+}
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="homeUno" headerMode="none"> 
+       <Stack.Navigator initialRouteName="Sintomasdealarma" headerMode="none">
+      {/*<Stack.Navigator initialRouteName="homeUno" headerMode="none"> */}
+     {/*  {<Stack.Navigator initialRouteName="Vacunacion" headerMode="none">} */} 
       {/*</Stack.Navigator><Stack.Navigator initialRouteName="Control" headerMode="none"> */}
      {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
       {/* <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none"> */}
@@ -262,6 +278,7 @@ function App() {
         <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
         <Stack.Screen name="CortePelo" component={corteDePelo} />
         <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
+        <Stack.Screen name="Sintomasdealarma" component={vistasintomasdealarma} />
         <Stack.Screen name="Paseo" component={vistaPaseo} />
         <Stack.Screen name="Hotel" component={vistaHotel} />
         <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
