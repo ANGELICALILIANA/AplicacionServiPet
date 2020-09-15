@@ -6,13 +6,13 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
-export default function vacunacion(props) {    
+export default function sintomasdealarmainicial(props) {    
     return (        
         <View
             style={styles.margenesVista}>
             <ImageBackground
                 source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
-                style={styles.imagenFondonutricion}>
+                style={styles.imagensintomasdealarma}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
@@ -24,18 +24,26 @@ export default function vacunacion(props) {
 
                 <View style={styles.encabezado2}>
                 <Image
-                    style={styles.iconovacunacion}
+                    style={styles.iconotelefono}
                     source={require('../../assets/Iconosintomasdealarma3.svg')} />
                 <Text style={styles.titulo}>SINTOMAS DE ALARMA</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencrecimiento}
-                    source={require('../../assets/vacunacion.jpg')} />
+                    style={styles.imagensintomasdealarmainicial}
+                    source={require('../../assets/sintomasdealarmainicial.jpg')} />
+                    <View style={styles.encabezado2}>
+                <Image
+                    style={styles.iconosintomas}
+                    source={require('../../assets/iconosintomasperrosgatos.svg')} />
+   
+                </View>
+
+                    
                 
                 <View style={styles.Descripcion}>
                 <Text style={styles.texto}>
-                Los animales son seres importantes para la humanidad y por ende para el desarrollo humano sostenible teniendo un papel relevante en el desarrollo emocional, afectivo y psicologico del individuo, la salud publica y la seguridad alimentaria.
+                En este espacio encontraras todo lo que necesitas saber sobre el posible estado de salud de tu fiel
                 </Text>
 
                 <View style={styles.Boton}>
@@ -54,7 +62,7 @@ export default function vacunacion(props) {
 };
 
 const styles = StyleSheet.create({
-    imagenFondonutricion: {
+    imagensintomasdealarma: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -62,10 +70,10 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencrecimiento: {
+    imagensintomasdealarmainicial: {
         paddingTop: '5px',
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -140,21 +148,26 @@ const styles = StyleSheet.create({
 
     },
 
-    iconovacunacion: {
-        width: '90px',
-        height: '90px',
+    iconotelefono: {
+        width: '73px',
+        height: '73px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
 
+iconosintomas: {
+    width: '120px',
+    height: '70px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+},
+
     texto: {
-        width: '90%',
-        color: '#444242',
-        fontSize: '9pt',
-        flex: '1',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignContent: 'center',
+        color: '#047D82',
+        textAlign: "center",
+        fontSize: '16pt',
+         
+        
     },
 
     Boton: {
