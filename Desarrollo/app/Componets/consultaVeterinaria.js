@@ -20,9 +20,13 @@ export default function consultaVeterinaria(props) {
                     <Image
                         style={styles.imagenCarrito}
                         source={require('../../assets/Carrito.svg')} />
-                    <Image
-                        style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                    <View>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
+                            <Image
+                                style={styles.imagenMenu}
+                                source={require('../../assets/SideMenuVerde.svg')} />
+                        </TouchableHighlight>
+                    </View>
                 </View>
                 <SearchBar
                 round
@@ -45,18 +49,18 @@ export default function consultaVeterinaria(props) {
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                 <Button
                     title="CONTROL"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: '20px', color: "white", width: '100px' }}>
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: 20, color: "white", width: 100, height: 50 }}>
                 </Button>
                 <Button
                     title="CRECIMIENTO Y DESARROLLO"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: '30px', color: "white", width: '100px'  }}>
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: 30, color: "white", width: 100  }}>
                 </Button>
                 <Button
                     title="VACUNACION Y DESPARASITACIÓN"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82',  margin: 'auto', borderRadius: '20px', color: "white", width: '110px' }}>
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{ backgroundColor: '#047D82',  margin: 'auto', borderRadius: 20, color: "white", width: 110 }}>
                 </Button>
                 </View>                                     
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -74,8 +78,8 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenvet: {
-        width: '300px',
-        height: '170px',
+        width: 300,
+        height: 150,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -89,16 +93,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     encabezado: {
-        height: '100px',
+        height: 100,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '80px',
+        width: 200,
+        height: 80,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -110,21 +114,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        position:'relative',
+        width: 50,
+        height: 65,
+        top: '-110%',
         left: '4%',
     },
     entradaTexto: {
@@ -134,12 +138,12 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#fff',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
         backgroundColor: '#047D82'
     },
     texto: {
         color: '#fff',
-        fontSize: '9pt',
+        fontSize: 13,
         margin: '1%'
     },
     search: {

@@ -27,14 +27,14 @@ export default function homeUno( props ) {
           <Button
             title="Registrate"
             titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: '156px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}
+            buttonStyle={{ backgroundColor: 'white', width: 156, margin: 'auto', borderRadius: 20, color: "white", margin: "auto" }}
             onPress={()=>{props.navigation.navigate('Registro')}}>
           </Button>
           <Button
             title='Echar un vistazo'
             type="clear"
             titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: 'fit-content', margin: 'auto', borderRadius: '20px', marginTop: '10px' }}
+            buttonStyle={{ backgroundColor: 'white', width: 156, margin: 'auto', borderRadius: 20, marginTop: 10 }}
              onPress={()=>{props.navigation.navigate('Hometwo')}}>
           </Button>
         </View>
@@ -53,15 +53,15 @@ const styles = StyleSheet.create({
   },
   imagenLogo: {
     position: 'relative',
-    width: '250px',
-    height: '400px',
+    width: 250,
+    height: 400,
     margin: 'auto',
   },
   imagenInicioSesion: {
-    marginTop: '-60px',
-    width: '50px',
-    height: '60px',
+    marginTop: -60,
+    width: 50,
+    height: 60,
     marginLeft: 'auto',
-    marginRight: '15px',
+    marginRight: 15,
   },
 });

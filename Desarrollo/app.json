@@ -19,8 +19,22 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "config":{
+        "googleMaps":{
+          "apiKey": "AIzaSyB8BCICErl1q1hR0UF4wAIMI5Rm4cNE1CA"
+        }
+      }
+    },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "config":{
+        "googleMaps":{
+          "apiKey": "AIzaSyB8BCICErl1q1hR0UF4wAIMI5Rm4cNE1CA",
+          "react-native": "react-native-web",      
+          "react-native-maps": "react-native-web-maps"
+        }
+      }
     }
   }
 }

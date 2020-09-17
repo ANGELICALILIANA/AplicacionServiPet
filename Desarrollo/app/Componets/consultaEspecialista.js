@@ -35,7 +35,7 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.png')} /> 
+                        source={require('../../assets/Especialista.jpeg')} /> 
                 </View>
                 <View>
                 <Image
@@ -57,20 +57,20 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="ETOLOGIA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
                 
                 <Button
                     title="NUTRICIONISTA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
@@ -89,19 +89,19 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPrincipal1: {
-        marginTop: '12px',
+        marginTop: 12,
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '180px',
+        height: 180,
     },
 
     imagenPrincipal2: {
-        marginTop: '8px',
+        marginTop: 8,
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
-        height: '60px',
+        height: 60,
     },
     cajaTexto: {
         backgroundColor: '#047D82',
@@ -110,14 +110,14 @@ const styles = StyleSheet.create({
     encabezado: {
         height: '12%',
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '190px',
-        height: '70px',
+        width: 190,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -129,20 +129,20 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
     imagenMenu: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         left: '4%',
     },
@@ -152,15 +152,15 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'white',
-        fontsize: '75%',
+        fontSize: 26,
         marginTop: '5%',
-        fontSize: '9pt',
+        fontSize: 9,
     },
     border: {    
         marginLeft: 'auto',
         marginRight: 'auto',
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
         color: 'white',
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
       },
     search: {
-        Top: '10%',
+        top: '10%',
         position: "absolute"
     },
 });

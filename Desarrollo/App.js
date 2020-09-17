@@ -28,6 +28,9 @@ import Crecimientodesarrollo from "./app/Componets/CrecimientoDesarrollo.js";
 import Vacunacion from "./app/Componets/vacunacion.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+import Contacto from "./app/Componets/contactenos";
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
+
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
 import Calendario from './app/Componets/calendario';
@@ -200,6 +203,11 @@ function vistaProfilaxis({ navigation }) {
   )
 }
 
+function contactenos({navigation}){
+  return(
+    <Contacto navigation={navigation}/>
+    )
+  }
 /**
  * 
  * Vista de paseo
@@ -268,6 +276,8 @@ function App() {
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="contactenos" component={contactenos} />
+        {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
         <Stack.Screen name="Control" component={vistaControl} />
         <Stack.Screen name="Crecimientodesarrollo" component={vistaCrecimiento} />
         <Stack.Screen name="Vacunacion" component={vistavacunacion} />

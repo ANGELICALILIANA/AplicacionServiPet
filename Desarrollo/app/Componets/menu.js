@@ -44,7 +44,7 @@ export default function menu(props){
                     <ListItemText style={{ color: '#fff'}} primary="Urgencia" />
                 </ListItem>
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
-                    <ListItemText style={{ color: '#fff'}} primary="Contactarnos" />
+                    <ListItemText style={{ color: '#fff'}} primary="Contactarnos"/>
                 </ListItem>
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
                     <ListItemText style={{ color: '#fff'}} primary="Social Media" />
@@ -59,9 +59,24 @@ export default function menu(props){
       }
       title="Cerrar Sesión" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: '300px', 
+      width: 300, 
       margin: 'auto',
-      borderRadius: '20px', 
+      borderRadius: 20, 
+      color: "white"}}></Button>
+
+<Button
+            icon={
+            <Icon
+            size={15}
+            color="white"
+            />
+      }
+      title="Contacto"
+      onPress={()=>{ props.navigation.navigate('contactenos')}} 
+      buttonStyle={{ backgroundColor: '#09B1B8', 
+      width: 300, 
+      margin: 'auto',
+      borderRadius: 20, 
       color: "white"}}></Button>
         </View>
     )
@@ -69,16 +84,16 @@ export default function menu(props){
 
 const styles = StyleSheet.create({    
     Logo:{
-      width: '220px',
-      height: '80px',
-      marginTop: '-130px',
-      marginBottom: '20px'
+      width: 220,
+      height: 80,
+      marginTop: -130,
+      marginBottom: 20
     },
     Cerrar:{
-        width: '40px',
-        height: '40px',
+        width: 40,
+        height: 40,
         marginLeft: 'auto',
-        marginTop: '-110px',
-        marginRight: '10px'
+        marginTop: -110,
+        marginRight: 10
     }
   });

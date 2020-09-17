@@ -37,8 +37,8 @@ export default function control(props) {
                 <View style={styles.Boton}>
                 <Button 
                     title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
                 </Button> 
                 </View>
                 </View>   
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
 
     imagencontrol: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '90%',
         height: '30%',
         marginLeft: 'auto',
@@ -75,29 +75,29 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: '80px',
+        height: 80,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: '#09B1B8',
         position: 'absolute',
     },
 
     encabezado2: {
-        paddingBottom: '1px',
+        paddingBottom: 1,
     },
 
     Descripcion: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '90%',
-        height: '80px',
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
 
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '70px',
+        width: 200,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -106,18 +106,18 @@ const styles = StyleSheet.create({
 
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
 
     iconocerrar: {
-        marginTop: '5px',
-        marginLeft: '5px',
+        marginTop: 5,
+        marginLeft: 5,
         position: 'absolute',
-        width: '27px',
-        height: '27px',
+        width: 27,
+        height: 27,
     },
 
     entradaTexto: {
@@ -128,12 +128,12 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#047D82',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
     },
 
     iconocontrol: {
-        width: '70px',
-        height: '70px',
+        width: 70,
+        height: 70,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -141,14 +141,14 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: '9pt',
-        flex: '1',
+        fontSize: 9,
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
     },
 
     Boton: {
-        paddingTop: '15px'
+        paddingTop: 15
     }
 });
