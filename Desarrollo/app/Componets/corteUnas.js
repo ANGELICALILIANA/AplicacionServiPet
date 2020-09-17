@@ -49,8 +49,8 @@ export default function corteUnas(props) {
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: '9pt' }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                            titleStyle={{ color: "white", fontSize: 9 }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
                         </Button>
                     </View>
 
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
 
     imagenetologia: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '90%',
         height: '30%',
         marginLeft: 'auto',
@@ -89,9 +89,9 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: '80px',
+        height: 80,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: '#09B1B8',
         position: 'absolute',
     },
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
     },
 
     Descripcion: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '100%',
-        height: '80px',
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',  
@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
 
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '70px',
+        width: 200,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
     },
 
     iconocerrar: {
-        marginTop: '5px',
-        marginLeft: '5px',
+        marginTop: 5,
+        marginLeft: 5,
         position: 'absolute',
-        width: '27px',
-        height: '27px',
+        width: 27,
+        height: 27,
     },
 
     entradaTexto: {
@@ -147,8 +147,8 @@ const styles = StyleSheet.create({
     },
 
     iconoetologia: {
-        width: '80px',
-        height: '80px',
+        width: 80,
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -164,6 +164,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: '15px'
+        paddingTop: 15
     }
 });

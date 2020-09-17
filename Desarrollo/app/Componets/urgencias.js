@@ -59,17 +59,17 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="URGENCIAS (TRIAGE)"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}>
                 </Button>
                 <Button
                     title="SINTOMAS DE ALARMA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}>
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '180px',
+        height: 180,
     },
 
     imagenPrincipal2: {
@@ -108,14 +108,14 @@ const styles = StyleSheet.create({
     encabezado: {
         height: '12%',
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '190px',
-        height: '70px',
+        width: 190,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {

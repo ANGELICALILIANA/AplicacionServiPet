@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { ImageBackground, StyleSheet, Text, View , Image, Modal, Linking, TouchableHighlight} from 'react-native';
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from './login';
+import * as Font from 'expo-font'
 
 export default function registro(props){
-    return(
+  const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }  
+  return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
       <View>
@@ -34,10 +52,10 @@ export default function registro(props){
       }
       title="Registrarse" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: '300px', 
+      width: 300, 
       margin: 'auto',
-      marginBottom: '8px', 
-      borderRadius: '20px', 
+      marginBottom: 8, 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Button
       icon={
@@ -49,9 +67,9 @@ export default function registro(props){
       }
       title="Registrarse con Google" 
       buttonStyle={{ backgroundColor: 'red', 
-      width: '300px', 
+      width: 300, 
       margin: 'auto', 
-      borderRadius: '20px', 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Text style={styles.text}>
         ¿Ya estoy registrado?
@@ -76,38 +94,37 @@ const styles = StyleSheet.create({
       fontSize: 16,
       textAlign: "center",
       fontWeight: "bold",
-      fontFamily: "nexa light",
+      fontFamily: "Nexa-Ligth",
       marginTop: "10px"    
     },
     textLink: {
       color: "blue",
       fontSize: 16,
       textAlign: "center",
-      fontFamily: "nexa light",
+      fontFamily: "Nexa-Ligth",
       marginTop: "10px"    
     },
     imgLogo: {
-      width: '320px',
-      height: '140px',
-      marginLeft: '5px',
+      width: 340,
+      height: 120,
+      marginLeft: 5,
       marginRight: 15
     },
     textlbl: {
       color: "#09B1B8",
       fontSize: 23,
       textAlign: "left",
-      fontFamily: "nexa light",
-      marginLeft: "20px"
+      fontFamily: "Nexa-Ligth",
+      marginLeft: 20
     },
     Cerrar:{
-      width: '40px',
-      height: '40px'
+      width: 40,
+      height: 40
     },
     textInput:{
-      borderColor: "#B4B4B4",      
-      height: "50px",
+      borderColor: "#B4B4B4",
       width: "90%",
-      margin: "20px",
+      margin: 10,
       fontSize: 23,
       textAlign: "center"
     }  
