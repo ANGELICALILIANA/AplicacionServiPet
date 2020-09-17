@@ -5,7 +5,10 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function cortePelo(props) {
+//Fondo
+//Icono 
+
+export default function sintomasGatos(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -17,38 +20,32 @@ export default function cortePelo(props) {
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
                     <View style={styles.iconocerrar}>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Urgencias') }}>
                             <Image
-                                style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconocorte}
-                        source={require('../../assets/CortedePelo.svg')} />
-                    <Text style={styles.titulo}>CORTE DE PELO</Text>
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/sintomasAlarma.svg')} />
+                    <Text style={styles.titulo}>SÍNTOMAS DE ALARMA (GATOS)</Text>
                 </View>
-
                 <Image
-                    style={styles.imagencorte}
-                    source={require('../../assets/CortePelo.jpg')} />
-
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/SintomasGatos.jpg')} />
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Lo más importante a la hora de cortarle el pelo a un perro que no se deja es relacionar la actividad con estímulos positivos.
-                        De esta forma, obligar al animal sujetándolo a la fuerza no será una opción en estos casos, puesto que esto solo le llevará a sentirse todavía más incómodo y, por ende, a querer escapar con más intensidad
+                        Los gatos enmascaran con facilidad los síntomas de sus enfermedades, por lo que podría ser difícil identificar si el animal está enfermo, a menos de que su dueño lo conozca a la perfección.
                         </Text>
-
-                    <View style={styles.Boton}>
-                        <Button
-                            title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
-                        </Button>
-                    </View>
-
+                    <Text style={styles.texto}>
+                        En los gatos pueden ser considerados signos de alarma: que no coma en un día, que deje de tomar agua y los cambios drásticos en su comportamiento.
+                        </Text>
+                    <Text style={styles.texto}>
+                        Las enfermedades más frecuentes en los felinos y que requieren atenciones de urgencia son los politraumatismos, que se presentan cuando el gato salta desde grandes alturas, y  la lipidosis hepática, que se refiere a la perdida del apetito repentina en animales que tienen obesidad.
+                        </Text>
                 </View>
 
             </ImageBackground>
@@ -65,12 +62,12 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorte: {
-        paddingTop: 5,
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: -40
     },
 
     cajaTexto: {
@@ -136,16 +133,18 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        color: '#047D82',
+        color: '#09B1B8',
         textAlign: "center",
-        fontSize: 24,
+        fontSize: 22,
+        fontWeight: 'bold',
     },
 
-    iconocorte: {
+    iconoprofilaxis: {
         width: 80,
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
@@ -156,9 +155,5 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
-    },
-
-    Boton: {
-        paddingTop: 15
     },
 });

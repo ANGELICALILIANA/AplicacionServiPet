@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function cortePelo(props) {
+export default function paseo(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -17,30 +17,31 @@ export default function cortePelo(props) {
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
                     <View style={styles.iconocerrar}>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Guarderia') }}>
                             <Image
-                                style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconocorte}
-                        source={require('../../assets/CortedePelo.svg')} />
-                    <Text style={styles.titulo}>CORTE DE PELO</Text>
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/iconopaseo.svg')} />
+                    <Text style={styles.titulo}>PASEO</Text>
                 </View>
-
                 <Image
-                    style={styles.imagencorte}
-                    source={require('../../assets/CortePelo.jpg')} />
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/Paseo.jpeg')} />
 
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Lo más importante a la hora de cortarle el pelo a un perro que no se deja es relacionar la actividad con estímulos positivos.
-                        De esta forma, obligar al animal sujetándolo a la fuerza no será una opción en estos casos, puesto que esto solo le llevará a sentirse todavía más incómodo y, por ende, a querer escapar con más intensidad
+                        Tu amada mascota debe estar en las manos adecuadas. Debes estar seguro que se trata de un paseador que no maltrate los perros y que se lleva bien con ellos.
+                        Además de estar preparado para manejar alguna situación o emergencia, como una pelea con otros caninos o primeros auxilios.
                         </Text>
-
+                    <Text>
+                        Servipet es tu mejor opción!
+                        </Text>
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
@@ -65,10 +66,9 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorte: {
-        paddingTop: 5,
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -141,11 +141,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
 
-    iconocorte: {
+    iconoprofilaxis: {
         width: 80,
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
@@ -159,6 +160,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
-    },
+        paddingTop: 5
+    }
 });

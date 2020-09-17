@@ -76,18 +76,21 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px',color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}
+                    onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold",  fontSize: '10.5pt'  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '95px', margin: 'auto', borderRadius: '15px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold"  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -105,15 +108,15 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPrincipal1: {
-        marginTop: '12px',
+        marginTop: 12,
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '170px',
+        height: 180,
     },
 
     imagenPrincipal2: {
-        paddingTop: '3%',
+        marginTop: 8,
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
@@ -126,14 +129,14 @@ const styles = StyleSheet.create({
     encabezado: {
         height: '12%',
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '190px',
-        height: '70px',
+        width: 190,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -145,7 +148,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {

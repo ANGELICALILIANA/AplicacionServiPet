@@ -5,7 +5,7 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function cortePelo(props) {
+export default function hotel(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -17,30 +17,34 @@ export default function cortePelo(props) {
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
                     <View style={styles.iconocerrar}>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Guarderia') }}>
                             <Image
-                                style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconocorte}
-                        source={require('../../assets/CortedePelo.svg')} />
-                    <Text style={styles.titulo}>CORTE DE PELO</Text>
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/iconohotel.svg')} />
+                    <Text style={styles.titulo}>HOTEL</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorte}
-                    source={require('../../assets/CortePelo.jpg')} />
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/Hotel.jpg')} />
 
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Lo más importante a la hora de cortarle el pelo a un perro que no se deja es relacionar la actividad con estímulos positivos.
-                        De esta forma, obligar al animal sujetándolo a la fuerza no será una opción en estos casos, puesto que esto solo le llevará a sentirse todavía más incómodo y, por ende, a querer escapar con más intensidad
+                        En Servipet nos preocupamos por el bienestar de tu mascota, por eso hemos desarrollado planes y actividades de esparcimiento para que nuestros mejores amigos disfruten su estadia con nosotros.
+                       </Text>
+                    <Text style={styles.texto}>
+                        Nuestra sede campestre les proporciona un ambiente de calma y tranquilidad, estamos ubicados en Cota-Cundinamarca.
+                         </Text>
+                    <Text style={styles.texto}>
+                        No te preocupes por esos días que debes estar fuera de la Ciudad, en Canes Club House estamos felices de cuidar a tu mejor amigo, además el disfrutará más de 10.000 mts 2 de parque campestre canino.
                         </Text>
-
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
@@ -65,10 +69,9 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorte: {
-        paddingTop: 5,
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -141,11 +144,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
 
-    iconocorte: {
+    iconoprofilaxis: {
         width: 80,
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
@@ -159,6 +163,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
-    },
+        paddingTop: 5
+    }
 });

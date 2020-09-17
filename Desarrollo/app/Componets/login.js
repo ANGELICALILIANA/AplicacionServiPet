@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import 'firebase/auth';
 import firebaseConfig from '../../firebase';
@@ -6,14 +6,26 @@ import { ImageBackground, StyleSheet, Text, View , Image, Modal, TouchableHighli
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import * as Font from 'expo-font'
 
-export default function login(props){
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
-
-  const submit = ()=>{
-    console.log(email,pass)
-  }
+export default function login(props){  
+  const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
@@ -35,10 +47,10 @@ export default function login(props){
       }
       title="Iniciar Sesión" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: '300px', 
+      width: 300, 
       margin: 'auto',
-      marginBottom: '8px', 
-      borderRadius: '20px', 
+      marginBottom: 8, 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Button
       icon={
@@ -50,9 +62,9 @@ export default function login(props){
       }
       title="Iniciar Sesión con Google" 
       buttonStyle={{ backgroundColor: 'red', 
-      width: '300px', 
+      width: 300, 
       margin: 'auto', 
-      borderRadius: '20px', 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Text style={styles.text}>
         ¿Aun no estás registrado?
@@ -77,19 +89,19 @@ const styles = StyleSheet.create({
       fontSize: 16,
       textAlign: "center",
       fontWeight: "bold",
-      fontFamily: "nexa light",
-      marginTop: "10px"    
+      fontFamily: "Nexa-Ligth",
+      marginTop: 10    
     },
     textLink: {
       color: "blue",
       fontSize: 16,
       textAlign: "center",
-      fontFamily: "nexa light",
-      marginTop: "10px"    
+      fontFamily: "Nexa-Ligth",
+      marginTop: 10    
     },
     imgLogo: {
-      width: '320px',
-      height: '140px',
+      width: 320,
+      height: 140,
       marginLeft: 15,
       marginRight: 15
     },
@@ -97,19 +109,19 @@ const styles = StyleSheet.create({
       color: "#09B1B8",
       fontSize: 23,
       textAlign: "left",
-      fontFamily: "nexa light",
-      marginLeft: "20px"
+      fontFamily: "Nexa-Ligth",
+      marginLeft: 20
     },
     Cerrar:{
-      width: '40px',
-      height: '40px',
-      marginTop: '-100px'
+      width: 40,
+      height: 40,
+      marginTop: -80
     },
     textInput:{
       borderColor: "#B4B4B4",      
-      height: "50px",
+      height: 50,
       width: "90%",
-      margin: "20px",
+      margin: 10,
       fontSize: 23,
       textAlign: "center"
     }  

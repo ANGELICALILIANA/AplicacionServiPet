@@ -4,52 +4,49 @@ import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
+//import Autocomplete from 'react-native-autocomplete-input';
 
-export default function cortePelo(props) {
-    return (
+export default function crecimientodesarrollo(props) {    
+    return (        
         <View
             style={styles.margenesVista}>
             <ImageBackground
                 source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
-                style={styles.imagenFondoEtologia}>
+                style={styles.imagenFondonutricion}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <View style={styles.iconocerrar}>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
-                            <Image
-                                style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
-                        </TouchableHighlight>
-                    </View>
-                </View>
-                <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconocorte}
-                        source={require('../../assets/CortedePelo.svg')} />
-                    <Text style={styles.titulo}>CORTE DE PELO</Text>
+                        style={styles.iconocerrar}
+                        source={require('../../assets/CerrarBlanco.svg')} />
+                </View>
+
+                <View style={styles.encabezado2}>
+                <Image
+                    style={styles.iconocrecimiento}
+                    source={require('../../assets/Crecimiento.svg')} />
+                <Text style={styles.titulo}>CRECIMIENTO Y DESARROLLO</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorte}
-                    source={require('../../assets/CortePelo.jpg')} />
-
+                    style={styles.imagencrecimiento}
+                    source={require('../../assets/imagenCrecimiento.jpg')} />
+                
                 <View style={styles.Descripcion}>
-                    <Text style={styles.texto}>
-                        Lo más importante a la hora de cortarle el pelo a un perro que no se deja es relacionar la actividad con estímulos positivos.
-                        De esta forma, obligar al animal sujetándolo a la fuerza no será una opción en estos casos, puesto que esto solo le llevará a sentirse todavía más incómodo y, por ende, a querer escapar con más intensidad
-                        </Text>
+                <Text style={styles.texto}>
+                El desarrollo de los cachorros involucra muchas etapas y avances conforme crecen hasta la edad adulta. Ya sea que hayas adoptado un cachorro y estés esperando a que se calme y deje de masticar todo, o que simplemente tengas curiosidad acerca de lo que pasa con los cachorros hasta convertirse en perros hechos y derechos
+                </Text>
 
-                    <View style={styles.Boton}>
-                        <Button
-                            title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
-                        </Button>
-                    </View>
-
+                <View style={styles.Boton}>
+                <Button 
+                    title="COMPRAR"
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                </Button> 
                 </View>
+
+                </View>   
 
             </ImageBackground>
         </View>
@@ -57,7 +54,7 @@ export default function cortePelo(props) {
 };
 
 const styles = StyleSheet.create({
-    imagenFondoEtologia: {
+    imagenFondonutricion: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -65,7 +62,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorte: {
+    imagencrecimiento: {
         paddingTop: 5,
         width: '90%',
         height: '30%',
@@ -97,12 +94,10 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: 5,
-        width: '100%',
+        width: '90%',
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
-        textAlign: 'justify',
-        marginLeft: '5%',
     },
 
     encabezadoLogoVerde: {
@@ -112,6 +107,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+
     },
 
     imagenCarrito: {
@@ -139,11 +135,14 @@ const styles = StyleSheet.create({
         color: '#047D82',
         textAlign: "center",
         fontSize: 24,
+       
+       
+
     },
 
-    iconocorte: {
-        width: 80,
-        height: 80,
+    iconocrecimiento: {
+        width: 70,
+        height: 70,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -160,5 +159,5 @@ const styles = StyleSheet.create({
 
     Boton: {
         paddingTop: 15
-    },
+    }
 });

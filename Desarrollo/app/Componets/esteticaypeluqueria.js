@@ -55,26 +55,26 @@ export default function esteticaypeluqueria(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="CORTE DE UÑAS"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', height: '30px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '5px' }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 80, height: 30, margin: 'auto', borderRadius: 30, color: "white", margin: "auto", fontSize: 8, marginRight: 5 }}
                         onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="BAÑO"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '5px' }}
-                        onPress={() => { props.navigation.navigate('BanoMascota') }}>
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 'auto', height: 30, borderRadius: 20, color: "white", margin: "auto", marginRight: 5 }}
+                        onPress={() => { props.navigation.navigate('BanoMascotas') }}>
                     </Button>
                     <Button
                         title="CORTE DE PELO"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '30px', color: "white", margin: "Auto", marginRight: '5px' }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 'auto', height: 30, borderRadius: 30, color: "white", margin: "auto", marginRight: 5 }}
                         onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
-                        titleStyle={{ color: "white", fontSize: 'small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '80px', margin: 'auto', height: '30px', borderRadius: '20px', color: "white", margin: "Auto" }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 'auto', height: 30, borderRadius: 20, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('Profilaxis') }}>
                     </Button>
                 </View>
@@ -128,16 +128,16 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     encabezado: {
-        height: '90px',
+        height: 90,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '80px',
+        width: 200,
+        height: 80,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '5%',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         backgroundColor: 'white',
     },
     numero: {
@@ -155,21 +155,21 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '55px',
-        height: '55px',
+        width: 55,
+        height: 55,
         top: '17%',
         right: '4%',
     },
     imagenMenu: {
         position: 'relative',
         width: 50,
-        height: '65px',
+        height: 65,
         top: '-103%',
         left: '4%',
     },
     entradaTexto: {
         position: 'relative',
-        marginTop: '10px',
+        marginTop: 10,
     },
     borde: {
         borderTopWidth: 2,
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     },
     organizacionBotones: {
         flexDirection: 'row',
-        marginBottom: '-4px',
+        marginBottom: -4,
         marginLeft: 'auto',
         marginRight: 'auto',
     },

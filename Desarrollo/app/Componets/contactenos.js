@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text,StyleSheet, View , Image, TouchableHighlight, ImageBackground} from 'react-native';
 import { SearchBar } from 'react-native-elements';
+// import Mapa from "./Map";
 
 export default function contactenos(props){       
     return(        
@@ -25,7 +26,10 @@ export default function contactenos(props){
                 placeholder="Lo que buscas para tu peludo"
                 style={styles.search}
                 />
-                <Text style={styles.titulo}>CONTACTENOS</Text>                
+                <Text style={styles.titulo}>CONTACTENOS</Text>
+                {/* <View>
+                <Mapa/>
+                </View>                                 */}
             </ImageBackground>
         </View>
     )
@@ -40,8 +44,8 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenvet: {
-        width: '300px',
-        height: '170px',
+        width: 300,
+        height: 170,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -55,16 +59,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     encabezado: {
-        height: '100px',
+        height: 100,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '70px',
+        width: 200,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
