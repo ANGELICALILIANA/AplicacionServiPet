@@ -57,6 +57,13 @@ export default function etologia(props) {
 };
 
 const styles = StyleSheet.create({
+    imagenFondoEtologia: {
+        position: 'absolute',
+        resizeMode: "cover",
+        justifyContent: "center",
+        width: '100%',
+        height: '100%',
+    },
     imagencorteuñas: {
         position: 'absolute',
         resizeMode: "cover",
