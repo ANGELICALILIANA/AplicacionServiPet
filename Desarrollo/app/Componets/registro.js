@@ -95,14 +95,14 @@ const styles = StyleSheet.create({
       textAlign: "center",
       fontWeight: "bold",
       fontFamily: "Nexa-Ligth",
-      marginTop: "10px"    
+      marginTop: 10    
     },
     textLink: {
       color: "blue",
       fontSize: 16,
       textAlign: "center",
       fontFamily: "Nexa-Ligth",
-      marginTop: "10px"    
+      marginTop: 10    
     },
     imgLogo: {
       width: 340,

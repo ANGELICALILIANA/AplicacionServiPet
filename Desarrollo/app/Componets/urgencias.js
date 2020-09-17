@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPrincipal1: {
-        marginTop: '12px',
+        marginTop: 12,
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
 
     imagenPrincipal2: {
-        marginTop: '8px',
+        marginTop: 8,
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',

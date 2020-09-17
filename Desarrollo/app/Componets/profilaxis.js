@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     },
 
     encabezado2: {
-        paddingBottom: '1px',
+        paddingBottom: 1,
     },
 
     Descripcion: {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
 
     iconocerrar: {
-        marginTop: '5px',
+        marginTop: 5,
         marginLeft: 5,
         position: 'absolute',
         width: 27,

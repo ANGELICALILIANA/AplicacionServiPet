@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
       borderColor: "#B4B4B4",      
       height: 50,
       width: "90%",
-      margin: "20px",
+      margin: 20,
       fontSize: 23,
       textAlign: "center"
     }  

@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
 
     encabezado2: {
-        paddingBottom: '1px',
+        paddingBottom: 1,
     },
 
     Descripcion: {

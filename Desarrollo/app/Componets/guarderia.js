@@ -52,17 +52,17 @@ export default function guarderia(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="PASEO"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bolder' }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 30, color: "white", margin: "auto", fontSize: 8, marginRight: 15 }}>
                     </Button>
                     <Button
                         title="HOTEL"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bolder' }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 20, color: "white", margin: "auto", marginRight: 15 }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bolder' }}
+                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 30, color: "white", margin: "auto"}}>
                     </Button>
                 </View>

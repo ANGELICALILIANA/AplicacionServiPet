@@ -86,14 +86,14 @@ const styles = StyleSheet.create({
     Logo:{
       width: 220,
       height: 80,
-      marginTop: '-130px',
+      marginTop: -130,
       marginBottom: 20
     },
     Cerrar:{
         width: 40,
         height: 40,
         marginLeft: 'auto',
-        marginTop: '-110px',
+        marginTop: -110,
         marginRight: 10
     }
   });

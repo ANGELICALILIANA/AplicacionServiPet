@@ -115,13 +115,13 @@ const styles = StyleSheet.create({
     Cerrar:{
       width: 40,
       height: 40,
-      marginTop: '-80px'
+      marginTop: -80
     },
     textInput:{
       borderColor: "#B4B4B4",      
       height: 50,
       width: "90%",
-      margin: "10px",
+      margin: 10,
       fontSize: 23,
       textAlign: "center"
     }  
