@@ -35,7 +35,7 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Urgencias.png')} /> 
+                        source={require('../../assets/Urgencias.jpg')} /> 
                 </View>
                 <View>
                 <Image
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
-        height: '55px',
+        height: 60,
     },
     cajaTexto: {
         backgroundColor: '#047D82',
@@ -133,15 +133,15 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
     imagenMenu: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         left: '4%',
     },
@@ -151,15 +151,15 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'white',
-        fontsize: '75%',
+        fontSize: 26,
         marginTop: '5%',
-        fontSize: '9pt',
+        fontSize: 9,
     },
     border: {    
         marginLeft: 'auto',
         marginRight: 'auto',
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
         color: 'white',
@@ -176,12 +176,8 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
       },
-      search: {
-
-        top: '9%',
-        width: '90%',
-        height: '25%',
-        marginRight: 'auto',
-        marginLeft: 'auto',
+    search: {
+        top: '10%',
+        position: "absolute"
     },
 });

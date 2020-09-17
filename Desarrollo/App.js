@@ -25,6 +25,9 @@ import Headerhometwo from "./app/Componets/headerHometwo.js";
 import * as Font from 'expo-font';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+import Contacto from "./app/Componets/contactenos";
+/*Saludos Soy Sergio Practicando en mi brazo*/ 
+
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
 import Calendario from './app/Componets/calendario';
@@ -191,6 +194,12 @@ function sintomasperro({ navigation }) {
 function servicioambulancia({ navigation }) {
   return (
     <Servicioambulancia navigation={navigation} />
+    )
+}
+
+function contactenos({navigation}){
+  return(
+    <Contacto navigation={navigation}/>
   )
 }
 
@@ -212,6 +221,8 @@ function App() {
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="contactenos" component={contactenos} />
+        {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
         <Stack.Screen name="Guarderia" component={vistaGuarderia} />
         <Stack.Screen name="Calendario" component={calendar} />
         <Stack.Screen name="CorteUnas" component={corteDeUnas} />

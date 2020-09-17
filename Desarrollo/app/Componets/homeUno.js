@@ -58,10 +58,10 @@ const styles = StyleSheet.create({
     margin: 'auto',
   },
   imagenInicioSesion: {
-    marginTop: '-60px',
-    width: '50px',
-    height: '60px',
+    marginTop: -60,
+    width: 50,
+    height: 60,
     marginLeft: 'auto',
-    marginRight: '15px',
+    marginRight: 15,
   },
 });

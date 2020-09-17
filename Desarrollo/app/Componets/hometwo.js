@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   imagenMenu: {
     marginTop: '-160px',
-    width: '50px',
+    width: 50,
     height: '50px',
     marginRight: 'auto',
   }
