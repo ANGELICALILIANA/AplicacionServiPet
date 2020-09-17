@@ -1,111 +1,154 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View , Image, Modal, Linking, TouchableHighlight} from 'react-native';
-import { Input } from 'react-native-elements';
+import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
-import { NavigationContainer } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Login from './login';
+import { Input } from 'react-native-elements';
+import { InputGroup, FormControl } from 'react-bootstrap';
+import { SearchBar } from 'react-native-elements';
+//import Autocomplete from 'react-native-autocomplete-input';
 
-export default function registro(props){
-    return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
-      <View>
-      <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/Carrito.svg')} style={styles.Carrito}></Image>
-      </TouchableHighlight>
-      </View>                                   
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
-      <Text style={styles.textlbl}>Nombre de usuario</Text>
-      <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Email</Text>
-      <Input style={styles.textInput}/>
-      <Text style={styles.textlbl}>Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Text style={styles.textlbl}>Confirmar Contraseña</Text>
-      <Input secureTextEntry={true}/>
-      <Button
-      icon={
-        <Icon
-          name="arrow-right"
-          size={15}
-          color="white"
-        />
-      }
-      title="Registrarse" 
-      buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: 300, 
-      margin: 'auto',
-      marginBottom: 8, 
-      borderRadius: 20, 
-      color: "white"}}></Button>
-      <Button
-      icon={
-        <Icon
-          name="arrow-right"
-          size={15}
-          color="white"
-        />
-      }
-      title="Registrarse con Google" 
-      buttonStyle={{ backgroundColor: 'red', 
-      width: 300, 
-      margin: 'auto', 
-      borderRadius: 20, 
-      color: "white"}}></Button>
-      <Text style={styles.text}>
-        ¿Ya estoy registrado?
-        <Text style={styles.textLink} onPress={()=>{props.navigation.navigate('Login')}}> Iniciar Sesión</Text>
-      </Text>      
-      </ImageBackground>              
-    </View>
+export default function control(props) {    
+    return (        
+        <View
+            style={styles.margenesVista}>
+            <ImageBackground
+                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                style={styles.imagenFondonutricion}>
+                <View style={styles.encabezado}>
+                    <Image
+                        style={styles.encabezadoLogoVerde}
+                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                    <Image
+                        style={styles.iconocerrar}
+                        source={require('../../assets/CerrarBlanco.svg')} />
+                </View>
+                <View style={styles.encabezado2}>
+                <Image
+                    style={styles.iconocontrol}
+                    source={require('../../assets/IconoControl.svg')} />
+                <Text style={styles.titulo}>CONTROL</Text>
+                </View>
+                <Image
+                    style={styles.imagencontrol}
+                    source={require('../../assets/Control.jpg')} />
+                <View style={styles.Descripcion}>
+                <Text style={styles.texto}>
+                Las mascotas deben ir al veterinario mínimo dos veces al año para tener ... de salud, el plan de vacunación, de alimentación y desparasitación, con ... la esterilización para evitar inconvenientes de proliferación sin control.
+                </Text>
+                <View style={styles.Boton}>
+                <Button 
+                    title="COMPRAR"
+                    titleStyle={{ color: "white", fontSize: '9pt' }}
+                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                </Button> 
+                </View>
+                </View>   
+            </ImageBackground>
+        </View>
     )
-}
+};
 
-const styles = StyleSheet.create({    
-    image: {
-      flex: 1,
-      position: "absolute",    
-      resizeMode: "cover",
-      justifyContent: "center",
-      width: '100%',
-      height: '100%',
+const styles = StyleSheet.create({
+    imagenFondonutricion: {
+        position: 'absolute',
+        resizeMode: "cover",
+        justifyContent: "center",
+        width: '100%',
+        height: '100%',
     },
-    text: {
-      color: "#B4B4B4",
-      fontSize: 16,
-      textAlign: "center",
-      fontWeight: "bold",
-      marginTop: 10    
+
+    imagencontrol: {
+        paddingTop: '5px',
+        width: '90%',
+        height: '30%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
-    textLink: {
-      color: "blue",
-      fontSize: 16,
-      textAlign: "center",
-      marginTop: 10    
+
+    cajaTexto: {
+        backgroundColor: '#047D82',
+        color: 'white',
     },
-    imgLogo: {
-      width: 320,
-      height: 140,
-      marginLeft: 15,
-      marginRight: 15
+
+    margenesVista: {
+        flex: 1,
+        justifyContent: 'center'
     },
-    textlbl: {
-      color: "#09B1B8",
-      fontSize: 23,
-      textAlign: "left",
-      marginLeft: 15
+
+    encabezado: {
+        height: '80px',
+        width: '100%',
+        top: '0px',
+        backgroundColor: '#09B1B8',
+        position: 'absolute',
     },
-    Carrito:{
-      width: 40,
-      height: 40
+
+    encabezado2: {
+        paddingBottom: '1px',
     },
-    textInput:{
-      borderColor: "#B4B4B4",      
-      height: 50,
-      width: "90%",
-      margin: 20,
-      fontSize: 23,
-      textAlign: "center"
-    }  
-  });
+
+    Descripcion: {
+        paddingTop: '5px',
+        width: '90%',
+        height: '80px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+
+    encabezadoLogoVerde: {
+        margin: 'auto',
+        width: '200px',
+        height: '70px',
+        position: 'relative',
+        marginTop: '1%',
+        margin: 'auto',
+
+    },
+
+    imagenCarrito: {
+        position: 'absolute',
+        width: '50px',
+        height: '60px',
+        top: '10%',
+        right: '4%',
+    },
+
+    iconocerrar: {
+        marginTop: '5px',
+        marginLeft: '5px',
+        position: 'absolute',
+        width: '27px',
+        height: '27px',
+    },
+
+    entradaTexto: {
+        position: 'relative',
+        marginTop: '20%'
+    },
+
+    titulo: {
+        color: '#047D82',
+        textAlign: "center",
+        fontSize: '24pt',
+    },
+
+    iconocontrol: {
+        width: '70px',
+        height: '70px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+
+    texto: {
+        width: '90%',
+        color: '#444242',
+        fontSize: '9pt',
+        flex: '1',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+    },
+
+    Boton: {
+        paddingTop: '15px'
+    }
+});

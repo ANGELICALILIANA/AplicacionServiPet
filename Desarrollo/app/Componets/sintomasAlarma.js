@@ -5,7 +5,11 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function cortePelo(props) {
+//Fondo
+//Icono 
+//Icono gatos y perros
+
+export default function sintomasAlarma(props) {
     return (
         <View
             style={styles.margenesVista}>
@@ -17,40 +21,37 @@ export default function cortePelo(props) {
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
                     <View style={styles.iconocerrar}>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('Urgencias') }}>
                             <Image
-                                style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
+                                source={require('../../assets/CerrarBlanco.svg')}
+                                style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconocorte}
-                        source={require('../../assets/CortedePelo.svg')} />
-                    <Text style={styles.titulo}>CORTE DE PELO</Text>
+                        style={styles.iconoprofilaxis}
+                        source={require('../../assets/sintomasAlarma.svg')} />
+                    <Text style={styles.titulo}>SÍNTOMAS DE ALARMA</Text>
                 </View>
-
                 <Image
-                    style={styles.imagencorte}
-                    source={require('../../assets/CortePelo.jpg')} />
-
+                    style={styles.imagenprofilaxis}
+                    source={require('../../assets/Hotel.jpg')} />
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Lo más importante a la hora de cortarle el pelo a un perro que no se deja es relacionar la actividad con estímulos positivos.
-                        De esta forma, obligar al animal sujetándolo a la fuerza no será una opción en estos casos, puesto que esto solo le llevará a sentirse todavía más incómodo y, por ende, a querer escapar con más intensidad
+                        EN ESTE ESPACIO ENCOTRARAS
+                        TODO LO QUE DESEAS SABER
+                        SOBRE EL POSIBLE ESTADO
+                        DE SALUD DE TU AMIGO FIEL.
                         </Text>
-
                     <View style={styles.Boton}>
                         <Button
-                            title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                            title="ECHA UN VISTAZO"
+                            titleStyle={{ color: "white", fontSize: '14pt',  fontWeight: 'bold',}}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: '10px', color: "white", width: '250px',}}>
                         </Button>
                     </View>
-
                 </View>
-
             </ImageBackground>
         </View>
     )
@@ -65,10 +66,9 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorte: {
-        paddingTop: 5,
+    imagenprofilaxis: {
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -84,21 +84,21 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: 80,
+        height: '80px',
         width: '100%',
-        top: 0,
+        top: '0px',
         backgroundColor: '#09B1B8',
         position: 'absolute',
     },
 
     encabezado2: {
-        paddingBottom: 1,
+        paddingBottom: '1px',
     },
 
     Descripcion: {
-        paddingTop: 5,
+        paddingTop: '5px',
         width: '100%',
-        height: 80,
+        height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
@@ -107,8 +107,8 @@ const styles = StyleSheet.create({
 
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: 200,
-        height: 70,
+        width: '200px',
+        height: '70px',
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -116,18 +116,18 @@ const styles = StyleSheet.create({
 
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
+        width: '50px',
+        height: '60px',
         top: '10%',
         right: '4%',
     },
 
     iconocerrar: {
-        marginTop: 5,
-        marginLeft: 5,
+        marginTop: '5px',
+        marginLeft: '5px',
         position: 'absolute',
-        width: 27,
-        height: 27,
+        width: '27px',
+        height: '27px',
     },
 
     entradaTexto: {
@@ -136,29 +136,33 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        color: '#047D82',
+        color: '#09B1B8',
         textAlign: "center",
-        fontSize: 24,
+        fontSize: '22pt',
+        fontWeight: 'bold',
     },
 
-    iconocorte: {
-        width: 80,
-        height: 80,
+    iconoprofilaxis: {
+        width: '80px',
+        height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
         width: '90%',
-        color: '#444242',
-        fontSize: 9,
-        flex: 1,
+        color: '#047D82',
+        fontSize: '16pt',
+        flex: '1',
         flexDirection: 'column',
-        justifyContent: 'center',
         alignContent: 'center',
+        textAlign: "center",
     },
 
     Boton: {
-        paddingTop: 15
-    },
+        paddingTop: '5px',
+        marginRight: '5%',
+        alignContent: 'center',
+    }
 });

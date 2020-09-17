@@ -63,7 +63,7 @@ export default function esteticaypeluqueria(props) {
                         title="BAÑO"
                         titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 'auto', height: 30, borderRadius: 20, color: "white", margin: "auto", marginRight: 5 }}
-                        onPress={() => { props.navigation.navigate('BanoMascota') }}>
+                        onPress={() => { props.navigation.navigate('BanoMascotas') }}>
                     </Button>
                     <Button
                         title="CORTE DE PELO"

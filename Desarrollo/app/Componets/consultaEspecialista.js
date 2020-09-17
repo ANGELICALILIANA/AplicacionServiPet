@@ -66,7 +66,6 @@ export default function consultaEspecialista(props) {
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
                     buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
-
                 </Button>
                 <Button
                     title="CIRUJANO"

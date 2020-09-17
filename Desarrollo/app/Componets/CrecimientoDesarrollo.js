@@ -4,14 +4,15 @@ import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
+//import Autocomplete from 'react-native-autocomplete-input';
 
-export default function etologia(props) {    
+export default function crecimientodesarrollo(props) {    
     return (        
         <View
             style={styles.margenesVista}>
             <ImageBackground
                 source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
-                style={styles.imagenFondoEtologia}>
+                style={styles.imagenFondonutricion}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
@@ -23,41 +24,37 @@ export default function etologia(props) {
 
                 <View style={styles.encabezado2}>
                 <Image
-                    style={styles.iconocorteuñas}
-                    source={require('../../assets/Etologia.svg')} />
-                <Text style={styles.titulo}>ETOLOGIA</Text>
+                    style={styles.iconocrecimiento}
+                    source={require('../../assets/Crecimiento.svg')} />
+                <Text style={styles.titulo}>CRECIMIENTO Y DESARROLLO</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorteuñas}
-                    source={require('../../assets/Etologia.jpg')} />
+                    style={styles.imagencrecimiento}
+                    source={require('../../assets/imagenCrecimiento.jpg')} />
                 
                 <View style={styles.Descripcion}>
                 <Text style={styles.texto}>
-                Las ideas fundamentales de la etología es la 
-                existencia de pautas de acción modal (PAM). Las 
-                PAM son comportamientos estereotipados que 
-                ocurren en una secuencia rígida, en situaciones 
-                determinadas como respuesta a un estímulo 
-                concreto. Una especie de “reflejo comportamental” 
-                que ocurre de forma inevitable y siempre de 
-                la misma forma.
+                El desarrollo de los cachorros involucra muchas etapas y avances conforme crecen hasta la edad adulta. Ya sea que hayas adoptado un cachorro y estés esperando a que se calme y deje de masticar todo, o que simplemente tengas curiosidad acerca de lo que pasa con los cachorros hasta convertirse en perros hechos y derechos
                 </Text>
+
                 <View style={styles.Boton}>
                 <Button 
                     title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                    titleStyle={{ color: "white", fontSize: '9pt' }}
+                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
                 </Button> 
                 </View>
+
                 </View>   
+
             </ImageBackground>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    imagencorteuñas: {
+    imagenFondonutricion: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -65,8 +62,8 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorteuñas: {
-        paddingTop: 5,
+    imagencrecimiento: {
+        paddingTop: '5px',
         width: '90%',
         height: '30%',
         marginLeft: 'auto',
@@ -84,29 +81,29 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: 80,
+        height: '80px',
         width: '100%',
-        top: 0,
+        top: '0px',
         backgroundColor: '#09B1B8',
         position: 'absolute',
     },
 
     encabezado2: {
-        paddingBottom: 1,
+        paddingBottom: '1px',
     },
 
     Descripcion: {
-        paddingTop: 5,
+        paddingTop: '5px',
         width: '90%',
-        height: 80,
+        height: '80px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
 
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: 200,
-        height: 70,
+        width: '200px',
+        height: '70px',
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
@@ -115,18 +112,18 @@ const styles = StyleSheet.create({
 
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
+        width: '50px',
+        height: '60px',
         top: '10%',
         right: '4%',
     },
 
     iconocerrar: {
-        marginTop: 5,
-        marginLeft: 5,
+        marginTop: '5px',
+        marginLeft: '5px',
         position: 'absolute',
-        width: 27,
-        height: 27,
+        width: '27px',
+        height: '27px',
     },
 
     entradaTexto: {
@@ -137,12 +134,15 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#047D82',
         textAlign: "center",
-        fontSize: 24,
+        fontSize: '24pt',
+       
+       
+
     },
 
-    iconoetologia: {
-        width: 80,
-        height: 80,
+    iconocrecimiento: {
+        width: '70px',
+        height: '70px',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -150,14 +150,14 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
-        flex: 1,
+        fontSize: '9pt',
+        flex: '1',
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
     },
 
     Boton: {
-        paddingTop: 15
+        paddingTop: '15px'
     }
 });

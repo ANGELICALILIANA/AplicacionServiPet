@@ -16,13 +16,14 @@ export default function corteUnas(props) {
                     <Image
                         style={styles.encabezadoLogoVerde}
                         source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                        <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
-                    <Image
-                        style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                    <View style={styles.iconocerrar}>
+                        <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
+                            <Image
+                                style={styles.iconocerrar}
+                                source={require('../../assets/CerrarBlanco.svg')} />
                         </TouchableHighlight>
+                    </View>
                 </View>
-
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoetologia}
@@ -106,8 +107,8 @@ const styles = StyleSheet.create({
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
-        textAlign: 'justify',  
-        marginLeft: '5%',  
+        textAlign: 'justify',
+        marginLeft: '5%',
     },
 
     encabezadoLogoVerde: {
