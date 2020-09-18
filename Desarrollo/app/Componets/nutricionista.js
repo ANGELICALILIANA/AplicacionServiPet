@@ -34,7 +34,7 @@ export default function nutricionista(props) {
                     source={require('../../assets/Nutricionista.jpg')} />
                 
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
+                <Text style={styles.entradaTexto}>
                 Las ideas fundamentales de la etología es la existencia de 
                 pautas de acción modal (PAM). Las PAM son comportamientos 
                 estereotipados que ocurren en una secuencia rígida, en 
@@ -47,7 +47,7 @@ export default function nutricionista(props) {
                 <Button 
                     title="COMPRAR"
                     titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                    buttonStyle={{  backgroundColor: '#047D82',  marginLeft: 'auto', marginRight: 'auto', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
                 </Button> 
                 </View>
 
@@ -132,8 +132,15 @@ const styles = StyleSheet.create({
     },
 
     entradaTexto: {
-        position: 'relative',
-        marginTop: '20%'
+        position: "relative",
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontSize: 26,
+        marginTop: '5%',
+        fontSize: 9,
     },
 
     titulo: {

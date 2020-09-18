@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: '80px',
+        height: 80,
         width: '100%',
         top: 0 ,
         backgroundColor: '#09B1B8',
@@ -141,14 +141,14 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: '9pt',
-        flex: '1',
+        fontSize: 9,
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
     },
 
     Boton: {
-        paddingTop: '15px'
+        paddingTop: 15,
     }
 });

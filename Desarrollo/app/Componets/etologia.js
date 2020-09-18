@@ -1,11 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
+import * as Font from 'expo-font'
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-export default function etologia(props) {    
+export default function etologia(props) {   
+    
+    const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+            'Nexa-Bold': require('../../assets/fonts/NexaBold.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }
+
     return (        
         <View
             style={styles.margenesVista}>
@@ -23,17 +44,17 @@ export default function etologia(props) {
 
                 <View style={styles.encabezado2}>
                 <Image
-                    style={styles.iconocorteuñas}
+                    style={styles.iconoetologia}
                     source={require('../../assets/Etologia.svg')} />
                 <Text style={styles.titulo}>ETOLOGIA</Text>
                 </View>
 
                 <Image
-                    style={styles.imagencorteuñas}
+                    style={styles.imagenetologia}
                     source={require('../../assets/Etologia.jpg')} />
                 
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
+                <Text style={styles.entradaTexto}>
                 Las ideas fundamentales de la etología es la 
                 existencia de pautas de acción modal (PAM). Las 
                 PAM son comportamientos estereotipados que 
@@ -47,7 +68,7 @@ export default function etologia(props) {
                 <Button 
                     title="COMPRAR"
                     titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                    buttonStyle={{  backgroundColor: '#047D82', marginLeft: 'auto', marginRight: 'auto', borderRadius: 10, color: "white", width: 100 }}>
                 </Button> 
                 </View>
                 </View>   
@@ -57,7 +78,7 @@ export default function etologia(props) {
 };
 
 const styles = StyleSheet.create({
-    imagencorteuñas: {
+    imagenetologia: {
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",
@@ -65,7 +86,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagencorteuñas: {
+    imagenetologia: {
         paddingTop: 5,
         width: '90%',
         height: '30%',
@@ -130,8 +151,15 @@ const styles = StyleSheet.create({
     },
 
     entradaTexto: {
-        position: 'relative',
-        marginTop: '20%'
+        position: "relative",
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontSize: 26,
+        marginTop: '5%',
+        fontSize: 9,
     },
 
     titulo: {
@@ -158,6 +186,17 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
-    }
+        paddingTop: 15,
+        justifyContent: "center",
+    },
+    
+    imagenFondoEtologia: {
+        position: 'absolute',
+        resizeMode: "cover",
+        justifyContent: "center",
+        width: '100%',
+        height: '100%',
+    },
+
+
 });

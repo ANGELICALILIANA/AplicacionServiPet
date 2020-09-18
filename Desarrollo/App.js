@@ -23,14 +23,13 @@ import Hometwo from "./app/Componets/hometwo.js";
 import Triage from "./app/Componets/triage.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
 import * as Font from 'expo-font';
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
 import Control from "./app/Componets/Control.js"
 import Crecimientodesarrollo from "./app/Componets/CrecimientoDesarrollo.js";
 import Vacunacion from "./app/Componets/vacunacion.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
 import Contacto from "./app/Componets/contactenos";
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
+
 
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';

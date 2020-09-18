@@ -19,6 +19,7 @@ export default function consultaEspecialista(props) {
     const loadFonts = async () => {
         await Font.loadAsync({
             'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+            'Nexa-Bold': require('../../assets/fonts/NexaBold.otf'),
         });
         setFontsLoaded(true);
     }
@@ -55,7 +56,7 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.jpeg')} /> 
+                        source={require('../../assets/Especialista.png')} /> 
                 </View>
                 <View>
                 <Image

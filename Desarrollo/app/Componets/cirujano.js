@@ -34,7 +34,7 @@ export default function cirujano(props) {
                     source={require('../../assets/Cirugia.jpg')} />
                 
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
+                <Text style={styles.entradaTexto}>
                 La salud de las mascotas debe ser una prioridad para sus 
                 propietarios y por ello, además de costear cualquier 
                 intervención quirúrgica, también es recomendable confiar 
@@ -46,7 +46,7 @@ export default function cirujano(props) {
                 <Button 
                     title="COMPRAR"
                     titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                    buttonStyle={{  backgroundColor: '#047D82',  marginLeft: 'auto', marginRight: 'auto', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
                 </Button> 
                 </View>
 
@@ -131,8 +131,15 @@ const styles = StyleSheet.create({
     },
 
     entradaTexto: {
-        position: 'relative',
-        marginTop: '20%'
+        position: "relative",
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontSize: 26,
+        marginTop: '5%',
+        fontSize: 9,
     },
 
     titulo: {
