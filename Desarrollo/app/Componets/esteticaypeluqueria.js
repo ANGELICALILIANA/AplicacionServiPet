@@ -56,30 +56,33 @@ export default function esteticaypeluqueria(props) {
                     <Button
                         title="CORTE DE UÑAS"
                         titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 90, height: 40, margin: 'auto', borderRadius: 25, color: "white", margin: "auto"}}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 90, height: 40, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="BAÑO"
-                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold'}}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 90, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('BanoMascotas') }}>
                     </Button>
                     <Button
                         title="CORTE DE PELO"
-                        titleStyle={{color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 90, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('CorteUnas') }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
                         titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
-                        buttonStyle={{backgroundColor: '#047D82', width: 90, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 90, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('Profilaxis') }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
-                    <Text style={styles.numero}>300 209 9929</Text>
+                    {/* <Text style={styles.numero}>300 209 9929</Text> */}
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
                 </View>
             </ImageBackground>
         </View >
@@ -188,7 +191,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
     },
-    
+
     margenesTexto: {
         width: '90%',
         alignContent: 'center',
@@ -198,7 +201,7 @@ const styles = StyleSheet.create({
         fontSize: 9,
         marginTop: '3%',
         marginBottom: '3%',
-        justifyContent: 'center',   
+        justifyContent: 'center',
     },
 
     organizacionBotones: {
@@ -211,6 +214,14 @@ const styles = StyleSheet.create({
         width: '90%',
         marginRight: 'auto',
         marginLeft: 'auto',
+    },
+
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });
 
