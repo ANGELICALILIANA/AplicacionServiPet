@@ -125,6 +125,8 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         fontSize: 22,
+        height: 40,
+        textAlign: 'center',
     },
     margenesVista: {
         flex: 1,
@@ -186,6 +188,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
     },
+    
     margenesTexto: {
         width: '90%',
         alignContent: 'center',
