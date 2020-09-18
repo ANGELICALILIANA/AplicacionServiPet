@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
 
     Descripcion: {
-        paddingTop: 5,
+        paddingTop:5,
         width: '100%',
         height: 80,
         marginLeft: 'auto',
@@ -157,6 +157,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
+        paddingTop: 15,
     }
 });

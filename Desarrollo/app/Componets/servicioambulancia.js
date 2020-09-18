@@ -149,6 +149,6 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
+        paddingTop: 15,
     }
 });
