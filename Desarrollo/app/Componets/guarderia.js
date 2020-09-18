@@ -10,21 +10,21 @@ export default function guarderia(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')}
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')}
                     />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <View>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
                             <Image
                                 style={styles.imagenMenu}
-                                source={require('../../assets/SideMenuVerde.svg')} />
+                                source={require('../../assets/IconosPng/SideMenu.png')} />
                         </TouchableHighlight>
                     </View>
                 </View>
@@ -75,6 +75,7 @@ export default function guarderia(props) {
 };
 
 const styles = StyleSheet.create({
+
     imagenFondoPeluqueriayEstetica: {
         position: 'absolute',
         resizeMode: "cover",
@@ -116,12 +117,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        margin: 'auto',
+        marginLeft: '21%',
         width: 200,
         height: 80,
         position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        marginTop: '3%',
     },
     piedepagina: {
         width: '100%',
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 55,
         height: 55,
-        top: '17%',
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
