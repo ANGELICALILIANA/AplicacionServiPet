@@ -14,12 +14,12 @@ export default function homeUno( props ) {
             <TouchableHighlight onPress={()=>{ props.navigation.navigate('Login')}}>
               <Image
                 style={styles.imagenInicioSesion}
-                source={require('../../assets/IniciarSesion.svg')} 
+                source={require('../../assets/IconosPng/IniciarSesion.png')} 
                 />
             </TouchableHighlight>
           </View>
           <Image
-            source={require('../../assets/LogoBlancoVertical.svg')}
+            source={require('../../assets/LogosServipet/LogoBlancoVertical.png')}
             style={styles.imagenLogo}>
           </Image>
           <Button
@@ -49,14 +49,18 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  
   imagenLogo: {
     position: 'relative',
     width: 250,
     height: 400,
     margin: 'auto',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
+
   imagenInicioSesion: {
-    marginTop: -60,
+    marginTop: -100,
     width: 50,
     height: 60,
     marginLeft: 'auto',

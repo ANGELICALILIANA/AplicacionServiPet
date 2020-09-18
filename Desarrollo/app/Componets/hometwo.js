@@ -8,7 +8,7 @@ function Apphometwo(props) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoVerde.png')} style={styles.image}>
-        {/* <View>
+     {/*    <View>
         <TouchableHighlight onPress={() => { props.navigation.navigate('Menu')}}>
         <Image source={require('../../assets/IconosPng/SideMenu.png')} style={styles.imagenMenu}></Image>
         </TouchableHighlight>
@@ -17,31 +17,31 @@ function Apphometwo(props) {
         <Button
           title="ESTETICA Y PELUQUERIA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 50, marginRight: 50, borderRadius: 8 }}
+          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 'auto', marginRight: 'auto', borderRadius: 8 }}
           onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
         </Button>
         <Button
           title="CONSULTA VETERINARIA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 50, marginRight: 50, borderRadius: 8, marginTop: 12 }}
+          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 'auto', marginRight: 'auto', borderRadius: 8, marginTop: 12 }}
           onPress={() => { props.navigation.navigate('ConsultaVeterinaria') }}>
         </Button>
         <Button
           title="CONSULTA ESPECIALISTA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 50, marginRight: 50, borderRadius: 8, marginTop: 12 }}
+          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 'auto', marginRight: 'auto', borderRadius: 8, marginTop: 12 }}
           onPress={() => { props.navigation.navigate('ConsultaEspecialista') }}>
         </Button>
         <Button
           title="GUARDERIA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 50, marginRight: 50, borderRadius: 8, marginTop: 12 }}
+          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 'auto', marginRight: 'auto', borderRadius: 8, marginTop: 12 }}
           onPress={() => { props.navigation.navigate('Guarderia') }}>
         </Button>
         <Button   
           title="URGENCIAS"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
-          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 50, marginRight: 50, borderRadius: 8, marginTop: 12 }}
+          buttonStyle={{ backgroundColor: 'white', width: 250, marginLeft: 'auto', marginRight: 'auto', borderRadius: 8, marginTop: 12 }}
           onPress={() => { props.navigation.navigate('Urgencias') }}>
         </Button>
       </ImageBackground>
