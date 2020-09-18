@@ -11,21 +11,21 @@ export default function cirujano(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondocirujia}>
                 <View style={styles.encabezado}>
                     <Image
-                        style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
-                    <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                 </View>
 
                 <View style={styles.encabezado2}>
                 <Image
+                        style={styles.encabezadoLogoVerde}
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal-01.png')} />
+                <Image
                     style={styles.iconocirujia}
-                    source={require('../../assets/Cirujano.svg')} />
+                    source={require('../../assets/IconosPng/Cirujano.png')} />
                 <Text style={styles.titulo}>CIRUJANO</Text>
                 </View>
 
@@ -149,8 +149,8 @@ const styles = StyleSheet.create({
     },
 
     iconocirujia: {
-        width: 80,
-        height: 80,
+        width: 140,
+        height: 140,
         marginLeft: 'auto',
         marginRight: 'auto',
     },

@@ -32,7 +32,7 @@ export default function consultaEspecialista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.fondoVerdeClaro}>
                 <View style={styles.encabezado}>
                     <Image

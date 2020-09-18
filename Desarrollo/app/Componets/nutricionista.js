@@ -11,7 +11,7 @@ export default function nutricionista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondonutricion}>
                 <View style={styles.encabezado}>
                     <Image

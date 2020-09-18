@@ -31,7 +31,7 @@ export default function etologia(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
