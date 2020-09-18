@@ -37,13 +37,13 @@ export default function consultaEspecialista(props) {
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/SideMenu.png')} />
                 </View>
                 <View>
                 <SearchBar
@@ -77,20 +77,20 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 5, height: 50, borderRadius: 25,color: "white" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
@@ -134,13 +134,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         position: 'absolute',
     },
-    encabezadoLogoVerde: {
-        margin: 'auto',
+    encabezadoLogoVerde: {        
         width: 190,
         height: 70,
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        marginTop: '5%',
+        marginLeft: 80,
+        marginRight: 80 
 
     },
     piedepagina: {
@@ -154,29 +153,23 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
-        position: "relative",
-        position: 'absolute',
+        position:'relative',
         width: 50,
-        height: 60,
-        top: '10%',
+        height: 65,
+        top: -65,
         left: '4%',
     },
     entradaTexto: {
-        position: "relative",
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontSize: 26,
-        marginTop: '5%',
-        fontSize: 9,
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     border: {   
         position: "relative", 
@@ -186,9 +179,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
+        marginBottom: 10,
         color: 'white',
         width: '90%',
-        textAlign: 'center',
+        textAlign: 'center'
     },
     margenesVista: {
         flex: 1,
@@ -205,5 +199,11 @@ const styles = StyleSheet.create({
         top: '10%',
         position: "absolute"
     },
+    titulo: {
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 24,
+        backgroundColor: '#047D82'
+    }
 
 });

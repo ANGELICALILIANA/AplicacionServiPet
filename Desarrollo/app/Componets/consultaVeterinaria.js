@@ -11,21 +11,20 @@ export default function consultaVeterinaria(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerde.svg')}
+                source={require('../../assets/FondosPng/FondoVerde.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <View>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
-                            <Image
-                                style={styles.imagenMenu}
-                                source={require('../../assets/SideMenuVerde.svg')} />
-                        </TouchableHighlight>
+                        <Image
+                            style={styles.imagenMenu}
+                            source={require('../../assets/IconosPng/SideMenu.png')} 
+                            onPress={() => { props.navigation.navigate('Menu') }}/>
                     </View>
                 </View>
                 <SearchBar
@@ -46,21 +45,24 @@ export default function consultaVeterinaria(props) {
                 sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. 
                 Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
                 </Text>
+                <Text style={styles.border}>
+                    ADQUIERE NUESTRO SERVICIOS DE
+                </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                 <Button
                     title="CONTROL"
-                    titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: 20, color: "white", width: 100, height: 50 }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}>
                 </Button>
                 <Button
                     title="CRECIMIENTO Y DESARROLLO"
-                    titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: 30, color: "white", width: 100  }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50  }}>
                 </Button>
                 <Button
                     title="VACUNACION Y DESPARASITACIÓN"
-                    titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{ backgroundColor: '#047D82',  margin: 'auto', borderRadius: 20, color: "white", width: 110 }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82',  margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}>
                 </Button>
                 </View>                                     
                 <Text style={styles.piedepagina}>3002099929</Text>
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
     },
     imagenvet: {
         width: 300,
-        height: 150,
+        height: 230,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -100,12 +102,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        margin: 'auto',
-        width: 200,
-        height: 80,
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        width: 190,
+        height: 70,
+        marginTop: '8%',
+        marginLeft: 80,
+        marginRight: 80
 
     },
     piedepagina: {
@@ -119,17 +120,17 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '30%',
         right: '4%',
     },
     imagenMenu: {
         position:'relative',
         width: 50,
         height: 65,
-        top: '-110%',
-        left: '4%',
+        top: -70,
+        left: '4%'
     },
     entradaTexto: {
         position: 'relative',
@@ -143,10 +144,24 @@ const styles = StyleSheet.create({
     },
     texto: {
         color: '#fff',
-        fontSize: 13,
-        margin: '1%'
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     search: {
         position: "absolute"
+    },
+    border: {   
+        position: "relative", 
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
+        borderBottomColor: 'white',
+        borderTopColor: 'white',
+        marginBottom: 10,
+        color: 'white',
+        width: '90%',
+        textAlign: 'center',
     }
 });

@@ -27,13 +27,13 @@ export default function registro(props){
     }  
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
+      <ImageBackground source={require('../../assets/FondoBlancoGris.png')} style={styles.image}>      
       <View>
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Carrito}></Image>
+      <Image source={require('../../assets/IconosPng/CerrarVerde.png')} style={styles.Cerrar}></Image>
       </TouchableHighlight>
       </View>                                   
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
+      <Image source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} style={styles.imgLogo}></Image>
       <Text style={styles.textlbl}>Nombre de usuario</Text>
       <Input style={styles.textInput}/>
       <Text style={styles.textlbl}>Email</Text>
@@ -53,7 +53,8 @@ export default function registro(props){
       title="Registrarse" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
       width: 300, 
-      margin: 'auto',
+      marginRight: 30,
+      marginLeft: 30,
       marginBottom: 8, 
       borderRadius: 20, 
       color: "white"}}></Button>
@@ -68,7 +69,8 @@ export default function registro(props){
       title="Registrarse con Google" 
       buttonStyle={{ backgroundColor: 'red', 
       width: 300, 
-      margin: 'auto', 
+      marginRight: 30,
+      marginLeft: 30, 
       borderRadius: 20, 
       color: "white"}}></Button>
       <Text style={styles.text}>
@@ -102,30 +104,35 @@ const styles = StyleSheet.create({
       fontSize: 16,
       textAlign: "center",
       fontFamily: "Nexa-Ligth",
+      fontWeight: 'bold',
       marginTop: 10    
     },
     imgLogo: {
-      width: 340,
-      height: 120,
-      marginLeft: 5,
-      marginRight: 15
+      width: 250,
+      height: 100,
+      marginLeft: 40,
+      marginRight: 40,
+      marginBottom: 20
     },
     textlbl: {
       color: "#09B1B8",
       fontSize: 23,
       textAlign: "left",
       fontFamily: "Nexa-Ligth",
+      fontWeight: 'bold',
       marginLeft: 20
     },
     Cerrar:{
       width: 40,
-      height: 40
+      height: 40,
+      marginBottom: '10%',
+      marginLeft: 5
     },
     textInput:{
       borderColor: "#B4B4B4",
       width: "90%",
       margin: 10,
-      fontSize: 23,
+      fontSize: 23,      
       textAlign: "center"
     }  
   });
