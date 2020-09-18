@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     },
 
     Descripcion: {
-        paddingTop: 1,
+        paddingTop:5,
         width: '100%',
         height: 80,
         marginLeft: 'auto',

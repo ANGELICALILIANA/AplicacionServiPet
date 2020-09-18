@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
 
     imagenetologia: {
-        paddingTop: 2,
+        paddingTop: 5,
         width: '90%',
         height: '30%',
         marginLeft: 'auto',
