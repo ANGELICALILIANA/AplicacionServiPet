@@ -11,7 +11,7 @@ export default function consultaVeterinaria(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerde.svg')}
+                source={require('../../assets/FondosPng/FondoVerde.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image

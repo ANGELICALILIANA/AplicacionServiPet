@@ -14,12 +14,14 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "**/*"
+      "assets/*"
     ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.sena.servipet",
+      "versionCode": 1.0, 
       "config":{
         "googleMaps":{
           "apiKey": "AIzaSyB8BCICErl1q1hR0UF4wAIMI5Rm4cNE1CA"
