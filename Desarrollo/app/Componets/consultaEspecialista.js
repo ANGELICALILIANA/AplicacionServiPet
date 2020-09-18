@@ -36,7 +36,7 @@ export default function consultaEspecialista(props) {
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
                         source={require('../../assets/IconosPng/Carrito.png')} />
@@ -73,19 +73,19 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="ETOLOGIA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 5, borderRadius: 25,color: "white" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 5, height: 50, borderRadius: 25,color: "white" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
                 <Button
                     title="NUTRICIONISTA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 5, borderRadius: 25, color: "white" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 5, borderRadius: 25, color: "white" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
@@ -129,13 +129,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         position: 'absolute',
     },
-    encabezadoLogoVerde: {
-        margin: 'auto',
+    encabezadoLogoVerde: {        
         width: 190,
         height: 70,
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        marginTop: '5%',
+        marginLeft: 80,
+        marginRight: 80 
 
     },
     piedepagina: {
@@ -149,8 +148,8 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
+        width: 55,
+        height: 55,
         top: '25%',
         right: '4%',
     },
@@ -158,7 +157,7 @@ const styles = StyleSheet.create({
         position:'relative',
         width: 50,
         height: 65,
-        top: '-55%',
+        top: -65,
         left: '4%',
     },
     entradaTexto: {

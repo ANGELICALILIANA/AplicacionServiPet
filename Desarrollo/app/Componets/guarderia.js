@@ -52,23 +52,21 @@ export default function guarderia(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="PASEO"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 30, color: "white", margin: "auto", fontSize: 8, marginRight: 15 }}>
                     </Button>
                     <Button
                         title="HOTEL"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 20, color: "white", margin: "auto", marginRight: 15 }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 30, color: "white", margin: "auto"}}>
                     </Button>
                 </View>
-                <View style={styles.piedepagina}>
-                    <Text style={styles.numero}>300 209 9929</Text>
-                </View>
+                <Text style={styles.piedepagina}>3002099929</Text>
             </ImageBackground>
         </View >
     )
@@ -110,25 +108,27 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     encabezado: {
-        height: 90,
+        height: 100,
         width: '100%',
         top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        marginLeft: '21%',
-        width: 200,
-        height: 80,
-        position: 'relative',
-        marginTop: '3%',
+        width: 190,
+        height: 70,
+        marginTop: '8%',
+        marginLeft: 80,
+        marginRight: 80
     },
     piedepagina: {
         width: '100%',
         height: '5%',
+        textAlign: 'center',
+        backgroundColor: 'white',
         position: 'absolute',
         bottom: 0,
-        backgroundColor: 'white',
+        color: '#047D82',
     },
     numero: {
         color: '#047D82',
@@ -138,15 +138,15 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 55,
         height: 55,
-        top: '25%',
+        top: '30%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'relative',
+        position:'relative',
         width: 50,
         height: 65,
-        top: '-103%',
-        left: '4%',
+        top: -70,
+        left: '4%'
     },
     entradaTexto: {
         position: 'relative',
@@ -166,14 +166,10 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
     },
     margenesTexto: {
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontSize: 9,
-        marginTop: '3%',
-        marginBottom: '3%',
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     organizacionBotones: {
         flexDirection: 'row',

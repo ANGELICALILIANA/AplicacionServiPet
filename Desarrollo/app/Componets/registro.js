@@ -33,7 +33,7 @@ export default function registro(props){
       <Image source={require('../../assets/IconosPng/CerrarVerde.png')} style={styles.Cerrar}></Image>
       </TouchableHighlight>
       </View>                                   
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>
+      <Image source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} style={styles.imgLogo}></Image>
       <Text style={styles.textlbl}>Nombre de usuario</Text>
       <Input style={styles.textInput}/>
       <Text style={styles.textlbl}>Email</Text>
@@ -108,10 +108,11 @@ const styles = StyleSheet.create({
       marginTop: 10    
     },
     imgLogo: {
-      width: 340,
-      height: 120,
-      marginLeft: 5,
-      marginRight: 15
+      width: 250,
+      height: 100,
+      marginLeft: 40,
+      marginRight: 40,
+      marginBottom: 20
     },
     textlbl: {
       color: "#09B1B8",
@@ -123,7 +124,9 @@ const styles = StyleSheet.create({
     },
     Cerrar:{
       width: 40,
-      height: 40
+      height: 40,
+      marginBottom: '10%',
+      marginLeft: 5
     },
     textInput:{
       borderColor: "#B4B4B4",

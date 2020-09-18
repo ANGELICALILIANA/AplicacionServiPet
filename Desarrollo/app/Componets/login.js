@@ -30,9 +30,9 @@ export default function login(props){
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoBlancoGris.png')} style={styles.image}>      
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
+      <Image source={require('../../assets/IconosPng/CerrarVerde.png')} style={styles.Cerrar}></Image>
       </TouchableHighlight>                       
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
+      <Image source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
       <Input keyboardType={"email-address"} style={styles.textInput} onChangeText={()=> setEmail()}/>
       <Text style={styles.textlbl}>Contraseña</Text>
@@ -103,10 +103,11 @@ const styles = StyleSheet.create({
       marginTop: 10    
     },
     imgLogo: {
-      width: 320,
-      height: 140,
-      marginLeft: 15,
-      marginRight: 15
+      width: 250,
+      height: 100,
+      marginLeft: 40,
+      marginRight: 40,
+      marginBottom: 20
     },
     textlbl: {
       color: "#09B1B8",
@@ -119,7 +120,8 @@ const styles = StyleSheet.create({
     Cerrar:{
       width: 40,
       height: 40,
-      marginTop: -80
+      marginBottom: '50%',
+      marginLeft: 5
     },
     textInput:{
       borderColor: "#B4B4B4",      
