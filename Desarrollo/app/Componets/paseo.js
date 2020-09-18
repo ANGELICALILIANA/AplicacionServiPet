@@ -10,16 +10,16 @@ export default function paseo(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <View style={styles.iconocerrar}>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('Guarderia') }}>
                             <Image
-                                source={require('../../assets/CerrarBlanco.svg')}
+                                source={require('../../assets/IconosPng/CerrarBlanco.png')}
                                 style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
@@ -27,7 +27,7 @@ export default function paseo(props) {
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoprofilaxis}
-                        source={require('../../assets/iconopaseo.svg')} />
+                        source={require('../../assets/IconosPng/paseo.png')} />
                     <Text style={styles.titulo}>PASEO</Text>
                 </View>
                 <Image
@@ -36,17 +36,19 @@ export default function paseo(props) {
 
                 <View style={styles.Descripcion}>
                     <Text style={styles.texto}>
-                        Tu amada mascota debe estar en las manos adecuadas. Debes estar seguro que se trata de un paseador que no maltrate los perros y que se lleva bien con ellos.
-                        Además de estar preparado para manejar alguna situación o emergencia, como una pelea con otros caninos o primeros auxilios.
+                        Tu amada mascota debe estar en las manos adecuadas. Debes estar seguro que 
+                        se trata de un paseador que no maltrate los perros y que se lleva bien con ellos.
+                        Además de estar preparado para manejar alguna situación o emergencia, como una 
+                        pelea con otros caninos o primeros auxilios.
                         </Text>
-                    <Text>
+                        <Text style={styles.texto2}>
                         Servipet es tu mejor opción!
                         </Text>
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                            titleStyle={{ color: "white", fontSize: 12 }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 25, margin: 'auto', color: "white", width: 100 }}>
                         </Button>
                     </View>
 
@@ -98,7 +100,7 @@ const styles = StyleSheet.create({
     Descripcion: {
         paddingTop: 5,
         width: '100%',
-        height: 80,
+        height: 175,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
         height: 70,
         position: 'relative',
         marginTop: '1%',
-        margin: 'auto',
+        marginLeft: '25%',
     },
 
     imagenCarrito: {
@@ -139,6 +141,7 @@ const styles = StyleSheet.create({
         color: '#047D82',
         textAlign: "center",
         fontSize: 24,
+        fontWeight: 'bold'
     },
 
     iconoprofilaxis: {
@@ -152,14 +155,28 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
+        fontSize: 11,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
     },
 
+    texto2: {
+        width: '90%',
+        color: '#09B1B8',
+        fontSize: 15,
+        fontWeight: 'bold',
+        flex: 1,
+        textAlign: "center",
+    },
+
+
     Boton: {
-        paddingTop: 5
+        paddingTop: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: '30%',
     }
 });
