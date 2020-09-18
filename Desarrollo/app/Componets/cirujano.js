@@ -22,7 +22,7 @@ export default function cirujano(props) {
                 <View style={styles.encabezado2}>
                 <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal-01.png')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                 <Image
                     style={styles.iconocirujia}
                     source={require('../../assets/IconosPng/Cirujano.png')} />

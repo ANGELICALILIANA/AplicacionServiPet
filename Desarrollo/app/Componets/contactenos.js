@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text,StyleSheet, View , Image, TouchableHighlight, ImageBackground} from 'react-native';
 import { SearchBar } from 'react-native-elements';
-import Mapa from "./Map";
+/* import Mapa from "./Map"; */
 
 export default function contactenos(props){       
     return(        

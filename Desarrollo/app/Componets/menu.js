@@ -16,7 +16,7 @@ export default function menu(props){
                 <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
             </TouchableHighlight>
             <Image source={require('../../assets/LogoBlancoHorizontal.svg')} style={styles.Logo}></Image>
-            <List style={{ backgroundColor: '#047D82' }} component="nav" className={classes.root} aria-label="mailbox folders">                        
+            <List style={{ backgroundColor: '#047D82' }} component="nav" /* className={classes.root} */ aria-label="mailbox folders">                        
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
                     <ListItemText style={{ color: '#fff'}} primary="Estética y Peluquería" />
                 </ListItem>
