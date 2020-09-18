@@ -46,8 +46,6 @@ export default function consultaEspecialista(props) {
                 <Text style={styles.entradaTexto}>
                 Una urgencia se presenta en aquellas situaciones en las que se precisa atención rápida, comunicate al celular 321 8024171 y un médico veterinario calificado te hará algunas preguntas de importancia para realizar un triage (clasificación de la urgencia), 
                 te dará consejos de atención básica, manipulación y transporte. Se te dará una cita de consulta urgente dentro de las siguientes 4 horas.
-                Normalmente estamos ante una urgencia cuando: Aparición súbita de un cuadro grave, traumas, heridas, o por empeoramiento de una enfermedad crónica, ejemplo: mascota con vómito recurrente, diarrea abundante y/o sanguinolenta, episodios convulsivos, 
-                sospecha de intoxicicación, dolor abdominal agudo, pérdida de conciencia momentánea, hinchazon alérgica sin compromiso respiratorio, caídas o golpes moderados, mucosas palidas y secas (deshidratacion aguda), salivación excesiva, distosia de parto entre otros.
                 </Text>
                 </View>
                 <View>
@@ -171,6 +169,9 @@ const styles = StyleSheet.create({
     arreglo: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
       },
     search: {
         top: '10%',

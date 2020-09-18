@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import * as Font from 'expo-font'
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
 export default function consultaEspecialista(props) {
+    
+    const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }
+    
     return (
         <View
             style={styles.margenesVista}>
@@ -44,8 +64,8 @@ export default function consultaEspecialista(props) {
                 </View>
                 <View>
                 <Text style={styles.entradaTexto}>
-                El veterinario es el profesional de la salud de referencia de tu perro y, como tal, se ocupa de prevenir, diagnosticar y curar los trastornos de tu amigo peludo, aunque también vela por la salud de las personas que conviven con animales para evitar la zoonosis o contagio entre animales y humanos.
-                En general, se recomienda que un perro sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
+                Una consulta especializada es la revisión médica que se enfoca en tratar sintomatologías específicas en las mascotas por especialistas en las diferentes áreas de la veterinaria; por ejemplo, cirugía, dermatología, odontología, oncología, entre otras áreas de la veterinaria para tratar las afecciones o enfermedades que presentan los animales.
+                En SERVIPET te brindamos el servicio veterinario de consultas especializadas para tu gato o perro, con el objetivo de que siempre tengas una clínica veterinaria de calidad donde asistir cuando necesites tratar la salud de tu mascota de forma adecuada. 
                 </Text>
                 </View>
                 <View>
@@ -60,7 +80,6 @@ export default function consultaEspecialista(props) {
                     buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
-                
                 <Button
                     title="NUTRICIONISTA"
                     titleStyle={{ color: "white", fontWeight: "bold"  }}
@@ -140,6 +159,7 @@ const styles = StyleSheet.create({
         right: '4%',
     },
     imagenMenu: {
+        position: "relative",
         position: 'absolute',
         width: 50,
         height: 60,
@@ -147,6 +167,7 @@ const styles = StyleSheet.create({
         left: '4%',
     },
     entradaTexto: {
+        position: "relative",
         width: '90%',
         alignContent: 'center',
         marginLeft: 'auto',
@@ -156,7 +177,8 @@ const styles = StyleSheet.create({
         marginTop: '5%',
         fontSize: 9,
     },
-    border: {    
+    border: {   
+        position: "relative", 
         marginLeft: 'auto',
         marginRight: 'auto',
         borderTopWidth: 2,
@@ -171,11 +193,16 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     arreglo: {
+        position: "relative",
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginRight: 'auto',
+        marginLeft: 'auto',
       },
     search: {
         top: '10%',
         position: "absolute"
     },
+
 });

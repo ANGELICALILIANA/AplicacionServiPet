@@ -1,7 +1,6 @@
 import * as React from 'react';
 /* import React, { Component } from 'react'; */
 /* import { DrawerNavigator } from 'react-native'; */
-/* import * as Font from 'expo-font'; */
 /* import Estetica from "./app/Componets/esteticaScreen.js"
 import Veterinaria from "./app/Componets/veterinariaScreen.js" */
   
@@ -21,7 +20,9 @@ import Etologia from './app/Componets/etologia';
 import Nutricionista from './app/Componets/nutricionista';
 import Cirujano from './app/Componets/cirujano';
 import Hometwo from "./app/Componets/hometwo.js";
+import Triage from "./app/Componets/triage.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
+import * as Font from 'expo-font';
 /*Saludos Soy Sergio Practicando en mi brazo*/ 
 import Control from "./app/Componets/Control.js"
 import Crecimientodesarrollo from "./app/Componets/CrecimientoDesarrollo.js";
@@ -38,6 +39,8 @@ import CorteUnas from './app/Componets/corteUnas';
 import BanoMascota from './app/Componets/banoMascota';
 import CortePelo from './app/Componets/cortePelo';
 import Profilaxis from './app/Componets/profilaxis';
+import Sintomasperro from './app/Componets/sintomasperro';
+import Servicioambulancia from './app/Componets/servicioambulancia';
 import Paseo from './app/Componets/paseo';
 import Hotel from './app/Componets/hotel';
 import ServicioGuarderia from './app/Componets/servicioGuarderia';
@@ -203,6 +206,24 @@ function vistaProfilaxis({ navigation }) {
   )
 }
 
+function triage({ navigation }) {
+  return (
+    <Triage navigation={navigation} />
+  )
+}
+
+function sintomasperro({ navigation }) {
+  return (
+    <Sintomasperro navigation={navigation} />
+  )
+}
+
+function servicioambulancia({ navigation }) {
+  return (
+    <Servicioambulancia navigation={navigation} />
+    )
+}
+
 function contactenos({navigation}){
   return(
     <Contacto navigation={navigation}/>
@@ -287,6 +308,9 @@ function App() {
         <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
         <Stack.Screen name="CortePelo" component={corteDePelo} />
         <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
+        <Stack.Screen name="Triage" component={triage} />
+        <Stack.Screen name="Sintomasperro" component={sintomasperro} />
+        <Stack.Screen name="Servicioambulancia" component={servicioambulancia} />
         <Stack.Screen name="Paseo" component={vistaPaseo} />
         <Stack.Screen name="Hotel" component={vistaHotel} />
         <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
@@ -297,14 +321,14 @@ function App() {
   );
 }
 
-{/* const navegacion = DrawerNavigator({
-  estetica:{
-    screen: Estetica
-  },
-  veterinaria:{
-    screen: Veterinaria
-  },
+/* const [loaded] = useFonts({
+  thebold: require('./assets/fonts/theboldfont.ttf'),
+});
 
-})  */}
+if (!loaded) {
+  return null;
+}
+
+return <Text style={{ fontFamily: 'thebold' }} />; */
 
 export default App;
