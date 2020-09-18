@@ -2,14 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 
-//Tipo de letra botones
-
 export default function homeUno( props ) {
   return (
     <View
       style={{ flex: 1, color: "white" }}>
       <ImageBackground
-        source={require('../../assets/FondoVerde.svg')}
+        source={require('../../assets/FondoVerde.png')}
         style={styles.imagenFondo}>
         <View style={styles.margenesPantalla}>
           <View>
@@ -26,18 +24,18 @@ export default function homeUno( props ) {
           </Image>
           <Button
             title="Registrate"
-            titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: 156, margin: 'auto', borderRadius: 20, color: "white", margin: "auto" }}
+            titleStyle={{ color: "gray",}}
+            buttonStyle={{ backgroundColor: 'white', width: 156, marginLeft: 'auto', marginRight: 'auto', borderRadius: 20, color: "white", margin: "auto" }}
             onPress={()=>{props.navigation.navigate('Registro')}}>
           </Button>
           <Button
             title='Echar un vistazo'
             type="clear"
             titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: 156, margin: 'auto', borderRadius: 20, marginTop: 10 }}
-             onPress={()=>{props.navigation.navigate('Hometwo')}}>
+            buttonStyle={{ backgroundColor: 'white', width: 156, marginLeft: 'auto', marginRight: 'auto', borderRadius: 20, marginTop: 10 }}
+            onPress={()=>{props.navigation.navigate('Hometwo')}}>
           </Button>
-        </View>
+        </View> 
       </ImageBackground>
     </View>
   )
