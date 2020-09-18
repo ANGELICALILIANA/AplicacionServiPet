@@ -10,21 +10,21 @@ export default function guarderia(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')}
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')}
                     />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <View>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
                             <Image
                                 style={styles.imagenMenu}
-                                source={require('../../assets/SideMenuVerde.svg')} />
+                                source={require('../../assets/IconosPng/SideMenu.png')} />
                         </TouchableHighlight>
                     </View>
                 </View>
@@ -52,20 +52,20 @@ export default function guarderia(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="PASEO"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 30, color: "white", margin: "auto", fontSize: 8, marginRight: 15 }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
                         onPress={() => { props.navigation.navigate('Paseo') }}>
                     </Button>
                     <Button
                         title="HOTEL"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 20, color: "white", margin: "auto", marginRight: 15 }}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
                         onPress={() => { props.navigation.navigate('Hotel') }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 30, color: "white", margin: "auto"}}
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto"}}
                         onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>
@@ -78,6 +78,7 @@ export default function guarderia(props) {
 };
 
 const styles = StyleSheet.create({
+
     imagenFondoPeluqueriayEstetica: {
         position: 'absolute',
         resizeMode: "cover",
@@ -111,20 +112,21 @@ const styles = StyleSheet.create({
     margenesVista: {
         flex: 1,
     },
+
     encabezado: {
-        height: 90,
+        height: '12%',
         width: '100%',
         top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
+
     encabezadoLogoVerde: {
-        margin: 'auto',
+        marginLeft: '21%',
         width: 200,
         height: 80,
         position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        marginTop: '3%',
     },
     piedepagina: {
         width: '100%',
@@ -141,7 +143,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 55,
         height: 55,
-        top: '17%',
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
@@ -186,7 +188,7 @@ const styles = StyleSheet.create({
     },
     buscar: {
         position: "relative",
-        top: '9%',
+        top: '7%',
         width: '90%',
         marginRight: 'auto',
         marginLeft: 'auto',
