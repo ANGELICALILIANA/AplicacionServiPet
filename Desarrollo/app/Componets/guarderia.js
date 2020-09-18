@@ -52,18 +52,21 @@ export default function guarderia(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="PASEO"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 30, color: "white", margin: "auto", fontSize: 8, marginRight: 15 }}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
+                        onPress={() => { props.navigation.navigate('Paseo') }}>
                     </Button>
                     <Button
                         title="HOTEL"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 20, color: "white", margin: "auto", marginRight: 15 }}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
+                        onPress={() => { props.navigation.navigate('Hotel') }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
-                        titleStyle={{ color: "white", fontSize: 8, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 30, color: "white", margin: "auto"}}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto"}}
+                        onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
@@ -109,13 +112,15 @@ const styles = StyleSheet.create({
     margenesVista: {
         flex: 1,
     },
+
     encabezado: {
-        height: 90,
+        height: '12%',
         width: '100%',
         top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
+
     encabezadoLogoVerde: {
         marginLeft: '21%',
         width: 200,
@@ -183,7 +188,7 @@ const styles = StyleSheet.create({
     },
     buscar: {
         position: "relative",
-        top: '9%',
+        top: '7%',
         width: '90%',
         marginRight: 'auto',
         marginLeft: 'auto',
