@@ -65,7 +65,7 @@ export default function guarderia(props) {
                     <Button
                         title="GUARDERIA"
                         titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto"}}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
                         onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>

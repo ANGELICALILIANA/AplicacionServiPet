@@ -15,7 +15,7 @@ export default function triaje(props) {
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <View style={styles.iconocerrar}>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
                             <Image

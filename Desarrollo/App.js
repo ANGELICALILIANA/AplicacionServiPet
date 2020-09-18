@@ -297,7 +297,6 @@ function App() {
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
         <Stack.Screen name="contactenos" component={contactenos} />
-        {/*<Stack.Screen name="  " component={HeaderhometwoScreen} /> */}
         <Stack.Screen name="Control" component={vistaControl} />
         <Stack.Screen name="Crecimientodesarrollo" component={vistaCrecimiento} />
         <Stack.Screen name="Vacunacion" component={vistavacunacion} />
