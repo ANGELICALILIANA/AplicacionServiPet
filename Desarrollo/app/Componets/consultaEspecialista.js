@@ -31,7 +31,7 @@ export default function consultaEspecialista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.fondoVerdeClaro}>
                 <View style={styles.encabezado}>
                     <Image
@@ -39,10 +39,10 @@ export default function consultaEspecialista(props) {
                         source={require('../../assets/LogoVerdeHorizontal.svg')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/SideMenu.png')} />
                 </View>
                 <View>
                 <SearchBar
@@ -52,11 +52,7 @@ export default function consultaEspecialista(props) {
                 style={styles.search}
                 />
                 </View>
-                <View>
-                <Image
-                        style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.jpeg')} /> 
-                </View>
+                <Text style={styles.titulo}>Consulta Especialista</Text>
                 <View>
                 <Image
                     style={styles.imagenPrincipal1}
@@ -76,20 +72,20 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 80, margin: 5, borderRadius: 25,color: "white" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
@@ -155,27 +151,21 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 50,
         height: 60,
-        top: '10%',
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
-        position: "relative",
-        position: 'absolute',
+        position:'relative',
         width: 50,
-        height: 60,
-        top: '10%',
+        height: 65,
+        top: '-55%',
         left: '4%',
     },
     entradaTexto: {
-        position: "relative",
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontSize: 26,
-        marginTop: '5%',
-        fontSize: 9,
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     border: {   
         position: "relative", 
@@ -185,9 +175,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
+        marginBottom: 10,
         color: 'white',
         width: '90%',
-        textAlign: 'center',
+        textAlign: 'center'
     },
     margenesVista: {
         flex: 1,
@@ -204,5 +195,11 @@ const styles = StyleSheet.create({
         top: '10%',
         position: "absolute"
     },
+    titulo: {
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 24,
+        backgroundColor: '#047D82'
+    }
 
 });

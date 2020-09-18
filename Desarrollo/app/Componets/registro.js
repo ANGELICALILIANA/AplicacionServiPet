@@ -30,7 +30,7 @@ export default function registro(props){
       <ImageBackground source={require('../../assets/FondoBlancoGris.png')} style={styles.image}>      
       <View>
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Carrito}></Image>
+      <Image source={require('../../assets/IconosPng/CerrarVerde.png')} style={styles.Cerrar}></Image>
       </TouchableHighlight>
       </View>                                   
       <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>

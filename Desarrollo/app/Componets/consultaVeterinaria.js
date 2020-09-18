@@ -19,13 +19,12 @@ export default function consultaVeterinaria(props) {
                         source={require('../../assets/LogoVerdeHorizontal.svg')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <View>
-                        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
-                            <Image
-                                style={styles.imagenMenu}
-                                source={require('../../assets/SideMenuVerde.svg')} />
-                        </TouchableHighlight>
+                        <Image
+                            style={styles.imagenMenu}
+                            source={require('../../assets/IconosPng/SideMenu.png')} 
+                            onPress={() => { props.navigation.navigate('Menu') }}/>
                     </View>
                 </View>
                 <SearchBar
@@ -45,6 +44,9 @@ export default function consultaVeterinaria(props) {
                 zoonosis o contagio entre animales y humanos. En general, se recomienda que un perro 
                 sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. 
                 Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
+                </Text>
+                <Text style={styles.border}>
+                    ADQUIERE NUESTRO SERVICIOS DE
                 </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                 <Button
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
     },
     imagenvet: {
         width: 300,
-        height: 150,
+        height: 230,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -121,14 +123,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 50,
         height: 60,
-        top: '10%',
+        top: '30%',
         right: '4%',
     },
     imagenMenu: {
         position:'relative',
         width: 50,
         height: 65,
-        top: '-110%',
+        top: '-75%',
         left: '4%',
     },
     entradaTexto: {
@@ -143,10 +145,24 @@ const styles = StyleSheet.create({
     },
     texto: {
         color: '#fff',
-        fontSize: 13,
-        margin: '1%'
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     search: {
         position: "absolute"
+    },
+    border: {   
+        position: "relative", 
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
+        borderBottomColor: 'white',
+        borderTopColor: 'white',
+        marginBottom: 10,
+        color: 'white',
+        width: '90%',
+        textAlign: 'center',
     }
 });

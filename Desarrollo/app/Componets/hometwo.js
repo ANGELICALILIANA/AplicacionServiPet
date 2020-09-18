@@ -8,12 +8,12 @@ function Apphometwo(props) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={require('../../assets/FondoVerde.png')} style={styles.image}>
-        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
-          <Image
-            style={styles.imagenMenu}
-            source={require('../../assets/SideMenu.svg')}
-          />
+        {/* <View>
+        <TouchableHighlight onPress={() => { props.navigation.navigate('Menu')}}>
+        <Image source={require('../../assets/IconosPng/SideMenu.png')} style={styles.imagenMenu}></Image>
         </TouchableHighlight>
+        </View> */}
+        
         <Button
           title="ESTETICA Y PELUQUERIA"
           titleStyle={{ color: "#047D82", fontWeight: "bold" }}
@@ -66,9 +66,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   imagenMenu: {
-    marginTop: -160,
+    position: 'relative',   
     width: 50,
     height: 50,
-    marginRight: 'auto',
   }
 });
