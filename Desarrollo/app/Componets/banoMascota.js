@@ -10,24 +10,24 @@ export default function corteUnas(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <View style={styles.iconocerrar}>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
                             <Image
                                 style={styles.iconocerrar}
-                                source={require('../../assets/CerrarBlanco.svg')} />
+                                source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                         </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoetologia}
-                        source={require('../../assets/BañoMascotas.svg')} />
+                        source={require('../../assets/IconosPng/BañoMascotas.png')} />
                     <Text style={styles.titulo}>BAÑO DE MASCOTAS</Text>
                 </View>
                 <Image
@@ -42,8 +42,8 @@ export default function corteUnas(props) {
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                            titleStyle={{ color: "white", fontSize: 12 }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 25, margin: 'auto', color: "white", width: 100 }}>
                         </Button>
                     </View>
                 </View>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     imagenetologia: {
         paddingTop: 5,
         width: '90%',
-        height: '30%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     Descripcion: {
         paddingTop: 5,
         width: '100%',
-        height: 80,
+        height: 175,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
@@ -108,6 +108,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     imagenCarrito: {
@@ -134,6 +136,7 @@ const styles = StyleSheet.create({
         color: '#047D82',
         textAlign: "center",
         fontSize: 24,
+        fontWeight: 'bold',
     },
 
     iconoetologia: {
@@ -141,12 +144,13 @@ const styles = StyleSheet.create({
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
+        fontSize: 11,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
@@ -154,6 +158,10 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
+        paddingTop: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: '30%',
     }
 });

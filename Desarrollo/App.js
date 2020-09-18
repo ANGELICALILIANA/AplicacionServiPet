@@ -29,8 +29,6 @@ import Vacunacion from "./app/Componets/vacunacion.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
 import Contacto from "./app/Componets/contactenos";
-
-
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
 import Calendario from './app/Componets/calendario';
@@ -45,6 +43,13 @@ import Hotel from './app/Componets/hotel';
 import ServicioGuarderia from './app/Componets/servicioGuarderia';
 import SintomasAlarma from './app/Componets/sintomasAlarma';
 import SintomasGatos from './app/Componets/sintomasGatos';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
+// import SideNab from './app/Componets/sideNab';
 
 function HometwoScreen({ navigation }) {
   return (
@@ -278,12 +283,24 @@ function vistaSintomasAlarmaGatos({ navigation }) {
   )
 }
 
+// /**
+//  * 
+//  * SideNav
+//  */
+// function navegacion({ navigation }) {
+//   return (
+//     <SideNab></SideNab>
+//   )
+// }
+
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="homeUno" headerMode="none"> 
+      {/* <MyDrawer /> */}
+      <Stack.Navigator initialRouteName="SideNab" headerMode="none"> 
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -314,19 +331,62 @@ function App() {
         <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
         <Stack.Screen name="SintomasAlarma" component={vistaSintomasAlarma} />
         <Stack.Screen name="SintomasGatos" component={vistaSintomasAlarmaGatos} />
+        {/* <Stack.Screen name="SideNab" component={navegacion} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-/* const [loaded] = useFonts({
-  thebold: require('./assets/fonts/theboldfont.ttf'),
-});
-
-if (!loaded) {
-  return null;
-}
-
-return <Text style={{ fontFamily: 'thebold' }} />; */
 
 export default App;
+
+
+// function Feed({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Feed Screen</Text>
+//       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
+//       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+//     </View>
+//   );
+// }
+
+// function Notifications() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Notifications Screen</Text>
+//     </View>
+//   );
+// }
+
+// function CustomDrawerContent(props) {
+//   return (
+//     <DrawerContentScrollView {...props}>
+//       <DrawerItemList {...props} />
+//       <DrawerItem
+//         label="Close drawer"
+//         onPress={() => props.navigation.closeDrawer()}
+//       />
+//       <DrawerItem
+//         label="Toggle drawer"
+//         onPress={() => props.navigation.toggleDrawer()}
+//       />
+//     </DrawerContentScrollView>
+//   );
+// }
+
+// const Drawer = createDrawerNavigator();
+
+// function MyDrawer() {
+//   return (
+//     <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
+//       <Drawer.Screen name="Feed" component={Feed} />
+//       <Drawer.Screen name="Notifications" component={Notifications} />
+//     </Drawer.Navigator>
+//   );
+// }
+
+
+
+
+

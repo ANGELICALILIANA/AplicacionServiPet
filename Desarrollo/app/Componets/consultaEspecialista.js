@@ -56,7 +56,8 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.png')} /> 
+                        source={require('../../assets/Especialista.png')} 
+                        /> 
                 </View>
                 <View>
                 <Image
