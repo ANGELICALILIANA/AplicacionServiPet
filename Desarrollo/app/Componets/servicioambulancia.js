@@ -10,24 +10,24 @@ export default function servicioambulancia(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
-                        style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        style={styles.encabezadoLogoBlanco}
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                         <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
                     <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                         </TouchableHighlight>
                 </View>
 
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoetologia}
-                        source={require('../../assets/Cortedeuñas.svg')} />
-                    <Text style={styles.titulo}>TRIAGE</Text>
+                        source={require('../../assets/IconosPng/Ambulancia.png')} />
+                    <Text style={styles.titulo}>SERVICIO DE AMBULANCIA</Text>
                 </View>
 
                 <Image
@@ -40,7 +40,13 @@ export default function servicioambulancia(props) {
                     También te brindamos atención para eventos masivos que requieran contar con capacidad de respuesta ante situaciones de gravedad. Recuerda que debes agendar el servicio con anterioridad y por vía telefónica. Programa tu servicio, recuerda que no somos una entidad de emergencia, ni urgencia.  
                 </Text>
                 </View>
-                
+                <View style={styles.Boton}>
+                <Button 
+                    title="COMPRAR"
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{  backgroundColor: '#047D82',  marginLeft: 'auto', marginRight: 'auto', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                </Button> 
+                </View>
             </ImageBackground>
         </View>
     )
@@ -95,13 +101,15 @@ const styles = StyleSheet.create({
         marginLeft: '5%',  
     },
 
-    encabezadoLogoVerde: {
+    encabezadoLogolanco: {
         margin: 'auto',
         width: 200 ,
         height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     imagenCarrito: {

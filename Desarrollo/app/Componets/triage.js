@@ -10,32 +10,32 @@ export default function triage(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
-                        style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        style={styles.encabezadoLogoBlanco}
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                         <TouchableHighlight onPress={()=>{ props.navigation.navigate('EsteticaYPeluqueria')}}>
                     <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                         </TouchableHighlight>
                 </View>
 
                 <View style={styles.encabezado2}>
                     <Image
-                        style={styles.iconoetologia}
-                        source={require('../../assets/Cortedeuñas.svg')} />
-                    <Text style={styles.titulo}>TRIAGE</Text>
+                        style={styles.iconotriaje}
+                        source={require('../../assets/IconosPng/TriageUrgencias.png')} />
+                    <Text style={styles.titulo}>URGENCIAS (TRIAGE)</Text>
                 </View>
 
                 <Image
-                    style={styles.imagenetologia}
+                    style={styles.imagentriaje1}
                     source={require('../../assets/Triage.jpg')} />
 
                 <Image
-                    style={styles.imagenetologia}
+                    style={styles.imagentriaje2}
                     source={require('../../assets/Triage2.png')} />
 
                 <View style={styles.Descripcion}>
@@ -43,7 +43,7 @@ export default function triage(props) {
                         <Button
                             title="Asignar Resultado"
                             titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, marginLeft: 'auto', marginRight: 'auto', margin: 'auto', color: "white", width: 100 }}>
                         </Button>
                     </View>
 
@@ -63,14 +63,21 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 
-    imagenetologia: {
-        paddingTop: 5,
-        width: '90%',
-        height: '30%',
+    imagentriaje1: {
+
+        width: '80%',
+        height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
 
+    imagentriaje2: {
+        paddingTop: 100,
+        width: '75%',
+        height: '30%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
     cajaTexto: {
         backgroundColor: '#047D82',
         color: 'white',
@@ -103,13 +110,15 @@ const styles = StyleSheet.create({
         marginLeft: '5%',  
     },
 
-    encabezadoLogoVerde: {
+    encabezadoLogoBlanco: {
         margin: 'auto',
         width: 200,
         height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     imagenCarrito: {
@@ -139,9 +148,10 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
 
-    iconoetologia: {
-        width: 80,
-        height: 65,
+    iconotriaje: {
+        marginTop: '20%',
+        width: 75,
+        height: 60,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -157,6 +167,7 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15,
+        position: 'relative',
+        paddingTop: 20,
     }
 });

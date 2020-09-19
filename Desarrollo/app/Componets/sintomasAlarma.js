@@ -128,8 +128,15 @@ const styles = StyleSheet.create({
     },
 
     entradaTexto: {
-        position: 'relative',
-        marginTop: '20%'
+        position: "relative",
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontSize: 26,
+        marginTop: '5%',
+        fontSize: 9,
     },
 
     titulo: {
@@ -148,6 +155,7 @@ const styles = StyleSheet.create({
     },
 
     texto: {
+        position: "relative",
         width: '90%',
         color: '#047D82',
         fontSize: 16,
@@ -155,11 +163,13 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignContent: 'center',
         textAlign: "center",
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     Boton: {
         paddingTop: 5,
-        marginRight: '5%',
-        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
 });
