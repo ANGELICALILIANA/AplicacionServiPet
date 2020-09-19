@@ -85,17 +85,21 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="NUTRICIONISTA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white"}}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -127,6 +131,11 @@ const styles = StyleSheet.create({
     cajaTexto: {
         backgroundColor: '#047D82',
         color: 'white',
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+
     },
     encabezado: {
         height: '12%',
@@ -170,7 +179,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 12,
         margin: '3%',
-        textAlign: 'justify'
+        textAlign: 'justify',
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     border: {   
         position: "relative", 
@@ -205,6 +218,14 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 24,
         backgroundColor: '#047D82'
+    },
+
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 
 });

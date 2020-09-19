@@ -36,16 +36,16 @@ export default function etologia(props) {
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                 </View>
 
                 <View style={styles.encabezado2}>
                 <Image
                     style={styles.iconoetologia}
-                    source={require('../../assets/Etologia.svg')} />
+                    source={require('../../assets/IconosPng/Etologia.png')} />
                 <Text style={styles.titulo}>ETOLOGIA</Text>
                 </View>
 
@@ -131,6 +131,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginRight: 'auto',
+        marginLeft: 'auto',
 
     },
 
@@ -191,6 +193,7 @@ const styles = StyleSheet.create({
     },
     
     imagenFondoEtologia: {
+        paddingTop: 1,
         position: 'absolute',
         resizeMode: "cover",
         justifyContent: "center",

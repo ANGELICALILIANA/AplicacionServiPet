@@ -6,47 +6,47 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
-export default function vacunacion(props) {    
-    return (        
+export default function vacunacion(props) {
+    return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondonutricion}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                 </View>
 
                 <View style={styles.encabezado2}>
-                <Image
-                    style={styles.iconocrecimiento}
-                    source={require('../../assets/Crecimiento.svg')} />
-                <Text style={styles.titulo}>CRECIMIENTO Y DESARROLLO</Text>
+                    <Image
+                        style={styles.iconocrecimiento}
+                        source={require('../../assets/IconosPng/Crecimiento.png')} />
+                    <Text style={styles.titulo}>CRECIMIENTO Y DESARROLLO</Text>
                 </View>
 
                 <Image
                     style={styles.imagencrecimiento}
                     source={require('../../assets/imagenCrecimiento.jpg')} />
-                
+
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
-                El desarrollo de los cachorros involucra muchas etapas y avances conforme crecen hasta la edad adulta. Ya sea que hayas adoptado un cachorro y estés esperando a que se calme y deje de masticar todo, o que simplemente tengas curiosidad acerca de lo que pasa con los cachorros hasta convertirse en perros hechos y derechos
+                    <Text style={styles.texto}>
+                        El desarrollo de los cachorros involucra muchas etapas y avances conforme crecen hasta la edad adulta. Ya sea que hayas adoptado un cachorro y estés esperando a que se calme y deje de masticar todo, o que simplemente tengas curiosidad acerca de lo que pasa con los cachorros hasta convertirse en perros hechos y derechos
                 </Text>
 
-                <View style={styles.Boton}>
-                <Button 
-                    title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: 9 }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
-                </Button> 
-                </View>
+                    <View style={styles.Boton}>
+                        <Button
+                            title="COMPRAR"
+                            titleStyle={{ color: "white", fontSize: 12 }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 25, margin: 'auto', color: "white", width: 100 }}>
+                        </Button>
+                    </View>
 
-                </View>   
+                </View>
 
             </ImageBackground>
         </View>
@@ -86,6 +86,8 @@ const styles = StyleSheet.create({
         top: 0,
         backgroundColor: '#09B1B8',
         position: 'absolute',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     encabezado2: {
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
     Descripcion: {
         paddingTop: 5,
         width: '90%',
-        height: 80,
+        height: 175,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -107,6 +109,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
 
     },
 
@@ -135,22 +139,23 @@ const styles = StyleSheet.create({
         color: '#047D82',
         textAlign: "center",
         fontSize: 24,
-       
-       
+
+
 
     },
 
     iconocrecimiento: {
-        width: 70,
-        height: 70,
+        width: 80,
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
+        fontSize: 11,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
@@ -158,6 +163,10 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15
+        paddingTop: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: '30%',
     }
 });

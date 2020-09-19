@@ -52,20 +52,27 @@ export default function consultaVeterinaria(props) {
                 <Button
                     title="CONTROL"
                     titleStyle={{ color: "white", fontSize: 12 }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}>
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}
+                    onPress={() => { props.navigation.navigate('Control') }}>
                 </Button>
                 <Button
                     title="CRECIMIENTO Y DESARROLLO"
                     titleStyle={{ color: "white", fontSize: 12 }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50  }}>
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50  }}
+                    onPress={() => { props.navigation.navigate('Crecimientodesarrollo') }}>
                 </Button>
                 <Button
                     title="VACUNACION Y DESPARASITACIÓN"
                     titleStyle={{ color: "white", fontSize: 12 }}
-                    buttonStyle={{ backgroundColor: '#047D82',  margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}>
+                    buttonStyle={{ backgroundColor: '#047D82',  margin: 5, borderRadius: 25, color: "white", width: 125, height: 50 }}
+                    onPress={() => { props.navigation.navigate('Vacunacion') }}>
                 </Button>
                 </View>                                     
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -146,7 +153,10 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 12,
         margin: '3%',
-        textAlign: 'justify'
+        textAlign: 'justify',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     search: {
         position: "absolute"
@@ -163,5 +173,12 @@ const styles = StyleSheet.create({
         color: 'white',
         width: '90%',
         textAlign: 'center',
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });

@@ -14,8 +14,7 @@ export default function homeUno( props ) {
             <TouchableHighlight onPress={()=>{ props.navigation.navigate('Login')}}>
               <Image
                 style={styles.imagenInicioSesion}
-                source={require('../../assets/IconosPng/IniciarSesion.png')} 
-                />
+                source={require('../../assets/IconosPng/IniciarSesion.png')} />
             </TouchableHighlight>
           </View>
           <Image

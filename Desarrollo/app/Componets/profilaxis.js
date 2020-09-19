@@ -110,11 +110,12 @@ const styles = StyleSheet.create({
     Descripcion: {
         paddingTop: 5,
         width: '100%',
-        height: 175,
+        height: 200,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
         marginLeft: '5%',
+        marginEnd: '30%',
     },
 
     encabezadoLogoVerde: {
@@ -171,6 +172,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
+        marginEnd: '20%',
     },
 
     Boton: {

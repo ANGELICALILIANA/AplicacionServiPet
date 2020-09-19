@@ -69,7 +69,11 @@ export default function guarderia(props) {
                         onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View >
     )
@@ -188,6 +192,13 @@ const styles = StyleSheet.create({
         width: '90%',
         marginRight: 'auto',
         marginLeft: 'auto',
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });
 

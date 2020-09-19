@@ -69,7 +69,7 @@ export default function esteticaypeluqueria(props) {
                         title="CORTE DE PELO"
                         titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
                         buttonStyle={{ backgroundColor: '#047D82', width: 90, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
-                        onPress={() => { props.navigation.navigate('CorteUnas') }}>
+                        onPress={() => { props.navigation.navigate('CortePelo') }}>
                     </Button>
                     <Button
                         title="PROFILAXIS"
@@ -79,7 +79,6 @@ export default function esteticaypeluqueria(props) {
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
-                    {/* <Text style={styles.numero}>300 209 9929</Text> */}
                     <Image
                         style={styles.imagenPiePagina}
                         source={require('../../assets/footer.jpeg')} />
@@ -222,7 +221,7 @@ const styles = StyleSheet.create({
         marginTop: '1%',
         height: '80%',
 
-    }
+    },
 });
 
 

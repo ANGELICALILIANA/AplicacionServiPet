@@ -66,7 +66,11 @@ export default function consultaEspecialista(props) {
                     buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white"}}>
                 </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -172,5 +176,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 24,
         backgroundColor: '#047D82'
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });
