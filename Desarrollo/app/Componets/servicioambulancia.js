@@ -144,12 +144,13 @@ const styles = StyleSheet.create({
         height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginTop: '-27%',
     },
 
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
+        fontSize: 11,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
@@ -157,6 +158,10 @@ const styles = StyleSheet.create({
     },
 
     Boton: {
-        paddingTop: 15,
+        paddingTop: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: '30%',
     }
 });

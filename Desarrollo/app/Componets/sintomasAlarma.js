@@ -11,16 +11,16 @@ export default function sintomasAlarma(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <View style={styles.iconocerrar}>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('Urgencias') }}>
                             <Image
-                                source={require('../../assets/CerrarBlanco.svg')}
+                                source={require('../../assets/IconosPng/CerrarBlanco.png')}
                                 style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
 
     Descripcion: {
         paddingTop: 5,
-        width: '100%',
-        height: 80,
+        width: '90%',
+        height: 150,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
@@ -109,6 +109,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginRight: 'auto',
+        marginLeft: 'auto',
     },
 
     imagenCarrito: {

@@ -87,6 +87,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
+    iconocerrar: {
+        marginTop: 5,
+        marginLeft: 5,
+        position: 'absolute',
+        width: 27,
+        height: 27,
+    },
     imagenPrincipal1: {
         marginTop: 12,
         marginLeft: 'auto',
