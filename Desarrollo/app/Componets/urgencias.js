@@ -58,7 +58,8 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="SINTOMAS DE ALARMA"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}>
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
+                    onPress={() => { props.navigation.navigate('SintomasAlarma') }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"

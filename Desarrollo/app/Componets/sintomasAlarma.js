@@ -5,9 +5,6 @@ import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import { SearchBar } from 'react-native-elements';
 
-//Fondo
-//Icono 
-//Icono gatos y perros
 
 export default function sintomasAlarma(props) {
     return (
