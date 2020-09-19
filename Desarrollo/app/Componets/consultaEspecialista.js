@@ -91,7 +91,7 @@ export default function consultaEspecialista(props) {
                 <Button
                     title="CIRUJANO"
                     titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white"}}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white", marginRight: 25}}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
