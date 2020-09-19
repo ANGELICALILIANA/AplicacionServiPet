@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text,StyleSheet, View , Image, TouchableHighlight, ImageBackground} from 'react-native';
 import { SearchBar } from 'react-native-elements';
-// import Mapa from "./Map";
+/* import Mapa from "./Map"; */
 
 export default function contactenos(props){       
     return(        
@@ -27,9 +27,9 @@ export default function contactenos(props){
                 style={styles.search}
                 />
                 <Text style={styles.titulo}>CONTACTENOS</Text>
-                {/* <View>
+                <View>
                 <Mapa/>
-                </View>                                 */}
+                </View>
             </ImageBackground>
         </View>
     )

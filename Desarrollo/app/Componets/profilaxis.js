@@ -10,16 +10,16 @@ export default function profilaxis(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondoEtologia}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <View style={styles.iconocerrar}>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('EsteticaYPeluqueria') }}>
                             <Image
-                                source={require('../../assets/CerrarBlanco.svg')}
+                                source={require('../../assets/IconosPng/CerrarBlanco.png')}
                                 style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
@@ -27,7 +27,7 @@ export default function profilaxis(props) {
                 <View style={styles.encabezado2}>
                     <Image
                         style={styles.iconoprofilaxis}
-                        source={require('../../assets/Profilaxis.svg')} />
+                        source={require('../../assets/IconosPng/Profilaxis.png')} />
                     <Text style={styles.titulo}>PROFILAXIS</Text>
                 </View>
 
@@ -56,8 +56,8 @@ export default function profilaxis(props) {
                     <View style={styles.Boton}>
                         <Button
                             title="COMPRAR"
-                            titleStyle={{ color: "white", fontSize: 9 }}
-                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
+                            titleStyle={{ color: "white", fontSize: 12 }}
+                            buttonStyle={{ backgroundColor: '#047D82', borderRadius: 25, margin: 'auto', color: "white", width: 100 }}>
                         </Button>
                     </View>
 
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         height: '25%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        paddingTop: 5,
     },
 
     cajaTexto: {
@@ -109,11 +110,12 @@ const styles = StyleSheet.create({
     Descripcion: {
         paddingTop: 5,
         width: '100%',
-        height: 80,
+        height: 200,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
         marginLeft: '5%',
+        marginEnd: '30%',
     },
 
     encabezadoLogoVerde: {
@@ -123,6 +125,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     imagenCarrito: {
@@ -163,14 +167,19 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: 9,
+        fontSize: 11,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
+        marginEnd: '20%',
     },
 
     Boton: {
-        paddingTop: 5
+        paddingTop: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: '30%',
     }
 });

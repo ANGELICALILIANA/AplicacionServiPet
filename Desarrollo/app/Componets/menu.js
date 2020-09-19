@@ -9,23 +9,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import { Button } from 'react-native-elements';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
-    },
-  }));
-
-export default function menu(props){  
-    const classes = useStyles();  
+export default function menu(props){    
     return(        
         <View style={{ backgroundColor: '#047D82',flex: 1, justifyContent: 'center' }}>
             <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
                 <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
             </TouchableHighlight>
             <Image source={require('../../assets/LogoBlancoHorizontal.svg')} style={styles.Logo}></Image>
-            <List style={{ backgroundColor: '#047D82' }} component="nav" className={classes.root} aria-label="mailbox folders">                        
+            <List style={{ backgroundColor: '#047D82' }} component="nav" /* className={classes.root} */ aria-label="mailbox folders">                        
                 <ListItem button divider style={{borderBottomColor: '#fff'}}>
                     <ListItemText style={{ color: '#fff'}} primary="Estética y Peluquería" />
                 </ListItem>

@@ -11,18 +11,18 @@ export default function consultaEspecialista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.fondoVerdeClaro}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/SideMenu.png')} />
                 </View>
                 <View>
                 <SearchBar
@@ -32,11 +32,7 @@ export default function consultaEspecialista(props) {
                 style={styles.search}
                 />
                 </View>
-                <View>
-                <Image
-                        style={styles.imagenPrincipal2}
-                        source={require('../../assets/Urgencias.jpg')} /> 
-                </View>
+                <Text style={styles.titulo}>Consulta Especialista</Text>
                 <View>
                 <Image
                     style={styles.imagenPrincipal1}
@@ -56,21 +52,25 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="URGENCIAS (TRIAGE)"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 125, margin: 'auto', borderRadius: 25,color: "white", margin: "auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25,color: "white" }}>
                 </Button>
                 <Button
                     title="SINTOMAS DE ALARMA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 150, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: 110, margin: 'auto', borderRadius: 25, color: "white", margin: "auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white"}}>
                 </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -111,13 +111,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        margin: 'auto',
         width: 190,
         height: 70,
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
-
+        marginTop: '5%',
+        marginLeft: 80,
+        marginRight: 80
     },
     piedepagina: {
         width: '100%',
@@ -130,27 +128,23 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: 50,
-        height: 60,
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
+        position:'relative',
         width: 50,
-        height: 60,
-        top: '10%',
+        height: 65,
+        top: -65,
         left: '4%',
     },
     entradaTexto: {
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontSize: 26,
-        marginTop: '5%',
-        fontSize: 9,
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     border: {    
         marginLeft: 'auto',
@@ -177,4 +171,17 @@ const styles = StyleSheet.create({
         top: '10%',
         position: "absolute"
     },
+    titulo: {
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 24,
+        backgroundColor: '#047D82'
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
+    }
 });

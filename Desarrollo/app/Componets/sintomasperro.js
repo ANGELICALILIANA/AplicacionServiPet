@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         position: 'absolute',
         width: 27,
-        height:27,
+        height: 27,
     },
 
     entradaTexto: {

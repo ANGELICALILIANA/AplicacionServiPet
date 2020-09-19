@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
 
     iconoetologia: {
         width: 80,
-        height:65,
+        height: 65,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
