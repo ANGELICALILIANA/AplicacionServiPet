@@ -102,12 +102,13 @@ const styles = StyleSheet.create({
 
     encabezado2: {
         paddingBottom: 1,
+        marginTop: '20%',
     },
 
     Descripcion: {
         paddingTop: 10,
         width: '100%',
-        height: 170,
+        height: 160,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'justify',
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
 
     Boton: {
 
-        paddingTop: 1,
+        marginTop: 5,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',

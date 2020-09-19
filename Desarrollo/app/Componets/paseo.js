@@ -23,6 +23,7 @@ export default function paseo(props) {
                                 style={styles.iconocerrar} />
                         </TouchableHighlight>
                     </View>
+
                 </View>
                 <View style={styles.encabezado2}>
                     <Image
@@ -95,6 +96,7 @@ const styles = StyleSheet.create({
 
     encabezado2: {
         paddingBottom: 1,
+        marginTop: '20%',
     },
 
     Descripcion: {
