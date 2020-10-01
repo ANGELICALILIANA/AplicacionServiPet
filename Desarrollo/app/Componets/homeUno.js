@@ -2,42 +2,39 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 
-//Tipo de letra botones
-
 export default function homeUno( props ) {
   return (
     <View
       style={{ flex: 1, color: "white" }}>
       <ImageBackground
-        source={require('../../assets/FondoVerde.svg')}
+        source={require('../../assets/FondosPng/FondoVerde.png')}
         style={styles.imagenFondo}>
         <View style={styles.margenesPantalla}>
           <View>
             <TouchableHighlight onPress={()=>{ props.navigation.navigate('Login')}}>
               <Image
                 style={styles.imagenInicioSesion}
-                source={require('../../assets/IniciarSesion.svg')} 
-                />
+                source={require('../../assets/IconosPng/IniciarSesion.png')} />
             </TouchableHighlight>
           </View>
           <Image
-            source={require('../../assets/LogoBlancoVertical.svg')}
+            source={require('../../assets/LogosServipet/LogoBlancoVertical.png')}
             style={styles.imagenLogo}>
           </Image>
           <Button
             title="Registrate"
-            titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: '156px', margin: 'auto', borderRadius: '20px', color: "white", margin: "Auto" }}
+            titleStyle={{ color: "gray",}}
+            buttonStyle={{ backgroundColor: 'white', width: 156, marginLeft: 'auto', marginRight: 'auto', borderRadius: 20, color: "white", margin: "auto" }}
             onPress={()=>{props.navigation.navigate('Registro')}}>
           </Button>
           <Button
             title='Echar un vistazo'
             type="clear"
             titleStyle={{ color: "gray" }}
-            buttonStyle={{ backgroundColor: 'white', width: 'fit-content', margin: 'auto', borderRadius: '20px', marginTop: '10px' }}
-             onPress={()=>{props.navigation.navigate('Hometwo')}}>
+            buttonStyle={{ backgroundColor: 'white', width: 156, marginLeft: 'auto', marginRight: 'auto', borderRadius: 20, marginTop: 10 }}
+            onPress={()=>{props.navigation.navigate('Hometwo')}}>
           </Button>
-        </View>
+        </View> 
       </ImageBackground>
     </View>
   )
@@ -51,17 +48,21 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  
   imagenLogo: {
     position: 'relative',
-    width: '250px',
-    height: '400px',
+    width: 250,
+    height: 400,
     margin: 'auto',
-  },
-  imagenInicioSesion: {
-    marginTop: '-60px',
-    width: '50px',
-    height: '60px',
     marginLeft: 'auto',
-    marginRight: '15px',
+    marginRight: 'auto',
+  },
+
+  imagenInicioSesion: {
+    marginTop: -100,
+    width: 50,
+    height: 60,
+    marginLeft: 'auto',
+    marginRight: 15,
   },
 });

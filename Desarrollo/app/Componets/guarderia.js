@@ -10,21 +10,21 @@ export default function guarderia(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')}
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')}
                     />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <View>
                         <TouchableHighlight onPress={() => { props.navigation.navigate('Menu') }}>
                             <Image
                                 style={styles.imagenMenu}
-                                source={require('../../assets/SideMenuVerde.svg')} />
+                                source={require('../../assets/IconosPng/SideMenu.png')} />
                         </TouchableHighlight>
                     </View>
                 </View>
@@ -52,22 +52,27 @@ export default function guarderia(props) {
                 <View style={styles.organizacionBotones}>
                     <Button
                         title="PASEO"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', height: '40px', margin: 'auto', borderRadius: '30px', color: "white", margin: "Auto", fontSize: 'small', marginRight: '15px' }}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 40, margin: 'auto', borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
+                        onPress={() => { props.navigation.navigate('Paseo') }}>
                     </Button>
                     <Button
                         title="HOTEL"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '20px', color: "white", margin: "Auto", marginRight: '15px' }}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto", marginRight: 15 }}
+                        onPress={() => { props.navigation.navigate('Hotel') }}>
                     </Button>
                     <Button
                         title="GUARDERIA"
-                        titleStyle={{ color: "white", fontSize: 'x-small', fontWeight: 'bolder' }}
-                        buttonStyle={{ backgroundColor: '#047D82', width: '100px', margin: 'auto', height: '40px', borderRadius: '30px', color: "white", margin: "Auto"}}>
+                        titleStyle={{ color: "white", fontSize: 12, fontWeight: 'bold' }}
+                        buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 'auto', height: 40, borderRadius: 25, color: "white", margin: "auto" }}
+                        onPress={() => { props.navigation.navigate('ServicioGuarderia') }}>
                     </Button>
                 </View>
                 <View style={styles.piedepagina}>
-                    <Text style={styles.numero}>300 209 9929</Text>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
                 </View>
             </ImageBackground>
         </View >
@@ -75,6 +80,7 @@ export default function guarderia(props) {
 };
 
 const styles = StyleSheet.create({
+
     imagenFondoPeluqueriayEstetica: {
         position: 'absolute',
         resizeMode: "cover",
@@ -98,37 +104,40 @@ const styles = StyleSheet.create({
         backgroundColor: '#047D82',
         color: 'white',
         width: '90%',
-        height: '40px',
+        height: 40,
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
-        fontSize: 'larger',
-        paddingTop: '5px',
+        fontSize: 24,
+        paddingTop: 5,
     },
     margenesVista: {
         flex: 1,
     },
+
     encabezado: {
-        height: '90px',
+        height: 100,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
+
     encabezadoLogoVerde: {
-        margin: 'auto',
-        width: '200px',
-        height: '80px',
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        width: 190,
+        height: 70,
+        marginTop: '8%',
+        marginLeft: 80,
+        marginRight: 80
     },
     piedepagina: {
         width: '100%',
         height: '5%',
-        position: 'absolute',
-        bottom: '0px',
+        textAlign: 'center',
         backgroundColor: 'white',
+        position: 'absolute',
+        bottom: 0,
+        color: '#047D82',
     },
     numero: {
         color: '#047D82',
@@ -136,57 +145,60 @@ const styles = StyleSheet.create({
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '55px',
-        height: '55px',
-        top: '17%',
+        width: 55,
+        height: 55,
+        top: '30%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'RELATIVE',
-        width: '50px',
-        height: '65px',
-        top: '-103%',
-        left: '4%',
+        position:'relative',
+        width: 50,
+        height: 65,
+        top: -70,
+        left: '4%'
     },
     entradaTexto: {
         position: 'relative',
-        marginTop: '10px',
+        marginTop: 10,
     },
     borde: {
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
         color: 'white',
         width: '90%',
         textAlign: 'center',
         marginBottom: '3%',
-        fontWeight: 'bolder',
+        fontWeight: 'bold',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
     margenesTexto: {
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontSize: 'x-small',
-        marginTop: '3%',
-        marginBottom: '3%',
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     organizacionBotones: {
         flexDirection: 'row',
-        marginBottom: '-3px',
+        marginBottom: -3,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
     buscar: {
         position: "relative",
-        top: '9%',
+        top: '7%',
         width: '90%',
         marginRight: 'auto',
         marginLeft: 'auto',
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });
 

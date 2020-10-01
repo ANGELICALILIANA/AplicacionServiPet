@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import 'firebase/auth';
 import firebaseConfig from '../../firebase';
@@ -6,21 +6,33 @@ import { ImageBackground, StyleSheet, Text, View , Image, Modal, TouchableHighli
 import { Input } from 'react-native-elements';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import * as Font from 'expo-font'
 
-export default function login(props){
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
-
-  const submit = ()=>{
-    console.log(email,pass)
-  }
+export default function login(props){  
+  const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }
     return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ImageBackground source={require('../../assets/FondoBlancoGris.svg')} style={styles.image}>      
+      <ImageBackground source={require('../../assets/FondoBlancoGris.png')} style={styles.image}>      
       <TouchableHighlight onPress={()=>{ props.navigation.navigate('homeUno')}}>
-      <Image source={require('../../assets/CerrarVerde.svg')} style={styles.Cerrar}></Image>
+      <Image source={require('../../assets/IconosPng/CerrarVerde.png')} style={styles.Cerrar}></Image>
       </TouchableHighlight>                       
-      <Image source={require('../../assets/LogoVerdeHorizontal.svg')} style={styles.imgLogo}></Image>      
+      <Image source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} style={styles.imgLogo}></Image>      
       <Text style={styles.textlbl}>Email</Text>
       <Input keyboardType={"email-address"} style={styles.textInput} onChangeText={()=> setEmail()}/>
       <Text style={styles.textlbl}>Contraseña</Text>
@@ -35,10 +47,11 @@ export default function login(props){
       }
       title="Iniciar Sesión" 
       buttonStyle={{ backgroundColor: '#09B1B8', 
-      width: '300px', 
-      margin: 'auto',
-      marginBottom: '8px', 
-      borderRadius: '20px', 
+      width: 300, 
+      marginRight: 30,
+      marginLeft: 30,
+      marginBottom: 8, 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Button
       icon={
@@ -50,9 +63,10 @@ export default function login(props){
       }
       title="Iniciar Sesión con Google" 
       buttonStyle={{ backgroundColor: 'red', 
-      width: '300px', 
-      margin: 'auto', 
-      borderRadius: '20px', 
+      width: 300, 
+      marginRight: 30,
+      marginLeft: 30, 
+      borderRadius: 20, 
       color: "white"}}></Button>
       <Text style={styles.text}>
         ¿Aun no estás registrado?
@@ -65,7 +79,7 @@ export default function login(props){
 
 const styles = StyleSheet.create({    
     image: {
-      flex: "1",
+      flex: 1,
       position: "absolute",    
       resizeMode: "cover",
       justifyContent: "center",
@@ -77,39 +91,43 @@ const styles = StyleSheet.create({
       fontSize: 16,
       textAlign: "center",
       fontWeight: "bold",
-      fontFamily: "nexa light",
-      marginTop: "10px"    
+      fontFamily: "Nexa-Ligth",
+      marginTop: 10    
     },
     textLink: {
       color: "blue",
       fontSize: 16,
       textAlign: "center",
-      fontFamily: "nexa light",
-      marginTop: "10px"    
+      fontFamily: "Nexa-Ligth",
+      fontWeight: 'bold',
+      marginTop: 10    
     },
     imgLogo: {
-      width: '320px',
-      height: '140px',
-      marginLeft: "15px",
-      marginRight: "15px"
+      width: 250,
+      height: 100,
+      marginLeft: 40,
+      marginRight: 40,
+      marginBottom: 20
     },
     textlbl: {
       color: "#09B1B8",
       fontSize: 23,
       textAlign: "left",
-      fontFamily: "nexa light",
-      marginLeft: "20px"
+      fontFamily: "Nexa-Ligth",
+      fontWeight: 'bold',
+      marginLeft: 20
     },
     Cerrar:{
-      width: '40px',
-      height: '40px',
-      marginTop: '-100px'
+      width: 40,
+      height: 40,
+      marginBottom: '50%',
+      marginLeft: 5
     },
     textInput:{
-      border: "#B4B4B4",      
-      height: "50px",
+      borderColor: "#B4B4B4",      
+      height: 50,
       width: "90%",
-      margin: "20px",
+      margin: 10,
       fontSize: 23,
       textAlign: "center"
     }  

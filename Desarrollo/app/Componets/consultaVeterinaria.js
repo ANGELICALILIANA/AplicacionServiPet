@@ -11,18 +11,21 @@ export default function consultaVeterinaria(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerde.svg')}
+                source={require('../../assets/FondosPng/FondoVerde.png')}
                 style={styles.imagenFondoPeluqueriayEstetica}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
-                    <Image
-                        style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
+                    <View>
+                        <Image
+                            style={styles.imagenMenu}
+                            source={require('../../assets/IconosPng/SideMenu.png')} 
+                            onPress={() => { props.navigation.navigate('Menu') }}/>
+                    </View>
                 </View>
                 <SearchBar
                 round
@@ -42,24 +45,34 @@ export default function consultaVeterinaria(props) {
                 sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. 
                 Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
                 </Text>
+                <Text style={styles.border}>
+                    ADQUIERE NUESTRO SERVICIOS DE
+                </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                 <Button
                     title="CONTROL"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: '20px', color: "white", width: '100px' }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50 }}
+                    onPress={() => { props.navigation.navigate('Control') }}>
                 </Button>
                 <Button
                     title="CRECIMIENTO Y DESARROLLO"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82', margin: 'auto', borderRadius: '30px', color: "white", width: '100px'  }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82', margin: 5, borderRadius: 25, color: "white", width: 100, height: 50  }}
+                    onPress={() => { props.navigation.navigate('Crecimientodesarrollo') }}>
                 </Button>
                 <Button
                     title="VACUNACION Y DESPARASITACIÓN"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{ backgroundColor: '#047D82',  margin: 'auto', borderRadius: '20px', color: "white", width: '110px' }}>
+                    titleStyle={{ color: "white", fontSize: 12 }}
+                    buttonStyle={{ backgroundColor: '#047D82',  margin: 5, borderRadius: 25, color: "white", width: 125, height: 50 }}
+                    onPress={() => { props.navigation.navigate('Vacunacion') }}>
                 </Button>
                 </View>                                     
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -74,8 +87,8 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenvet: {
-        width: '300px',
-        height: '170px',
+        width: 300,
+        height: 230,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '1%'
@@ -89,19 +102,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     encabezado: {
-        height: '100px',
+        height: 100,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        margin: 'auto',
-        width: '200px',
-        height: '80px',
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+        width: 190,
+        height: 70,
+        marginTop: '8%',
+        marginLeft: 80,
+        marginRight: 80
 
     },
     piedepagina: {
@@ -110,22 +122,22 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '30%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
-        left: '4%',
+        position:'relative',
+        width: 50,
+        height: 65,
+        top: -70,
+        left: '4%'
     },
     entradaTexto: {
         position: 'relative',
@@ -134,15 +146,39 @@ const styles = StyleSheet.create({
     titulo: {
         color: '#fff',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
         backgroundColor: '#047D82'
     },
     texto: {
         color: '#fff',
-        fontSize: '9pt',
-        margin: '1%'
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     search: {
         position: "absolute"
+    },
+    border: {   
+        position: "relative", 
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
+        borderBottomColor: 'white',
+        borderTopColor: 'white',
+        marginBottom: 10,
+        color: 'white',
+        width: '90%',
+        textAlign: 'center',
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
     }
 });

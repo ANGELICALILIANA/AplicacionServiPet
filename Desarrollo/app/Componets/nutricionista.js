@@ -11,21 +11,21 @@ export default function nutricionista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoBlancoHuellasHuesos.svg')}
+                source={require('../../assets/FondosPng/FondoBlancoHuellasHuesos.png')}
                 style={styles.imagenFondonutricion}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoBlancoHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoBlancoHorizontal.png')} />
                     <Image
                         style={styles.iconocerrar}
-                        source={require('../../assets/CerrarBlanco.svg')} />
+                        source={require('../../assets/IconosPng/CerrarBlanco.png')} />
                 </View>
 
                 <View style={styles.encabezado2}>
                 <Image
                     style={styles.icononutricion}
-                    source={require('../../assets/Nutricionista.svg')} />
+                    source={require('../../assets/IconosPng/Nutricionista.png')} />
                 <Text style={styles.titulo}>NUTRICIONISTA</Text>
                 </View>
 
@@ -34,7 +34,7 @@ export default function nutricionista(props) {
                     source={require('../../assets/Nutricionista.jpg')} />
                 
                 <View style={styles.Descripcion}>
-                <Text style={styles.texto}>
+                <Text style={styles.entradaTexto}>
                 Las ideas fundamentales de la etología es la existencia de 
                 pautas de acción modal (PAM). Las PAM son comportamientos 
                 estereotipados que ocurren en una secuencia rígida, en 
@@ -46,8 +46,8 @@ export default function nutricionista(props) {
                 <View style={styles.Boton}>
                 <Button 
                     title="COMPRAR"
-                    titleStyle={{ color: "white", fontSize: '9pt' }}
-                    buttonStyle={{  backgroundColor: '#047D82',  borderRadius: '10px', margin: 'auto', color: "white", width: '100px' }}>
+                    titleStyle={{ color: "white", fontSize: 9 }}
+                    buttonStyle={{  backgroundColor: '#047D82',  marginLeft: 'auto', marginRight: 'auto', borderRadius: 10, margin: 'auto', color: "white", width: 100 }}>
                 </Button> 
                 </View>
 
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     },
 
     imagennutricion: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '90%',
         height: '30%',
         marginLeft: 'auto',
@@ -86,65 +86,74 @@ const styles = StyleSheet.create({
     },
 
     encabezado: {
-        height: '80px',
+        height: 80,
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: '#09B1B8',
         position: 'absolute',
     },
 
     encabezado2: {
-        paddingBottom: '1px',
+        paddingBottom: 1,
     },
 
     Descripcion: {
-        paddingTop: '5px',
+        paddingTop: 5,
         width: '90%',
-        height: '80px',
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
 
     encabezadoLogoVerde: {
         margin: 'auto',
-        width: '200px',
-        height: '70px',
+        width: 200,
+        height: 70,
         position: 'relative',
         marginTop: '1%',
         margin: 'auto',
+        marginLeft: 'auto',
+        marginRight: 'auto',
 
     },
 
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
+        width: 50,
+        height: 60,
         top: '10%',
         right: '4%',
     },
 
     iconocerrar: {
-        marginTop: '5px',
-        marginLeft: '5px',
+        marginTop: 5,
+        marginLeft: 5,
         position: 'absolute',
-        width: '27px',
-        height: '27px',
+        width: 27,
+        height: 27,
     },
 
     entradaTexto: {
-        position: 'relative',
-        marginTop: '20%'
+        position: "relative",
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontSize: 26,
+        marginTop: '5%',
+        fontSize: 9,
     },
 
     titulo: {
         color: '#047D82',
         textAlign: "center",
-        fontSize: '24pt',
+        fontSize: 24,
     },
 
     icononutricion: {
-        width: '80px',
-        height: '80px',
+        width: 80,
+        height: 80,
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -152,14 +161,14 @@ const styles = StyleSheet.create({
     texto: {
         width: '90%',
         color: '#444242',
-        fontSize: '9pt',
-        flex: '1',
+        fontSize: 9,
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
         alignContent: 'center',
     },
 
     Boton: {
-        paddingTop: '15px'
+        paddingTop: 15
     }
 });

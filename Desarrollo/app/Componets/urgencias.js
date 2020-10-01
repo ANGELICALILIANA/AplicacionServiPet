@@ -11,18 +11,18 @@ export default function consultaEspecialista(props) {
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.fondoVerdeClaro}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/SideMenu.png')} />
                 </View>
                 <View>
                 <SearchBar
@@ -32,11 +32,7 @@ export default function consultaEspecialista(props) {
                 style={styles.search}
                 />
                 </View>
-                <View>
-                <Image
-                        style={styles.imagenPrincipal2}
-                        source={require('../../assets/Urgencias.png')} /> 
-                </View>
+                <Text style={styles.titulo}>Urgencias</Text>
                 <View>
                 <Image
                     style={styles.imagenPrincipal1}
@@ -46,8 +42,6 @@ export default function consultaEspecialista(props) {
                 <Text style={styles.entradaTexto}>
                 Una urgencia se presenta en aquellas situaciones en las que se precisa atención rápida, comunicate al celular 321 8024171 y un médico veterinario calificado te hará algunas preguntas de importancia para realizar un triage (clasificación de la urgencia), 
                 te dará consejos de atención básica, manipulación y transporte. Se te dará una cita de consulta urgente dentro de las siguientes 4 horas.
-                Normalmente estamos ante una urgencia cuando: Aparición súbita de un cuadro grave, traumas, heridas, o por empeoramiento de una enfermedad crónica, ejemplo: mascota con vómito recurrente, diarrea abundante y/o sanguinolenta, episodios convulsivos, 
-                sospecha de intoxicicación, dolor abdominal agudo, pérdida de conciencia momentánea, hinchazon alérgica sin compromiso respiratorio, caídas o golpes moderados, mucosas palidas y secas (deshidratacion aguda), salivación excesiva, distosia de parto entre otros.
                 </Text>
                 </View>
                 <View>
@@ -58,21 +52,28 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="URGENCIAS (TRIAGE)"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25,color: "white" }}
+                    onPress={() => { props.navigation.navigate('Triage') }}>
                 </Button>
                 <Button
                     title="SINTOMAS DE ALARMA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white" }}
+                    onPress={() => { props.navigation.navigate('SintomasAlarma') }}>
                 </Button>
                 <Button
                     title="SERVICIO DE AMBULANCIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}>
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white"}}
+                    onPress={() => { props.navigation.navigate('Servicioambulancia') }}>
                 </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -87,19 +88,19 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPrincipal1: {
-        marginTop: '12px',
+        marginTop: 12,
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '180px',
+        height: 180,
     },
 
     imagenPrincipal2: {
-        marginTop: '8px',
+        marginTop: 8,
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
-        height: '60px',
+        height: 60,
     },
     cajaTexto: {
         backgroundColor: '#047D82',
@@ -108,18 +109,16 @@ const styles = StyleSheet.create({
     encabezado: {
         height: '12%',
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
     encabezadoLogoVerde: {
-        margin: 'auto',
-        width: '190px',
-        height: '70px',
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
-
+        width: 190,
+        height: 70,
+        marginTop: '5%',
+        marginLeft: 80,
+        marginRight: 80
     },
     piedepagina: {
         width: '100%',
@@ -127,38 +126,34 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        position:'relative',
+        width: 50,
+        height: 65,
+        top: -65,
         left: '4%',
     },
     entradaTexto: {
-        width: '90%',
-        alignContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'white',
-        fontsize: '75%',
-        marginTop: '5%',
-        fontSize: '9pt',
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify'
     },
     border: {    
         marginLeft: 'auto',
         marginRight: 'auto',
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
         color: 'white',
@@ -171,9 +166,25 @@ const styles = StyleSheet.create({
     arreglo: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
       },
     search: {
-        Top: '10%',
+        top: '10%',
         position: "absolute"
     },
+    titulo: {
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 24,
+        backgroundColor: '#047D82'
+    },
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
+    }
 });

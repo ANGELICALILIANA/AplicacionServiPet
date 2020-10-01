@@ -1,7 +1,6 @@
 import * as React from 'react';
 /* import React, { Component } from 'react'; */
 /* import { DrawerNavigator } from 'react-native'; */
-/* import * as Font from 'expo-font'; */
 /* import Estetica from "./app/Componets/esteticaScreen.js"
 import Veterinaria from "./app/Componets/veterinariaScreen.js" */
   
@@ -21,13 +20,15 @@ import Etologia from './app/Componets/etologia';
 import Nutricionista from './app/Componets/nutricionista';
 import Cirujano from './app/Componets/cirujano';
 import Hometwo from "./app/Componets/hometwo.js";
+import Triage from "./app/Componets/triage.js";
 import Headerhometwo from "./app/Componets/headerHometwo.js";
-/*Saludos Soy Sergio Practicando en mi brazo*/ 
-import Control from "./app/Componets/control.js"
+import * as Font from 'expo-font';
+import Control from "./app/Componets/Control.js"
 import Crecimientodesarrollo from "./app/Componets/CrecimientoDesarrollo.js";
 import Vacunacion from "./app/Componets/vacunacion.js";
 import { InputGroup, FormControl } from 'react-bootstrap';
 import Menu from "./app/Componets/menu";
+import Contacto from "./app/Componets/contactenos";
 import Guarderia from './app/Componets/guarderia';
 import ReactDOM from 'react-dom';
 import Calendario from './app/Componets/calendario';
@@ -35,12 +36,21 @@ import CorteUnas from './app/Componets/corteUnas';
 import BanoMascota from './app/Componets/banoMascota';
 import CortePelo from './app/Componets/cortePelo';
 import Profilaxis from './app/Componets/profilaxis';
+import Sintomasperro from './app/Componets/sintomasperro';
+import Servicioambulancia from './app/Componets/servicioambulancia';
 import Paseo from './app/Componets/paseo';
 import Hotel from './app/Componets/hotel';
 import ServicioGuarderia from './app/Componets/servicioGuarderia';
-import Sintomasdealarma from './app/Componets/sintomasdealarma';
-import SintomasdealarmaGatos from './app/Componets/sintomasdealarmagatos';
-import SintomasdealarmaPerros from './app/Componets/sintomasdealarmaperros';
+import SintomasAlarma from './app/Componets/sintomasAlarma';
+import SintomasGatos from './app/Componets/sintomasGatos';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
+// import SideNab from './app/Componets/sideNab';
+
 function HometwoScreen({ navigation }) {
   return (
     <Hometwo navigation={navigation} />
@@ -148,15 +158,10 @@ return(
 
 )
 }
-/**
- * 
- * Vista Crecimiento
- */
 
 function vistaCrecimiento({navigation}){
 return(
   <Crecimientodesarrollo navegation={navigation}/>
-
 )
 }
 /**
@@ -208,6 +213,29 @@ function vistaProfilaxis({ navigation }) {
   )
 }
 
+function triage({ navigation }) {
+  return (
+    <Triage navigation={navigation} />
+  )
+}
+
+function sintomasperro({ navigation }) {
+  return (
+    <Sintomasperro navigation={navigation} />
+  )
+}
+
+function servicioambulancia({ navigation }) {
+  return (
+    <Servicioambulancia navigation={navigation} />
+    )
+}
+
+function contactenos({navigation}){
+  return(
+    <Contacto navigation={navigation}/>
+    )
+  }
 /**
  * 
  * Vista de paseo
@@ -266,19 +294,44 @@ function vistasintomasdealarmaperros({ navigation }) {
   )
 }
 
+/**
+ * 
+ * Vista de Sintomas de Alarma
+ */
+function vistaSintomasAlarma({ navigation }) {
+  return (
+    <SintomasAlarma navigation={navigation} />
+  )
+}
+
+/**
+ * 
+ * Vista de Sintomas de Alarma Gatos
+ */
+function vistaSintomasAlarmaGatos({ navigation }) {
+  return (
+    <SintomasGatos navigation={navigation} />
+  )
+}
+
+// /**
+//  * 
+//  * SideNav
+//  */
+// function navegacion({ navigation }) {
+//   return (
+//     <SideNab></SideNab>
+//   )
+// }
+
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer> <Stack.Navigator initialRouteName="Sintomasdealarmaperros" headerMode="none">
-      
-     {/*  <Stack.Navigator initialRouteName="Sintomasdealarmagatos" headerMode="none"> */}
-       {/* <Stack.Navigator initialRouteName="Sintomasdealarma" headerMode="none"> */}
-      {/*<Stack.Navigator initialRouteName="homeUno" headerMode="none"> */}
-     {/*  {<Stack.Navigator initialRouteName="Vacunacion" headerMode="none">} */} 
-      {/*</Stack.Navigator><Stack.Navigator initialRouteName="Control" headerMode="none"> */}
-     {/* <Stack.Navigator initialRouteName="homeUno" headerMode="none">  */}
-      {/* <Stack.Navigator initialRouteName="EsteticaYPeluqueria" headerMode="none"> */}
+    <NavigationContainer>
+      {/* <MyDrawer /> */}
+      <Stack.Navigator initialRouteName="SideNab" headerMode="none"> 
         <Stack.Screen name="homeUno" component={HomeScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
@@ -291,6 +344,7 @@ function App() {
         <Stack.Screen name="ConsultaVeterinaria" component={consultaVet} />
         <Stack.Screen name="Hometwo" component={HometwoScreen} />
         <Stack.Screen name="Menu" component={menuScreen} />
+        <Stack.Screen name="contactenos" component={contactenos} />
         <Stack.Screen name="Control" component={vistaControl} />
         <Stack.Screen name="Crecimientodesarrollo" component={vistaCrecimiento} />
         <Stack.Screen name="Vacunacion" component={vistavacunacion} />
@@ -300,25 +354,70 @@ function App() {
         <Stack.Screen name="BanoMascotas" component={banoDeMascotas} />
         <Stack.Screen name="CortePelo" component={corteDePelo} />
         <Stack.Screen name="Profilaxis" component={vistaProfilaxis} />
-        <Stack.Screen name="Sintomasdealarma" component={vistasintomasdealarma} />
-        <Stack.Screen name="Sintomasdealarmaperros" component={vistasintomasdealarmaperros} />
-        <Stack.Screen name="Sintomasdealarmagatos" component={vistasintomasdealarmagatos} />
+        <Stack.Screen name="Triage" component={triage} />
+        <Stack.Screen name="Sintomasperro" component={sintomasperro} />
+        <Stack.Screen name="Servicioambulancia" component={servicioambulancia} />
         <Stack.Screen name="Paseo" component={vistaPaseo} />
         <Stack.Screen name="Hotel" component={vistaHotel} />
         <Stack.Screen name="ServicioGuarderia" component={vistaServicioGuarderia} />
+        <Stack.Screen name="SintomasAlarma" component={vistaSintomasAlarma} />
+        <Stack.Screen name="SintomasGatos" component={vistaSintomasAlarmaGatos} />
+        {/* <Stack.Screen name="SideNab" component={navegacion} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-{/* const navegacion = DrawerNavigator({
-  estetica:{
-    screen: Estetica
-  },
-  veterinaria:{
-    screen: Veterinaria
-  },
-
-})  */}
 
 export default App;
+
+
+// function Feed({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Feed Screen</Text>
+//       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
+//       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+//     </View>
+//   );
+// }
+
+// function Notifications() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Notifications Screen</Text>
+//     </View>
+//   );
+// }
+
+// function CustomDrawerContent(props) {
+//   return (
+//     <DrawerContentScrollView {...props}>
+//       <DrawerItemList {...props} />
+//       <DrawerItem
+//         label="Close drawer"
+//         onPress={() => props.navigation.closeDrawer()}
+//       />
+//       <DrawerItem
+//         label="Toggle drawer"
+//         onPress={() => props.navigation.toggleDrawer()}
+//       />
+//     </DrawerContentScrollView>
+//   );
+// }
+
+// const Drawer = createDrawerNavigator();
+
+// function MyDrawer() {
+//   return (
+//     <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
+//       <Drawer.Screen name="Feed" component={Feed} />
+//       <Drawer.Screen name="Notifications" component={Notifications} />
+//     </Drawer.Navigator>
+//   );
+// }
+
+
+
+
+

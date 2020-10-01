@@ -1,28 +1,49 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableHighlight, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Input } from 'react-native-elements';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import * as Font from 'expo-font'
 import { SearchBar } from 'react-native-elements';
 //import Autocomplete from 'react-native-autocomplete-input';
 
 export default function consultaEspecialista(props) {
+    
+    const [fontsLoaded, setFontsLoaded]= useState(false);
+    useEffect(() => {
+        if (!fontsLoaded){
+            loadFonts();
+        }
+    });
+    
+    const loadFonts = async () => {
+        await Font.loadAsync({
+            'Nexa-Ligth': require('../../assets/fonts/NexaLight.otf'),
+            'Nexa-Bold': require('../../assets/fonts/NexaBold.otf'),
+        });
+        setFontsLoaded(true);
+    }
+  
+    if(!fontsLoaded){
+        return(<View/>);
+    }
+    
     return (
         <View
             style={styles.margenesVista}>
             <ImageBackground
-                source={require('../../assets/FondoVerdeClaro.svg')}
+                source={require('../../assets/FondosPng/FondoVerdeClaro.png')}
                 style={styles.fondoVerdeClaro}>
                 <View style={styles.encabezado}>
                     <Image
                         style={styles.encabezadoLogoVerde}
-                        source={require('../../assets/LogoVerdeHorizontal.svg')} />
+                        source={require('../../assets/LogosServipet/LogoVerdeHorizontal.png')} />
                     <Image
                         style={styles.imagenCarrito}
-                        source={require('../../assets/Carrito.svg')} />
+                        source={require('../../assets/IconosPng/Carrito.png')} />
                     <Image
                         style={styles.imagenMenu}
-                        source={require('../../assets/SideMenu.svg')} />
+                        source={require('../../assets/IconosPng/SideMenu.png')} />
                 </View>
                 <View>
                 <SearchBar
@@ -35,7 +56,8 @@ export default function consultaEspecialista(props) {
                 <View>
                 <Image
                         style={styles.imagenPrincipal2}
-                        source={require('../../assets/Especialista.png')} /> 
+                        source={require('../../assets/Especialista.png')} 
+                        /> 
                 </View>
                 <View>
                 <Image
@@ -44,8 +66,8 @@ export default function consultaEspecialista(props) {
                 </View>
                 <View>
                 <Text style={styles.entradaTexto}>
-                El veterinario es el profesional de la salud de referencia de tu perro y, como tal, se ocupa de prevenir, diagnosticar y curar los trastornos de tu amigo peludo, aunque también vela por la salud de las personas que conviven con animales para evitar la zoonosis o contagio entre animales y humanos.
-                En general, se recomienda que un perro sea revisado por un veterinario al menos una vez al año y cuando envejecen, cada 6 meses. Durante las visitas rutinarias, lleva el historial médico del peludo y la cartilla de vacunas.
+                Una consulta especializada es la revisión médica que se enfoca en tratar sintomatologías específicas en las mascotas por especialistas en las diferentes áreas de la veterinaria; por ejemplo, cirugía, dermatología, odontología, oncología, entre otras áreas de la veterinaria para tratar las afecciones o enfermedades que presentan los animales.
+                En SERVIPET te brindamos el servicio veterinario de consultas especializadas para tu gato o perro, con el objetivo de que siempre tengas una clínica veterinaria de calidad donde asistir cuando necesites tratar la salud de tu mascota de forma adecuada. 
                 </Text>
                 </View>
                 <View>
@@ -56,25 +78,28 @@ export default function consultaEspecialista(props) {
                 <View style={styles.arreglo}>
                 <Button
                     title="ETOLOGIA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '125px', margin: 'auto', borderRadius: '25px',color: "white", margin: "Auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, margin: 5, height: 50, borderRadius: 25,color: "white" }}
                     onPress={() => { props.navigation.navigate('Etologia') }}>    
                 </Button>
-                
                 <Button
                     title="NUTRICIONISTA"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '150px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 110, height: 50, margin: 5, borderRadius: 25, color: "white" }}
                     onPress={() => { props.navigation.navigate('Nutricionista') }}>     
                 </Button>
                 <Button
                     title="CIRUJANO"
-                    titleStyle={{ color: "white", fontWeight: "bold"  }}
-                    buttonStyle={{ backgroundColor: '#047D82', width: '110px', margin: 'auto', borderRadius: '25px', color: "white", margin: "Auto" }}
+                    titleStyle={{ color: "white", fontWeight: "bold", fontSize: 12  }}
+                    buttonStyle={{ backgroundColor: '#047D82', width: 100, height: 50, margin: 5, borderRadius: 25, color: "white", marginRight: 25}}
                     onPress={() => { props.navigation.navigate('cirujano') }}>     
                 </Button>
                 </View>
-                <Text style={styles.piedepagina}>3002099929</Text>
+                <View style={styles.piedepagina}>
+                    <Image
+                        style={styles.imagenPiePagina}
+                        source={require('../../assets/footer.jpeg')} />
+                </View>
             </ImageBackground>
         </View>
     )
@@ -89,38 +114,42 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     imagenPrincipal1: {
-        marginTop: '12px',
+        marginTop: 12,
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '90%',
-        height: '180px',
+        height: 180,
     },
 
     imagenPrincipal2: {
-        marginTop: '8px',
+        marginTop: 8,
         marginLeft: 'auto',
         marginRight: 'auto',  
         width: '90%',
-        height: '60px',
+        height: 60,
     },
     cajaTexto: {
         backgroundColor: '#047D82',
         color: 'white',
+        width: '90%',
+        alignContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+
     },
     encabezado: {
         height: '12%',
         width: '100%',
-        top: '0px',
+        top: 0,
         backgroundColor: 'white',
         position: 'absolute',
     },
-    encabezadoLogoVerde: {
-        margin: 'auto',
-        width: '190px',
-        height: '70px',
-        position: 'relative',
-        marginTop: '1%',
-        margin: 'auto',
+    encabezadoLogoVerde: {        
+        width: 190,
+        height: 70,
+        marginTop: '5%',
+        marginLeft: 80,
+        marginRight: 80 
 
     },
     piedepagina: {
@@ -129,53 +158,74 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: '0px',
+        bottom: 0,
         color: '#047D82',
     },
     imagenCarrito: {
         position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        width: 55,
+        height: 55,
+        top: '25%',
         right: '4%',
     },
     imagenMenu: {
-        position: 'absolute',
-        width: '50px',
-        height: '60px',
-        top: '10%',
+        position:'relative',
+        width: 50,
+        height: 65,
+        top: -65,
         left: '4%',
     },
     entradaTexto: {
+        color: '#fff',
+        fontSize: 12,
+        margin: '3%',
+        textAlign: 'justify',
         width: '90%',
         alignContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        color: 'white',
-        fontsize: '75%',
-        marginTop: '5%',
-        fontSize: '9pt',
     },
-    border: {    
+    border: {   
+        position: "relative", 
         marginLeft: 'auto',
         marginRight: 'auto',
-        borderTopWidth: '2px',
-        borderBottomWidth: '2px',
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         borderBottomColor: 'white',
         borderTopColor: 'white',
+        marginBottom: 10,
         color: 'white',
         width: '90%',
-        textAlign: 'center',
+        textAlign: 'center'
     },
     margenesVista: {
         flex: 1,
     },
     arreglo: {
+        position: "relative",
         flexDirection: 'row',
         justifyContent: 'space-between',
+        width: '90%',
+        marginRight: 'auto',
+        marginLeft: 'auto',
       },
     search: {
-        Top: '10%',
+        top: '10%',
         position: "absolute"
     },
+    titulo: {
+        color: '#fff',
+        textAlign: "center",
+        fontSize: 24,
+        backgroundColor: '#047D82'
+    },
+
+    imagenPiePagina: {
+        position: 'relative',
+        width: '100%',
+        marginTop: '1%',
+        height: '80%',
+
+    }
+
 });
